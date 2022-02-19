@@ -1,0 +1,3 @@
+# Sans-paroles
+Il est conseillé de s'éloigner des sans-paroles. En effet, ils ne représentent aucun danger au premier abord à cause de leur nature silencieuse et de leur manière d'errer sans but distinct, mais ils répondent tous aux ordres du [[Tyran]] aveuglément et peuvent se révéler être très agréssifs si celui-ci leur demande. Il faut se méfier d'eux car même s'ils sont muets, leur ouïe est excellente et ils servent d'yeux et d'oreille à leur maître.  
+Ils sont créés par le [[Tyran]] lorsqu'il lobotomise un [[Rêveur]] ou un [[Onards |Onard]]. Dans le cas ou c'est un [[Rêveur]], celui ci meurt dans le monde réel.  

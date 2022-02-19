@@ -1,0 +1,2 @@
+# Onards
+Les Onards sont les habitants natifs d'[[Oneiros]] et sont tous des souvenirs du [[Tyran]]. Leur apparence est relative à la vivacité du souvenir que le [[Tyran]] a d'eux, ce qui fait que la plupart d'entre eux sont flous et presque indiscernable à l'exception des proches du [[Tyran]]. Il est dit qu'ils sont discrets, si bien qu'un [[Rêveur |rêveur]] pourrait les oublier s'ils n'y prettent pas grande attention malgrès le fait qu'ils représentent la plus grande partie de la population. Lorsqu'on les écoute, leur discours ne fait pas toujours sens. 
