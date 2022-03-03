@@ -7,12 +7,8 @@
         "id": "ec0173a7bc3a1f20",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Idées.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Idées.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +84,15 @@
   },
   "active": "ec0173a7bc3a1f20",
   "lastOpenFiles": [
-    "Idées.md",
     "Homepage.md",
-    "Oneiros/Habitants/Sans-paroles.md",
-    "Oneiros/Oneiros.md",
-    "Oneiros/Habitants/Rêveur.md",
-    "Oneiros/Habitants/Onards.md",
-    "Personnages/Tyran.md",
+    "Idées.md",
+    "Oneiros/Nyxos.md",
+    "Histoire/Acte 1.md",
+    "Personnages/l'écrivain.md",
+    "Fichiers/ecrivain.png",
     "Game Design Document.md",
-    "Personnages/Personnage Principal.md",
-    "test.md"
+    "Oneiros/Oneiros.md",
+    "Oneiros/Habitants/Sans-paroles.md",
+    "Personnages/Tyran.md"
   ]
 }

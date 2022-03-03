@@ -1,0 +1,6 @@
+# Acte 1
+Le joueur commence dans la banlieue de la [[Ville principale]], désorienté. Il demande son chemin à [[l'écrivain]], qui lui fait visiter l'endroit de façon très enthousiaste. Le joueur peut deviner que [[l'écrivain]] n'est pas ici depuis longtemps malgrès le fait qu'il connaisse bien l'endroit. Les deux personnages croisent des [[Onards]] flous et [[l'écrivain]] explique qu'il en a déjà croisé mais qu'ils ne disent rien de compréhensible.  
+
+A un moment donné, la voix du [[Tyran]] retentit et il ordonne a ses [[Sans-paroles]] de se saisir de [[l'écrivain]]. Le joueur est face à sa première situation de combat, qui sert de tutoriel et les deux personnages arrivent à s'échapper. Ils se cachent dans une maison vide, mais les sans paroles retrouvent [[l'écrivain]] et l'emportent. 
+
+Le personnage principal se réveille à ce moment là, déboussolé et confus car son rêve parraîssait bien trop réel mais il doit se préparer pour aller travailler. Un peu plus tard, il apprends la mort d'un de ses patients suite a un arrêt cérébral qui n'est autre que [[l'écrivain]], et il fait le lien avec son rêve. Il y avait quelques morts similaires depuis quelque temps dans l'hôpital et le joueur se rendra compte qu'il ne rêvait pas lors de l'[[Acte 2]].
