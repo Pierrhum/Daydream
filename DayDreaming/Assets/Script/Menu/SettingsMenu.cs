@@ -10,11 +10,15 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer am;
 
     public TMPro.TMP_Dropdown resolutionDropDown;
+    public Toggle togFS;
 
     private Resolution[] resolutions;
+    private bool fs;
 
     public void Start()
     {
+        togFS.isOn = Screen.fullScreen;
+
         resolutions = Screen.resolutions;
         
         resolutionDropDown.ClearOptions();
@@ -47,7 +51,12 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+        fs = isFullScreen;
+
     }
 
+    public void SetResolution(int valueOfDD){
+         Screen.SetResolution(resolutions[valueOfDD].width,resolutions[valueOfDD].height,fs);
+    }
 
 }
