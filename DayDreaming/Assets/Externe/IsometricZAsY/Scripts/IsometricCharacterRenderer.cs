@@ -39,7 +39,6 @@ public class IsometricCharacterRenderer : MonoBehaviour
             directionArray = runDirections;
             lastDirection = DirectionToIndex(direction, 8);
         }
-        Debug.Log(directionArray[lastDirection]);
 
         //tell the animator to play the requested state
         animator.Play(directionArray[lastDirection]);
