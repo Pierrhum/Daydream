@@ -2950,7 +2950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   am: {fileID: 24100000, guid: 081db0624f08f43a0bcd128df9c2c4c4, type: 2}
-  resolutionDropDown: {fileID: 0}
+  resolutionDropDown: {fileID: 1893300762}
 --- !u!1 &1817336960
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,7 +3252,7 @@ GameObject:
   - component: {fileID: 1893300763}
   - component: {fileID: 1893300762}
   m_Layer: 5
-  m_Name: ResChoice
+  m_Name: resolutionDD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
