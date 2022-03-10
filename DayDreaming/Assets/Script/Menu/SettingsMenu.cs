@@ -15,6 +15,10 @@ public class SettingsMenu : MonoBehaviour
     private Resolution[] resolutions;
     private bool fs;
 
+    public GameObject settingsWindow;
+    public GameObject PauseMenu;
+
+
     public void Start()
     {
         togFS.isOn = Screen.fullScreen;
@@ -57,6 +61,18 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetResolution(int valueOfDD){
          Screen.SetResolution(resolutions[valueOfDD].width,resolutions[valueOfDD].height,fs);
+    }
+
+    // Permet de fermer les settings du jeu 
+    public void closeSettings()
+    {
+
+        if(PauseMenu != null)
+            PauseMenu.SetActive(true);
+
+
+        settingsWindow.SetActive(false);
+
     }
 
 }

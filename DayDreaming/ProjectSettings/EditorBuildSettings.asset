@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7ffeecf2863f94baebf5a413cc65fb94
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Scene_Biome_Desert_ZAsY.unity
+    guid: 5a724eab55b0ddb4baad3dd6c8be5480
   m_configObjects: {}

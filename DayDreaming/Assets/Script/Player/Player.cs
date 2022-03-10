@@ -26,4 +26,9 @@ public class Player : MonoBehaviour
         isoRenderer.SetDirection(movement);
         rbody.velocity = movement;
     }
+
+    public void OpenMenu(InputAction.CallbackContext context)
+    {
+        Debug.Log("yo");   
+    }
 }

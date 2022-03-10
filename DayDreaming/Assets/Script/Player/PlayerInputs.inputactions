@@ -1,5 +1,5 @@
 {
-    "name": "inputs",
+    "name": "PlayerInputs",
     "maps": [
         {
             "name": "Player",
@@ -346,6 +346,15 @@
                     "type": "PassThrough",
                     "id": "56395091-457d-4380-8e8b-db5e34337d53",
                     "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "c135550a-d0f8-445a-8b17-cadc4275671d",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -767,6 +776,17 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "TrackedDeviceOrientation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e078385d-662b-4544-bcd8-f7b990f2fc93",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
