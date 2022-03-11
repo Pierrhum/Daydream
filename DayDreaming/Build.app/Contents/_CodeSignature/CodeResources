@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<data>
-		YCSOib6+bUCKF4hM6Ti/sDFwGfs=
+		3NkW5c5NZNe/xlhumZj6JPot5bk=
 		</data>
 		<key>Resources/Data/Managed/Mono.Security.dll</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Resources/Data/globalgamemanagers</key>
 		<data>
-		cz3fMGVv/2Mvcglg5mwg4QO/pEg=
+		c30Rs4eOObmpkFDfTxv829NbUew=
 		</data>
 		<key>Resources/Data/globalgamemanagers.assets</key>
 		<data>
@@ -466,7 +466,7 @@
 		</data>
 		<key>Resources/Data/level1</key>
 		<data>
-		Z2iVlG13tnYEa6mzxjKJHNJcbFE=
+		mumsTRCJpMHXxWvW+bn2dk01I3U=
 		</data>
 		<key>Resources/Data/resources.assets</key>
 		<data>
@@ -478,7 +478,7 @@
 		</data>
 		<key>Resources/Data/sharedassets0.assets</key>
 		<data>
-		nTtACwSu3qvXXV/i4xnEwlttEuI=
+		bmSWqnAvnMjiSF+rRjU8SDg0llQ=
 		</data>
 		<key>Resources/Data/sharedassets0.assets.resS</key>
 		<data>
@@ -677,16 +677,16 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			eVC1sUF39bW/F5SVSgF0Ft4GVFA=
+			fVhDLWAa/5Uz0D4qoelrVbMEM2Q=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"7950b5b14177f5b5bf1794954a017416de065450" or cdhash H"79851fb70f7d8af6668a5b8863ebfd5d28b42166"</string>
+			<string>cdhash H"7d58432d601aff9533d03e2aa1e96b55b3043364" or cdhash H"010341ec3ca55d3c28b0f5fe38a9b951f0f43263"</string>
 		</dict>
 		<key>Resources/Data/Managed/Assembly-CSharp.dll</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xUk/0/y5a3y3NrF35u2RWFzeLCjqsI6MtYupstDcagE=
+			5Ukg/QFoivCrt+lZVw88ouDDZ03CnGhNquLPEgo3cW4=
 			</data>
 		</dict>
 		<key>Resources/Data/Managed/Mono.Security.dll</key>
@@ -1470,7 +1470,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sGkpWJ5DULng4cHRpqoy+Jx4a/hDs35SAQQy7IALA5g=
+			+0CLZdeWVsaweDIHl+t9eytTzf2zRuL3aGzUpKKT42s=
 			</data>
 		</dict>
 		<key>Resources/Data/globalgamemanagers.assets</key>
@@ -1491,7 +1491,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7ByrtJcA3OXpRXfM+Gy/UBP7IkkFlnvHTvnJFLLQNQY=
+			mkcdMMOS0PMUqx92Yy5kbZZqNhN6qEuf2b6KYWBITSE=
 			</data>
 		</dict>
 		<key>Resources/Data/resources.assets</key>
@@ -1512,7 +1512,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AfLdqCrJZK2R/vweHiYuNZYmSqVK2y5+q5xe/Cz25Zw=
+			ob+5cvrgnLQiKkQ6YiTsaCm9Av7Oi2bTv1N6bxK83gI=
 			</data>
 		</dict>
 		<key>Resources/Data/sharedassets0.assets.resS</key>

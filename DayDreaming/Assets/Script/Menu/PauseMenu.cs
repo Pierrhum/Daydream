@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,8 +11,17 @@ public class PauseMenu : MonoBehaviour
     {
         if(MenuPause.activeSelf){
             MenuPause.SetActive(false);
+            Time.timeScale = 1;
         }
-        else OpenMenuPause();
+        else{
+            if(!settingsWindow.activeSelf)
+                OpenMenuPause();
+            else{
+                settingsWindow.SetActive(false);
+                MenuPause.SetActive(true);
+            }
+        }
+        
     }
 
     public void openSettings()
@@ -28,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     // lance le menu pause
     public void OpenMenuPause()
     {
+        Time.timeScale = 0;
         MenuPause.SetActive(true);
     }
 }
