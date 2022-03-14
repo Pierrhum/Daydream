@@ -23,12 +23,6 @@ public class MainMenu : MonoBehaviour
         settingsWindow.SetActive(true);
     }
 
-    // Permet d'ouvrir les settings du jeu 
-    public void closeSettings()
-    {
-        settingsWindow.SetActive(false);
-    }
-
     // Permet de quitter le jeu
     public void quitGame()
     {
