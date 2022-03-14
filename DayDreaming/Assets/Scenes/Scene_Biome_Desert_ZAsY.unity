@@ -8269,6 +8269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPM
       objectReference: {fileID: 0}
+    - target: {fileID: 8998024642914921508, guid: a036988e380f84c65bf995c8bf72b73f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8998024642914921512, guid: a036988e380f84c65bf995c8bf72b73f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8371,7 +8375,7 @@ PrefabInstance:
       objectReference: {fileID: 621703834}
     - target: {fileID: 8998024643853763929, guid: a036988e380f84c65bf995c8bf72b73f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a036988e380f84c65bf995c8bf72b73f, type: 3}
