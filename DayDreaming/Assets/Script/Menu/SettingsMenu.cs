@@ -16,7 +16,7 @@ public class SettingsMenu : MonoBehaviour
     private bool fs;
 
     public GameObject settingsWindow;
-    public GameObject PauseMenu;
+    public GameObject pauseMenu;
 
 
     public void Start()
@@ -64,11 +64,11 @@ public class SettingsMenu : MonoBehaviour
     }
 
     // Permet de fermer les settings du jeu 
-    public void closeSettings()
+    public void CloseSettings()
     {
 
-        if(PauseMenu != null)
-            PauseMenu.SetActive(true);
+        if(pauseMenu != null)
+            pauseMenu.SetActive(true);
 
 
         settingsWindow.SetActive(false);
