@@ -7,8 +7,12 @@
         "id": "ec0173a7bc3a1f20",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Histoire/Acte 1.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Histoire/Acte 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,10 +89,10 @@
   },
   "active": "ec0173a7bc3a1f20",
   "lastOpenFiles": [
+    "Histoire/Acte 1.md",
     "Homepage.md",
     "Idées.md",
     "Oneiros/Nyxos.md",
-    "Histoire/Acte 1.md",
     "Personnages/l'écrivain.md",
     "Fichiers/ecrivain.png",
     "Game Design Document.md",
