@@ -9,12 +9,26 @@ public class Player : MonoBehaviour
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
 
+    public Quest Quest;
+
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
+    public void NextQuest()
+    {
+        if (Quest.Next == null)
+            Debug.Log("jeu terminé");
+        else
+        {
+            Quest = Quest.Next;
+            Debug.Log("New quest : " + Quest.Name);
+        }
+    }
+
+    /************ INPUTS ***********/
 
     public void Move(InputAction.CallbackContext context)
     {
