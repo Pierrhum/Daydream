@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60501fd0057128b43ba4ea02e895fcf4, type: 3}
   m_Name: New Quest 1
   m_EditorClassIdentifier: 
-  Name: 
-  Description: 
+  Name: "Qu\xEAte 2"
+  Description: "Deuxi\xE8me qu\xEAte"
   Next: {fileID: 0}
   Trigger: {fileID: 0}
