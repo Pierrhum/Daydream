@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene_Biome_Desert_ZAsY.unity
+    path: Assets/Scenes/Overworld.unity
     guid: 5a724eab55b0ddb4baad3dd6c8be5480
   - enabled: 1
     path: Assets/Scenes/FightMode.unity
