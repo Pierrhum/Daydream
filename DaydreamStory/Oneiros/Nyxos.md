@@ -1,3 +1,10 @@
 # Nyxos 
-Nyxos est la première ville d'[[Oneiros]]. Le joueur la visite pour la première fois dans l'[[Acte 1]]. 
+Le joueur la visite pour la première fois dans l'[[Acte 1]]. 
 La ville ressemble a une banlieue pavillonaire gigantesque, tout le temps plongée dans la nuit. Chaque maison est exactement pareil et il est très facile de se perdre et de tourner en rond tellement tout se ressemble. En effet, même si vous bougez un objet, il reprendra sa position initiale quand vous aurez le dos tourné. La plupart des maisons sont inhabitées mais quelques [[Onards]] vivent dans certaines d'entre elles. Certaines fenêtres possèdent des yeux qui se ferment quand on les regarde. 
+
+##### Images : 
+Extérieur : 
+![](Fichiers/nyxos_extérieur.jpeg)
+
+Intérieur :
+![](Fichiers/nyxos_interieur.jpeg)
