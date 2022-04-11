@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
+// Script pour le menu pause
+// @author Maxime Ginda
 public class PauseMenu : MonoBehaviour
 {
     // Permet d'accéder au panneau d'option
     public GameObject settingsWindow;
-    public GameObject MenuPause;
+    public GameObject pauseMenu;
 
-    public void resume()
+    public void Resume()
     {
-        if(MenuPause.activeSelf){
-            MenuPause.SetActive(false);
+        if(pauseMenu.activeSelf){
+            pauseMenu.SetActive(false);
             Time.timeScale = 1;
         }
         else{
@@ -18,19 +21,19 @@ public class PauseMenu : MonoBehaviour
                 OpenMenuPause();
             else{
                 settingsWindow.SetActive(false);
-                MenuPause.SetActive(true);
+                pauseMenu.SetActive(true);
             }
         }
         
     }
 
-    public void openSettings()
+    public void OpenSettings()
     {
-        MenuPause.SetActive(false);
+        pauseMenu.SetActive(false);
         settingsWindow.SetActive(true);
     }
 
-    public void quitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
@@ -39,6 +42,6 @@ public class PauseMenu : MonoBehaviour
     public void OpenMenuPause()
     {
         Time.timeScale = 0;
-        MenuPause.SetActive(true);
+        pauseMenu.SetActive(true);
     }
 }

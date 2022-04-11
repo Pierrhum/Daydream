@@ -12,19 +12,19 @@ public class MainMenu : MonoBehaviour
     public GameObject settingsWindow;
 
     // Permet de lancer le jeu
-    public void startGame()
+    public void StartGame()
     {
         SceneManager.LoadScene(this.firstLevel);
     }
 
     // Permet d'ouvrir les settings du jeu 
-    public void openSettings()
+    public void OpenSettings()
     {
         settingsWindow.SetActive(true);
     }
 
     // Permet de quitter le jeu
-    public void quitGame()
+    public void QuitGame()
     {
         Application.Quit();
     }
