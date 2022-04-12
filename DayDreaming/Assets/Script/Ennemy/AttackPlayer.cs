@@ -7,7 +7,7 @@ public class AttackPlayer : MonoBehaviour {
 
 	private Rigidbody2D SelfRigidbody;
 	private CircleCollider2D SelfCollider;
-	private GameObject PlayerGameObject;
+    private Player player;
 	private CircleCollider2D PlayerCollider;
 	private Vector2 PlayerDirection;
 	private float PlayerDistance;
@@ -16,11 +16,10 @@ public class AttackPlayer : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+        player = GameManager.instance.player;
         this.SelfRigidbody = this.GetComponent<Rigidbody2D>();
         this.SelfCollider = this.GetComponent<CircleCollider2D>();
-        this.PlayerGameObject = GameObject.FindGameObjectWithTag("Player");
-        this.PlayerCollider = this.PlayerGameObject.GetComponent<CircleCollider2D>();
+        this.PlayerCollider = player.GetComponentInChildren<CircleCollider2D>();
         this.PlayerDirection = new Vector2(0.0f,0.0f);
         this.PlayerDistance = Mathf.Infinity;
         this.RangeOfAggression = 1.5f;
@@ -32,7 +31,7 @@ public class AttackPlayer : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         
-        this.PlayerDirection = this.PlayerGameObject.transform.position - this.transform.position;
+        this.PlayerDirection = this.player.transform.position - this.transform.position;
         this.PlayerDistance = this.PlayerDirection.magnitude;
 
         if(this.PlayerDistance < this.RangeOfAggression) {
@@ -45,9 +44,9 @@ public class AttackPlayer : MonoBehaviour {
         else SetStill();
     }
 	
-	void LoadFight() {
-
-		SceneManager.LoadScene("FightMode");
+	void LoadFight() 
+    {
+        Debug.Log("Fight");
 	}
 
 	void RunAtPlayer() {

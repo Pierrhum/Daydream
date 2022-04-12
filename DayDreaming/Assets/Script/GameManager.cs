@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Script de game manager
-// TODO SINGLETON !!!!
-// @author Maxime
 public class GameManager : MonoBehaviour
 {
+    // Singleton
+    [System.NonSerialized]
+    public static GameManager instance;
 
+    // Game
+    public Player player;
+
+    // UI
     public GameObject gameOverMenu;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        // TODO 
+        instance = this;
     }
 
     // Update is called once per frame
