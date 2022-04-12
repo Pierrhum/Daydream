@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68ab299e475bb2e46bbde592fd7b4a4c, type: 3}
   m_Name: Enemy
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 21300000, guid: daaaae34d0708154baf5d0353d396a41, type: 3}
-  Speed: 1.5
+  Sprite: {fileID: 21300000, guid: 98f2642b52e0df044b6a3fbddbec1a11, type: 3}
+  Speed: 1
   RangeOfAggression: 1.5
