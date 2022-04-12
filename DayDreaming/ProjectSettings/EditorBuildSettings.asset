@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7ffeecf2863f94baebf5a413cc65fb94
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: 
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Scene_Biome_Desert_ZAsY.unity
+    path: Assets/Scenes/Overworld.unity
     guid: 5a724eab55b0ddb4baad3dd6c8be5480
+  - enabled: 1
+    path: Assets/Scenes/FightMode.unity
+    guid: f89597fa468fa467d9b6b1298b2a717e
+  - enabled: 1
+    path: Assets/Scenes/Pierre.unity
+    guid: a6066a78513ac58498fea35624fe5c1c
+  - enabled: 1
+    path: Assets/Scenes/testSceneUI.unity
+    guid: b3ac7626dffa04b32a22d0b4e9249dfe
+  - enabled: 1
+    path: Assets/Scenes/Scene_Biome_Desert_ZAsY.unity
+    guid: beff4117302ab0346a644666f76514a2
   m_configObjects: {}
