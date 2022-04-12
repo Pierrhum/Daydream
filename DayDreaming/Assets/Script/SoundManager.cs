@@ -6,8 +6,5 @@ public class SoundManager : MonoBehaviour
 {
     public Music music;
 
-    void Start()
-    {
-        music.Play();
-    }
+    // TODO : Bruitages, Modifier volume son, etc..
 }

@@ -8,27 +8,22 @@ public class GameManager : MonoBehaviour
     [System.NonSerialized]
     public static GameManager instance;
 
+    // Managers
+    public SoundManager soundManager;
+    public UIManager uiManager;
+
     // Game
     public Player player;
-
-    // UI
-    public GameObject gameOverMenu;
 
     private void Awake()
     {
         instance = this;
+        soundManager.music.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
         // TODO
-    }
-
-    // Ouvre le game over menu 
-    // Pour le moment ce fait quand on clique sur
-    public void OpenGameOverMenu()
-    {
-        gameOverMenu.SetActive(true);
     }
 }
