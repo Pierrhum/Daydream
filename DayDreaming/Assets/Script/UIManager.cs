@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     // UI
     public GameObject gameOverMenu;
+    [SerializeField] private CardsFight CardsFight;
 
     // TODO : Animation
     public void OpenGameOverMenu()
@@ -15,5 +16,9 @@ public class UIManager : MonoBehaviour
 
     // TODO Menu Pause
     // TODO Menu combat
+    public void OpenFightMenu()
+    {
+        CardsFight.Open();
+    }
     // TODO HUD
 }

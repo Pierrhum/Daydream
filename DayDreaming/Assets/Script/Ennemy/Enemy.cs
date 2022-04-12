@@ -19,25 +19,29 @@ public class Enemy : AI
     }
     void Update()
     {
-        Vector2 PlayerDirection = Player.transform.position - this.transform.position;
-
-        float PlayerDistance = PlayerDirection.magnitude;
-
-        if (PlayerDistance < this.RangeOfAggression)
+        if (!Player.isFighting)
         {
+            Vector2 PlayerDirection = Player.transform.position - this.transform.position;
 
-            if (this.Collider.IsTouching(this.PlayerCollider)) LoadFight();
+            float PlayerDistance = PlayerDirection.magnitude;
 
-            else Move(PlayerDirection);
+            if (PlayerDistance < this.RangeOfAggression)
+            {
+
+                if (this.Collider.IsTouching(this.PlayerCollider)) LoadFight();
+
+                else Move(PlayerDirection);
+            }
+
+            else Stop();
         }
-
-        else Stop();
     }
 
     void LoadFight()
     {
         Stop();
-        Debug.Log("Fight");
+        Player.isFighting = true;
+        GameManager.instance.uiManager.OpenFightMenu();
     }
 
 }

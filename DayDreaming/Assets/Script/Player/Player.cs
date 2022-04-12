@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public Quest Quest;
 
+    public bool isFighting = false;
 
     private void Awake()
     {
