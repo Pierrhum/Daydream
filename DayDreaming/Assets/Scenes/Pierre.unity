@@ -633,6 +633,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &422920973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2646886987781537379, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 2646886988875908437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be6bd474f34cb840a576d4120b91f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &660566249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3581,6 +3592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1
   RangeOfAggression: 1.5
+  asset: {fileID: 11400000, guid: 1ac092a8fafdadf458b66b159c9a280f, type: 2}
 --- !u!58 &1651807876
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7838,6 +7850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883a6536b3ca6fc4088e014d70675867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverMenu: {fileID: 0}
 --- !u!1 &1847808825
 GameObject:
   m_ObjectHideFlags: 0
@@ -8963,6 +8976,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 148228170}
+    - target: {fileID: 2646886989467762501, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: uiManager
+      value: 
+      objectReference: {fileID: 1808336034}
+    - target: {fileID: 2646886989467762501, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 422920973}
     - target: {fileID: 2646886989467762522, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_Name
       value: GameManager
