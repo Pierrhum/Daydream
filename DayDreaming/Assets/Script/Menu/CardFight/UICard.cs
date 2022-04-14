@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Coffee.UIEffects;
 
 public class UICard : MonoBehaviour
 {
     public PlayerHand hand;
+    public UIShiny uIShiny;
     private int index;
     public int initialPosOnCurve;
 
     private Coroutine lastC;
     private static bool isDragging = false;
+    private bool isSelected = false;
 
     public void Setup(PlayerHand hand, int index, int initialPosOnCurve)
     {
+        uIShiny.enabled = false;
         this.hand = hand;
         this.index = index;
         this.initialPosOnCurve = initialPosOnCurve;
@@ -25,14 +29,20 @@ public class UICard : MonoBehaviour
     public void OnCardHover()
     {
         if(!isDragging)
+        {
             hand.MoveCards(index);
+            uIShiny.enabled = true;
+        }
     }
 
     // Ecarter les deux cartes autour
     public void OnCardExit()
     {
         if (!isDragging)
+        {
             hand.ResetCardPos();
+            uIShiny.enabled = false;
+        }
     }
     public void OnClick()
     {
@@ -43,6 +53,9 @@ public class UICard : MonoBehaviour
     public void OnDrag(BaseEventData data)
     {
         isDragging = true;
+        if(!isSelected)
+            StartCoroutine(CardSelected());
+
         PointerEventData pointerData = data as PointerEventData;
         transform.position += new Vector3(pointerData.delta.x, pointerData.delta.y, 0);
     }
@@ -50,6 +63,7 @@ public class UICard : MonoBehaviour
     public void OnDrop(BaseEventData data)
     {
         isDragging = false;
+        isSelected = false;
         SetPositionOnCurve(initialPosOnCurve);
     }
 
@@ -79,5 +93,27 @@ public class UICard : MonoBehaviour
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
             yield return new WaitForSeconds(Time.deltaTime);
         }
+    }
+
+    private IEnumerator CardSelected()
+    {
+        isSelected = true;
+        AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+        while (isDragging)
+        {
+            while (uIShiny.width < 1)
+            {
+                uIShiny.width += Time.deltaTime;
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+            yield return new WaitForSeconds(0.1f); 
+            while (uIShiny.width > 0.5f)
+            {
+                uIShiny.width -= Time.deltaTime;
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return null;
     }
 }

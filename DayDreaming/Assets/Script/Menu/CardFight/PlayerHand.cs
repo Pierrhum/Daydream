@@ -19,15 +19,18 @@ public class PlayerHand : MonoBehaviour
 
     private void InitCardPos()
     {
-        float cardGap = 1.0f / (UICards.Count + 1);
-        int id = 0;
-        foreach (UICard card in UICards)
+        if(bezier.curve != null)
         {
-            float gap = (id+1) * cardGap;
-            int curveIndex = (int)((bezier.curve.Count) * gap);
-            card.Setup(this, id, curveIndex);
-            card.SetPositionOnCurve(curveIndex);
-            id++;
+            float cardGap = 1.0f / (UICards.Count + 1);
+            int id = 0;
+            foreach (UICard card in UICards)
+            {
+                float gap = (id + 1) * cardGap;
+                int curveIndex = (int)((bezier.curve.Count) * gap);
+                card.Setup(this, id, curveIndex);
+                card.SetPositionOnCurve(curveIndex);
+                id++;
+            }
         }
     }
     public void MoveCards(int cardId)
