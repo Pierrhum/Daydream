@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff3c32d9f92e7249a87d44eaf07703b, type: 3}
   m_Name: Broken Reality
   m_EditorClassIdentifier: 
-  begin: {fileID: 0}
-  loop: {fileID: 0}
-  end: {fileID: 0}
+  begin: {fileID: 8300000, guid: 1eaaa491f1760fb48829f5804b4205aa, type: 3}
+  loop: {fileID: 8300000, guid: 7787a8ae34a873e4b98ef067274cc002, type: 3}
+  end: {fileID: 8300000, guid: 60a9e14fc609da6478e916842e49636d, type: 3}
