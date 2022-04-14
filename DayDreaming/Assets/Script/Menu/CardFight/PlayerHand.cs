@@ -5,74 +5,51 @@ using UnityEngine.EventSystems;
 
 public class PlayerHand : MonoBehaviour
 {
-    public Transform[] Cards;
-    [SerializeField]
-    private Transform[] controlPoints;
-
-
-    List<UICard> UICards;
+    public BezierCurve bezier;
+    public List<UICard> UICards;
 
     private void Awake()
     {
-        
+        InitCardPos();
     }
-
-    private Vector2 BezierCasteljau(List<Vector2> points, int i, int k, float u)
-    {
-        if (k == 0)
-        {
-                return points[i];
-        }
-        else return BezierCasteljau(points, i, k - 1, u) * (1 - u) + BezierCasteljau(points, i + 1, k - 1, u) * u;
-    }
-
-    private List<Vector2> BezierCurveByCasteljau(List<Vector2> tabPoints, long nbU)
-    {
-        List<Vector2> points = new List<Vector2>();
-        for(float k = 0f; k <= nbU; k++)
-        {
-            float u = k / nbU;
-            Vector2 point = BezierCasteljau(tabPoints, 0, tabPoints.Count-1, u);
-            points.Add(point);
-        }
-        return points;
-    }
-
     private void OnDrawGizmos()
     {
-        List<Vector2> pts = new List<Vector2>();
-        foreach (Transform pt in controlPoints)
+        InitCardPos();
+    }
+
+    private void InitCardPos()
+    {
+        float cardGap = 1.0f / (UICards.Count + 1);
+        int id = 0;
+        foreach (UICard card in UICards)
         {
-            pts.Add(new Vector2(pt.position.x, pt.position.y));
+            float gap = (id+1) * cardGap;
+            int curveIndex = (int)((bezier.curve.Count) * gap);
+            card.Setup(this, id, curveIndex);
+            card.SetPositionOnCurve(curveIndex);
+            id++;
         }
-        List<Vector2> curve = BezierCurveByCasteljau(pts, 50);
-        foreach (Vector2 pt in curve)
-            Gizmos.DrawSphere(pt, 10f);
+    }
+    public void MoveCards(int cardId)
+    {
+        float cardGap = (bezier.curve.Count) / (UICards.Count);
+        int rightIndex = (cardId == (UICards.Count - 1)) ? 0 : (int)(UICards[cardId + 1].initialPosOnCurve + (cardGap * 0.5f));
+        int leftIndex = (cardId == 0) ? 0 : (int)(UICards[cardId - 1].initialPosOnCurve  - (cardGap * 0.5f));
 
-        for(int i = 0; i < Cards.Length; i++)
+        if (cardId == 0)
+            UICards[cardId + 1].SetPositionOnCurve(rightIndex);
+        else if(cardId == UICards.Count-1)
+            UICards[cardId - 1].SetPositionOnCurve(leftIndex);
+        else
         {
-            float gap = (float)i / (Cards.Length-1);
-            int curveIndex = (int)((curve.Count-1) * gap);
-            Cards[i].transform.position = new Vector3(curve[curveIndex].x, curve[curveIndex].y, 0);
+            UICards[cardId + 1].SetPositionOnCurve(rightIndex);
+            UICards[cardId - 1].SetPositionOnCurve(leftIndex);
         }
     }
-
-    public void Start()
+    public void ResetCardPos()
     {
-        UICards = new List<UICard>(GetComponentsInChildren<UICard>());
+        foreach (UICard card in UICards)
+            card.SetPositionOnCurve(card.initialPosOnCurve);
     }
 
-
-
-    // Ecarter les deux cartes autour
-    public void OnCardHover(PointerEventData data)
-    {
-        Debug.Log("enter");
-    }
-
-    // Ecarter les deux cartes autour
-    public void OnCardExit(PointerEventData data)
-    {
-        Debug.Log("exit");
-    }
 }

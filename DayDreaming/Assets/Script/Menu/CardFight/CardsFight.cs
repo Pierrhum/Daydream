@@ -12,7 +12,8 @@ public class CardsFight : MonoBehaviour
     public Image EnemySprite;
     public GameObject PlayerHand;
 
-    private List<Image> fadeImages = new List<Image>();
+    [SerializeField]
+    private List<Image> fadeImages;
 
     private UIDissolve dissolve;
 
@@ -20,11 +21,6 @@ public class CardsFight : MonoBehaviour
     {
         dissolve = Overlay.GetComponent<UIDissolve>();
         dissolve.effectFactor = 1.0f;
-        // Fill the image list to fade
-        fadeImages.Add(PlayerSprite);
-        fadeImages.Add(EnemySprite);
-        foreach (Transform child in PlayerHand.transform)
-            fadeImages.Add(child.GetComponent<Image>());
 
         SetOpacity(0.0f);
         gameObject.SetActive(false);
