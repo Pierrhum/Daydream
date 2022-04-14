@@ -8783,14 +8783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2152926882792845942, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 2152926882792845942, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2646886989467762500, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -8842,22 +8834,6 @@ PrefabInstance:
     - target: {fileID: 2646886989467762522, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4101930575278188587, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.11446043
-      objectReference: {fileID: 0}
-    - target: {fileID: 5132555554475271445, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.058566805
-      objectReference: {fileID: 0}
-    - target: {fileID: 7589655397342612721, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -250
-      objectReference: {fileID: 0}
-    - target: {fileID: 7589655397342612721, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
