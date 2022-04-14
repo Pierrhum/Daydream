@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 // Must be a singleton
 public class Inventory : MonoBehaviour
@@ -9,6 +10,9 @@ public class Inventory : MonoBehaviour
     public List<CardAsset> cardInventory = new List<CardAsset>();
     public GameObject inventoryWindow;
     public TextMeshProUGUI textCategory;
+    public GameObject cardPannel;
+    public GameObject objectPannel;   
+
     private int choose = 0;
 
     // Implementation of singleton instance
@@ -39,14 +43,19 @@ public class Inventory : MonoBehaviour
 
     public void rightChoose()
     {
+        choose++;
         if(choose%2 == 0){
             textCategory.SetText("Card");
+            cardPannel.SetActive(true);
+            objectPannel.SetActive(false);
         }
         else{
             textCategory.SetText("Object");
+            cardPannel.SetActive(false);
+            objectPannel.SetActive(true);
         }
 
-        choose++;
+        
     }
 
     public void leftChoose()
@@ -60,4 +69,17 @@ public class Inventory : MonoBehaviour
 
         choose++;
     }
+
+    public void OnPointerEnter()
+    {   
+        Vector3 scaleChange = new Vector3(2.0f, 2.0f, .0f);
+        GameObject.FindWithTag("TestCard").transform.localScale = scaleChange;
+    }
+
+    public void OnPointerExit()
+    {
+        Vector3 scaleChange = new Vector3(1.0f, 1.0f, .0f);
+        GameObject.FindWithTag("TestCard").transform.localScale = scaleChange;  
+    }
+ 
 }
