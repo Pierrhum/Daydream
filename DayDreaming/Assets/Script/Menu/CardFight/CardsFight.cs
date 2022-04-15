@@ -10,11 +10,10 @@ public class CardsFight : MonoBehaviour
     public Image Overlay;
     public Image PlayerSprite;
     public Image EnemySprite;
-    public GameObject PlayerHand;
+    public PlayerHand PlayerHand;
 
     [SerializeField]
     private List<Image> fadeImages;
-
     private UIDissolve dissolve;
 
     public void Start()
@@ -30,7 +29,6 @@ public class CardsFight : MonoBehaviour
     public void Open()
     {
         gameObject.SetActive(true);
-        GameManager.instance.soundManager.music.Stop(false);
         music.Play();
         StartCoroutine(ShowCoroutine());
     }

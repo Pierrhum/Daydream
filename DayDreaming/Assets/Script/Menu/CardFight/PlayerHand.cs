@@ -5,20 +5,51 @@ using UnityEngine.EventSystems;
 
 public class PlayerHand : MonoBehaviour
 {
+    public Player player;
     public BezierCurve bezier;
     public List<UICard> UICards;
+
+    public UICard template;
 
     public Transform dropArea;
 
     public bool CanPlay = true;
+    private bool gizmos = true;
 
     private void Awake()
     {
+        InitCardUI();
         InitCardPos();
     }
     private void OnDrawGizmos()
     {
-        InitCardPos();
+        if(UICards.Count != player.Cards.Count)
+        {
+            foreach (UICard card in UICards)
+            {
+                UICards.Remove(card);
+                DestroyImmediate(card.gameObject);
+            }
+            InitCardUI();
+            InitCardPos();
+        }
+
+
+    }
+
+    private void InitCardUI()
+    {
+        if(player==null)
+            player = GameManager.instance.player;
+        int id = 0;
+        foreach (CardAsset card in player.Cards)
+        {
+            UICard uiCard = Instantiate(template, template.transform.position, template.transform.rotation, transform);
+            uiCard.Init(this, id, card);
+            id++;
+
+            UICards.Add(uiCard);
+        }
     }
 
     public void InitCardPos()
@@ -26,14 +57,12 @@ public class PlayerHand : MonoBehaviour
         if(CanPlay && bezier.curve != null)
         {
             float cardGap = 1.0f / (UICards.Count + 1);
-            int id = 0;
             foreach (UICard card in UICards)
             {
-                float gap = (id + 1) * cardGap;
+                float gap = (card.index + 1) * cardGap;
                 int curveIndex = (int)((bezier.curve.Count) * gap);
-                card.Setup(this, id, curveIndex);
+                card.SetInitialPos(curveIndex);
                 card.SetPositionOnCurve(curveIndex);
-                id++;
             }
         }
     }

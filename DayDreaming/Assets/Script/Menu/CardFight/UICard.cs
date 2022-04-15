@@ -3,24 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Coffee.UIEffects;
+using UnityEngine.UI;
 
 public class UICard : MonoBehaviour
 {
     public PlayerHand hand;
     public UIShiny uIShiny;
     public Texture DestroyTransition;
-    private int index;
+
     public int initialPosOnCurve;
+    public int index;
+    private CardAsset card;
 
     private Coroutine lastC;
     private static bool isDragging = false;
     private bool isSelected = false;
 
-    public void Setup(PlayerHand hand, int index, int initialPosOnCurve)
+    public void Init(PlayerHand hand, int index, CardAsset card)
     {
         uIShiny.enabled = false;
         this.hand = hand;
         this.index = index;
+        this.card = card;
+
+        GetComponent<Image>().sprite = card.Sprite;
+
+    }
+
+    public void SetInitialPos(int initialPosOnCurve)
+    {
         this.initialPosOnCurve = initialPosOnCurve;
 
         transform.position = new Vector3(hand.bezier.curve[initialPosOnCurve].x, hand.bezier.curve[initialPosOnCurve].y, 0);
