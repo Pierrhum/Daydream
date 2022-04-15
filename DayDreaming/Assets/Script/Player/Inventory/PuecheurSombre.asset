@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c167ab5cb74f2a14b9bc01868c397230, type: 3}
-  m_Name: Test
+  m_Name: PuecheurSombre
   m_EditorClassIdentifier: 
-  Name: Test
+  Name: Puecheur Sombre
   Sprite: {fileID: 21300000, guid: 94e1497170c112147bb64bb7fed4360e, type: 3}
   type: 0
+  description: "Puech est un encul\xE9"
