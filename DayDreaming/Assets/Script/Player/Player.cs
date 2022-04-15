@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
+    public List<CardAsset> Cards;
 
     public Quest Quest;
 

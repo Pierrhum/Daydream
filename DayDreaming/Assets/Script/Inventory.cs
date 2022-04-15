@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 // Must be a singleton
 public class Inventory : MonoBehaviour
 {
-    public List<CardAsset> cardInventory = new List<CardAsset>();
+    public Player player;
     public GameObject inventoryWindow;
     public TextMeshProUGUI textCategory;
     public GameObject textName;
@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour
     // Permet d'ajouter une carte à l'inventaire
     public void addCard(CardAsset cardToAdd)
     {
-        cardInventory.Add(cardToAdd);
+        player.Cards.Add(cardToAdd);
     }
 
     public void openInventory()
@@ -46,8 +46,8 @@ public class Inventory : MonoBehaviour
 
         for(int i = 0; i < 5; i++){
             GameObject card = GameObject.Find(i.ToString());
-            if(i < cardInventory.Count){
-                card.GetComponent<Button>().image.sprite = cardInventory[i].Sprite;
+            if(i < player.Cards.Count){
+                card.GetComponent<Button>().image.sprite = player.Cards[i].Sprite;
             }
             else{
                 card.SetActive(false);
@@ -113,8 +113,8 @@ public class Inventory : MonoBehaviour
         textName.SetActive(true);
         textDescription.SetActive(true);
         textClick.SetActive(false);
-        textName.GetComponent<TextMeshProUGUI>().SetText(cardInventory[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
-        textDescription.GetComponent<TextMeshProUGUI>().SetText(cardInventory[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
+        textName.GetComponent<TextMeshProUGUI>().SetText(player.Cards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
+        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.Cards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
     }
  
 }
