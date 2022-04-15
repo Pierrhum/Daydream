@@ -10,5 +10,6 @@ public class CardAsset : ScriptableObject
     public string Name;
     public Sprite Sprite;
     public Type type;
+    public string description;
 
 }
