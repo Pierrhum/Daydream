@@ -8,6 +8,7 @@ public class UICard : MonoBehaviour
 {
     public PlayerHand hand;
     public UIShiny uIShiny;
+    public Texture DestroyTransition;
     private int index;
     public int initialPosOnCurve;
 
@@ -64,7 +65,9 @@ public class UICard : MonoBehaviour
     {
         isDragging = false;
         isSelected = false;
-        SetPositionOnCurve(initialPosOnCurve);
+        if (RectTransformUtility.RectangleContainsScreenPoint(hand.dropArea as RectTransform, transform.position))
+            StartCoroutine(UseCard(0.5f));
+        else SetPositionOnCurve(initialPosOnCurve);
     }
 
     public void SetPositionOnCurve(int index)
@@ -115,5 +118,30 @@ public class UICard : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         yield return null;
+    }
+
+    private IEnumerator UseCard(float duration)
+    {
+        Destroy(uIShiny);
+        yield return new WaitForSeconds(Time.deltaTime);
+        UIDissolve dissolve = gameObject.AddComponent<UIDissolve>();
+        dissolve.transitionTexture = DestroyTransition;
+        dissolve.effectFactor = 0;
+
+        float timer = 0f;
+        AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+
+        while (timer <= duration)
+        {
+            timer += Time.deltaTime;
+            dissolve.effectFactor = Mathf.Lerp(0f, 1f, smoothCurve.Evaluate(timer / duration));
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        hand.UICards.Remove(this);
+        hand.InitCardPos();
+
+        // Apply card effect
+
+        Destroy(gameObject);
     }
 }

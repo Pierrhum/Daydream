@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hand: {fileID: 0}
   uIShiny: {fileID: 17371810453120834}
+  DestroyTransition: {fileID: 2800000, guid: a74d3d4a498866d44b094d3d3717604d, type: 3}
   initialPosOnCurve: 0
 --- !u!114 &7377070842048169197
 MonoBehaviour:

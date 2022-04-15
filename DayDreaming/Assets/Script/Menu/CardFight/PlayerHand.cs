@@ -8,6 +8,8 @@ public class PlayerHand : MonoBehaviour
     public BezierCurve bezier;
     public List<UICard> UICards;
 
+    public Transform dropArea;
+
     private void Awake()
     {
         InitCardPos();
@@ -17,7 +19,7 @@ public class PlayerHand : MonoBehaviour
         InitCardPos();
     }
 
-    private void InitCardPos()
+    public void InitCardPos()
     {
         if(bezier.curve != null)
         {
