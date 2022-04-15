@@ -18,6 +18,14 @@ public class PlayerHand : MonoBehaviour
 
     private void Awake()
     {
+        if(UICards.Count > 0)
+        {
+            foreach (UICard card in UICards)
+            {
+                UICards.Remove(card);
+                DestroyImmediate(card.gameObject);
+            }
+        }
         InitCardUI();
         InitCardPos();
     }
