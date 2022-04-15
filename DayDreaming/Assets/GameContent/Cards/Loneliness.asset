@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c167ab5cb74f2a14b9bc01868c397230, type: 3}
   m_Name: Loneliness
   m_EditorClassIdentifier: 
-  Name: 
-  Sprite: {fileID: 0}
+  Name: Loneliness
+  Sprite: {fileID: 21300000, guid: ed3a960e13476bd4ca2137e501a6fda8, type: 3}
   type: 0
   description: 

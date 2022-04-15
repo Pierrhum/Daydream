@@ -14,32 +14,37 @@ public class PlayerHand : MonoBehaviour
     public Transform dropArea;
 
     public bool CanPlay = true;
-    private bool gizmos = true;
+    public bool DebugCards = true;
 
     private void Awake()
     {
         if(UICards.Count > 0)
         {
             foreach (UICard card in UICards)
-            {
-                UICards.Remove(card);
                 DestroyImmediate(card.gameObject);
-            }
+            UICards.Clear();
         }
         InitCardUI();
         InitCardPos();
     }
     private void OnDrawGizmos()
     {
-        if(UICards.Count != player.Cards.Count)
+        if(DebugCards)
         {
-            foreach (UICard card in UICards)
+            UICard[] cards = GetComponentsInChildren<UICard>();
+            if (cards.Length != player.Cards.Count)
             {
-                UICards.Remove(card);
-                DestroyImmediate(card.gameObject);
+                foreach (UICard card in cards)
+                {
+                    if (!card.Equals(template))
+                    {
+                        UICards.Remove(card);
+                        DestroyImmediate(card.gameObject);
+                    }
+                }
+                InitCardUI();
+                InitCardPos();
             }
-            InitCardUI();
-            InitCardPos();
         }
 
 
@@ -49,12 +54,10 @@ public class PlayerHand : MonoBehaviour
     {
         if(player==null)
             player = GameManager.instance.player;
-        int id = 0;
         foreach (CardAsset card in player.Cards)
         {
             UICard uiCard = Instantiate(template, template.transform.position, template.transform.rotation, transform);
-            uiCard.Init(this, id, card);
-            id++;
+            uiCard.Init(this,card);
 
             UICards.Add(uiCard);
         }
@@ -64,13 +67,15 @@ public class PlayerHand : MonoBehaviour
     {
         if(CanPlay && bezier.curve != null)
         {
+            int id = 0;
             float cardGap = 1.0f / (UICards.Count + 1);
             foreach (UICard card in UICards)
             {
-                float gap = (card.index + 1) * cardGap;
+                float gap = (id + 1) * cardGap;
                 int curveIndex = (int)((bezier.curve.Count) * gap);
-                card.SetInitialPos(curveIndex);
+                card.SetInitialPos(id, curveIndex);
                 card.SetPositionOnCurve(curveIndex);
+                id++;
             }
         }
     }

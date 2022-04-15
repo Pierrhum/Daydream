@@ -20,7 +20,8 @@ public class CardsFight : MonoBehaviour
     {
         dissolve = Overlay.GetComponent<UIDissolve>();
         dissolve.effectFactor = 1.0f;
-
+        foreach (UICard card in PlayerHand.UICards)
+            fadeImages.Add(card.GetComponent<Image>());
         SetOpacity(0.0f);
         gameObject.SetActive(false);
 

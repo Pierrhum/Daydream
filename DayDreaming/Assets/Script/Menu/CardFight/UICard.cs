@@ -19,19 +19,19 @@ public class UICard : MonoBehaviour
     private static bool isDragging = false;
     private bool isSelected = false;
 
-    public void Init(PlayerHand hand, int index, CardAsset card)
+    public void Init(PlayerHand hand, CardAsset card)
     {
         uIShiny.enabled = false;
         this.hand = hand;
-        this.index = index;
         this.card = card;
 
         GetComponent<Image>().sprite = card.Sprite;
 
     }
 
-    public void SetInitialPos(int initialPosOnCurve)
+    public void SetInitialPos(int index, int initialPosOnCurve)
     {
+        this.index = index;
         this.initialPosOnCurve = initialPosOnCurve;
 
         transform.position = new Vector3(hand.bezier.curve[initialPosOnCurve].x, hand.bezier.curve[initialPosOnCurve].y, 0);
@@ -157,7 +157,7 @@ public class UICard : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
         // Apply card effect
-
+        card.ApplyEffect(hand.player, null);
 
         hand.CanPlay = true;
         hand.InitCardPos();

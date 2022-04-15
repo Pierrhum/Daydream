@@ -5,11 +5,39 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class CardAsset : ScriptableObject
 {
-    public enum Type { COMMON, RARE, LEGENDARY, UNIQUE };
+    public enum Rarity { COMMON, RARE, LEGENDARY, UNIQUE };
 
     public string Name;
     public Sprite Sprite;
-    public Type type;
+    public Rarity rarity;
     public string description;
 
+    public void ApplyEffect(Player player, Enemy enemy)
+    {
+        // asset filename
+        switch(name)
+        {
+            case "FlyingCarpet":
+                Debug.Log("Todo : Flying Carpet");
+                break;
+            case "Resting":
+                Debug.Log("Todo : Resting");
+                break;
+            case "Loneliness":
+                Debug.Log("Todo : Loneliness");
+                break;
+            case "Rooted":
+                Debug.Log("Todo : Rooted");
+                break;
+            case "SinisterPath":
+                Debug.Log("Todo : Sinister Path");
+                break;
+            case "Watched":
+                Debug.Log("Todo : Watched");
+                break;
+            default:
+                Debug.Log(name + " - card effect uninitialized");
+                break;
+        }
+    }
 }
