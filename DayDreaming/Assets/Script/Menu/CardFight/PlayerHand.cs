@@ -10,6 +10,8 @@ public class PlayerHand : MonoBehaviour
 
     public Transform dropArea;
 
+    public bool CanPlay = true;
+
     private void Awake()
     {
         InitCardPos();
@@ -21,7 +23,7 @@ public class PlayerHand : MonoBehaviour
 
     public void InitCardPos()
     {
-        if(bezier.curve != null)
+        if(CanPlay && bezier.curve != null)
         {
             float cardGap = 1.0f / (UICards.Count + 1);
             int id = 0;
@@ -37,24 +39,30 @@ public class PlayerHand : MonoBehaviour
     }
     public void MoveCards(int cardId)
     {
-        float cardGap = (bezier.curve.Count) / (UICards.Count);
-        int rightIndex = (cardId == (UICards.Count - 1)) ? 0 : (int)(UICards[cardId + 1].initialPosOnCurve + (cardGap * 0.5f));
-        int leftIndex = (cardId == 0) ? 0 : (int)(UICards[cardId - 1].initialPosOnCurve  - (cardGap * 0.5f));
-
-        if (cardId == 0)
-            UICards[cardId + 1].SetPositionOnCurve(rightIndex);
-        else if(cardId == UICards.Count-1)
-            UICards[cardId - 1].SetPositionOnCurve(leftIndex);
-        else
+        if(CanPlay && UICards.Count > 1)
         {
-            UICards[cardId + 1].SetPositionOnCurve(rightIndex);
-            UICards[cardId - 1].SetPositionOnCurve(leftIndex);
+            float cardGap = (bezier.curve.Count) / (UICards.Count);
+            int rightIndex = (cardId == (UICards.Count - 1)) ? 0 : (int)(UICards[cardId + 1].initialPosOnCurve + (cardGap * 0.5f));
+            int leftIndex = (cardId == 0) ? 0 : (int)(UICards[cardId - 1].initialPosOnCurve - (cardGap * 0.5f));
+
+            if (cardId == 0)
+                UICards[cardId + 1].SetPositionOnCurve(rightIndex);
+            else if (cardId == UICards.Count - 1)
+                UICards[cardId - 1].SetPositionOnCurve(leftIndex);
+            else
+            {
+                UICards[cardId + 1].SetPositionOnCurve(rightIndex);
+                UICards[cardId - 1].SetPositionOnCurve(leftIndex);
+            }
         }
     }
     public void ResetCardPos()
     {
-        foreach (UICard card in UICards)
-            card.SetPositionOnCurve(card.initialPosOnCurve);
+        if(CanPlay)
+        {
+            foreach (UICard card in UICards)
+                card.SetPositionOnCurve(card.initialPosOnCurve);
+        }
     }
 
 }

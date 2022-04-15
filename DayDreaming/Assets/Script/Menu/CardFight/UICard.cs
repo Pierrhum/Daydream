@@ -29,7 +29,7 @@ public class UICard : MonoBehaviour
     // Ecarter les deux cartes autour
     public void OnCardHover()
     {
-        if(!isDragging)
+        if(hand.CanPlay && !isDragging)
         {
             hand.MoveCards(index);
             uIShiny.enabled = true;
@@ -39,7 +39,7 @@ public class UICard : MonoBehaviour
     // Ecarter les deux cartes autour
     public void OnCardExit()
     {
-        if (!isDragging)
+        if (hand.CanPlay && !isDragging)
         {
             hand.ResetCardPos();
             uIShiny.enabled = false;
@@ -47,27 +47,33 @@ public class UICard : MonoBehaviour
     }
     public void OnClick()
     {
-        if (!isDragging)
+        if (hand.CanPlay && !isDragging)
             Debug.Log("click");
     }
 
     public void OnDrag(BaseEventData data)
     {
-        isDragging = true;
-        if(!isSelected)
-            StartCoroutine(CardSelected());
+        if(hand.CanPlay)
+        {
+            isDragging = true;
+            if (hand.CanPlay && !isSelected)
+                StartCoroutine(CardSelected());
 
-        PointerEventData pointerData = data as PointerEventData;
-        transform.position += new Vector3(pointerData.delta.x, pointerData.delta.y, 0);
+            PointerEventData pointerData = data as PointerEventData;
+            transform.position += new Vector3(pointerData.delta.x, pointerData.delta.y, 0);
+        }
     }
 
     public void OnDrop(BaseEventData data)
     {
-        isDragging = false;
-        isSelected = false;
-        if (RectTransformUtility.RectangleContainsScreenPoint(hand.dropArea as RectTransform, transform.position))
-            StartCoroutine(UseCard(0.5f));
-        else SetPositionOnCurve(initialPosOnCurve);
+        if (hand.CanPlay)
+        {
+            isDragging = false;
+            isSelected = false;
+            if (RectTransformUtility.RectangleContainsScreenPoint(hand.dropArea as RectTransform, transform.position))
+                StartCoroutine(UseCard(0.5f));
+            else SetPositionOnCurve(initialPosOnCurve);
+        }
     }
 
     public void SetPositionOnCurve(int index)
@@ -122,6 +128,8 @@ public class UICard : MonoBehaviour
 
     private IEnumerator UseCard(float duration)
     {
+        hand.CanPlay = false;
+        hand.UICards.Remove(this);
         Destroy(uIShiny);
         yield return new WaitForSeconds(Time.deltaTime);
         UIDissolve dissolve = gameObject.AddComponent<UIDissolve>();
@@ -137,11 +145,11 @@ public class UICard : MonoBehaviour
             dissolve.effectFactor = Mathf.Lerp(0f, 1f, smoothCurve.Evaluate(timer / duration));
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        hand.UICards.Remove(this);
-        hand.InitCardPos();
-
         // Apply card effect
 
+
+        hand.CanPlay = true;
+        hand.InitCardPos();
         Destroy(gameObject);
     }
 }
