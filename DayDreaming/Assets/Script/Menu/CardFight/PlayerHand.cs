@@ -13,7 +13,6 @@ public class PlayerHand : MonoBehaviour
 
     public Transform dropArea;
 
-    public bool CanPlay = true;
     public bool DebugCards = true;
 
     private void Awake()
@@ -69,7 +68,7 @@ public class PlayerHand : MonoBehaviour
 
     public void InitCardPos()
     {
-        if(CanPlay && bezier.curve != null)
+        if(bezier.curve != null)
         {
             int id = 0;
             float cardGap = 1.0f / (UICards.Count + 1);
@@ -85,7 +84,7 @@ public class PlayerHand : MonoBehaviour
     }
     public void MoveCards(int cardId)
     {
-        if(CanPlay && UICards.Count > 1)
+        if(player.CanPlay() && UICards.Count > 1)
         {
             float cardGap = (bezier.curve.Count) / (UICards.Count);
             int rightIndex = (cardId == (UICards.Count - 1)) ? 0 : (int)(UICards[cardId + 1].initialPosOnCurve + (cardGap * 0.5f));
@@ -104,11 +103,8 @@ public class PlayerHand : MonoBehaviour
     }
     public void ResetCardPos()
     {
-        if(CanPlay)
-        {
-            foreach (UICard card in UICards)
-                card.SetPositionOnCurve(card.initialPosOnCurve);
-        }
+        foreach (UICard card in UICards)
+            card.SetPositionOnCurve(card.initialPosOnCurve);
     }
 
 }

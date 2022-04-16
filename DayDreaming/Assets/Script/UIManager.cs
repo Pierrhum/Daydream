@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 {
     // UI
     public GameObject gameOverMenu;
-    [SerializeField] private CardsFight CardsFight;
+    public CardsFight CardsFight;
 
     // TODO : Animation
     public void OpenGameOverMenu()

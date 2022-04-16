@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Player : Fighter
 {
@@ -18,6 +19,16 @@ public class Player : Fighter
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
+
+    /************ COMBAT ***********/
+
+    public override void CanPlay(bool canPlay)
+    {
+        base.CanPlay(canPlay);
+        foreach (UICard uiCard in GameManager.instance.uiManager.CardsFight.PlayerHand.UICards)
+            uiCard.GetComponent<Button>().interactable = canPlay;
+    }
+
     public void NextQuest()
     {
         if (Quest.Next == null)

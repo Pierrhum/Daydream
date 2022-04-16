@@ -49,6 +49,22 @@ public class Enemy : Fighter
     {
         base.Die();
         GameManager.instance.uiManager.CloseFightMenu();
+        Destroy(gameObject);
+    }
+
+    public void Attack()
+    {
+        if(Cards.Count > 0)
+        {
+            int random = Random.Range(0, Cards.Count);
+            CardAsset card = Cards[random];
+            card.ApplyEffect(this, GameManager.instance.player);
+            Cards.Remove(card);
+
+            GameManager.instance.uiManager.CardsFight.UpdateProgressBars();
+            GameManager.instance.uiManager.CardsFight.EndTurn();
+            GameManager.instance.player.CanPlay(true);
+        }
     }
 
 }

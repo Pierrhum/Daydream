@@ -15,6 +15,7 @@ public class CardsFight : MonoBehaviour
 
     public ProgressBar PlayerBar;
     public ProgressBar EnemyBar;
+    public int Turn;
 
     [SerializeField]
     private List<Image> fadeImages;
@@ -33,6 +34,7 @@ public class CardsFight : MonoBehaviour
     public void Open(Enemy Enemy)
     {
         this.Enemy = Enemy;
+        this.Turn = 0;
         gameObject.SetActive(true);
 
         UpdateProgressBars();
@@ -59,6 +61,7 @@ public class CardsFight : MonoBehaviour
         yield return StartCoroutine(Utils.UI.Fade(fadeImages, 0.0f, 1.0f, 0.2f));
         PlayerBar.SetOpacity(1.0f);
         EnemyBar.SetOpacity(1.0f);
+        PlayerHand.player.CanPlay(true);
     }
 
     private IEnumerator HideCoroutine()
@@ -84,5 +87,17 @@ public class CardsFight : MonoBehaviour
             Utils.UI.SetImageOpacity(img, a);
         PlayerBar.SetOpacity(a);
         EnemyBar.SetOpacity(a);
+    }
+
+    public void EndTurn()
+    {
+        Turn++;
+        // Application des status associés au nouveau tour
+        List<Status> PlayerStatus;
+        List<Status> EnemyStatus;
+        if (PlayerHand.player.status.TryGetValue(Turn, out PlayerStatus))
+            PlayerStatus.ForEach(s => s.ApplyStatus());
+        if (Enemy.status.TryGetValue(Turn, out EnemyStatus))
+            EnemyStatus.ForEach(s => s.ApplyStatus());
     }
 }

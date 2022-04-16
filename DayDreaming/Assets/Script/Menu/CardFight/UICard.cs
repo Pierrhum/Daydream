@@ -20,6 +20,7 @@ public class UICard : MonoBehaviour
     private static bool isDragging = false;
     private bool isSelected = false;
     private PlayerHand hand;
+    private Player player;
 
     public void Init(CardsFight CardsFightUI, CardAsset card)
     {
@@ -27,6 +28,7 @@ public class UICard : MonoBehaviour
         this.CardsFightUI = CardsFightUI;
         this.card = card;
         this.hand = CardsFightUI.PlayerHand;
+        this.player = hand.player;
 
         GetComponent<Image>().sprite = card.Sprite;
 
@@ -44,7 +46,7 @@ public class UICard : MonoBehaviour
     // Ecarter les deux cartes autour
     public void OnCardHover()
     {
-        if(CardsFightUI.PlayerHand.CanPlay && !isDragging)
+        if(player.CanPlay() && !isDragging)
         {
             InfoPopUp.Show(card);
             hand.MoveCards(index);
@@ -55,7 +57,7 @@ public class UICard : MonoBehaviour
     // Ecarter les deux cartes autour
     public void OnCardExit()
     {
-        if (hand.CanPlay && !isDragging)
+        if (player.CanPlay() && !isDragging)
         {
             InfoPopUp.Hide();
             hand.ResetCardPos();
@@ -64,17 +66,17 @@ public class UICard : MonoBehaviour
     }
     public void OnClick()
     {
-        if (hand.CanPlay && !isDragging)
+        if (player.CanPlay() && !isDragging)
             Debug.Log("click");
     }
 
     public void OnDrag(BaseEventData data)
     {
-        if(hand.CanPlay)
+        if(player.CanPlay())
         {
             InfoPopUp.Hide();
             isDragging = true;
-            if (hand.CanPlay && !isSelected)
+            if (player.CanPlay() && !isSelected)
                 StartCoroutine(CardSelected());
 
             PointerEventData pointerData = data as PointerEventData;
@@ -84,7 +86,7 @@ public class UICard : MonoBehaviour
 
     public void OnDrop(BaseEventData data)
     {
-        if (hand.CanPlay)
+        if (player.CanPlay())
         {
             isDragging = false;
             isSelected = false;
@@ -146,7 +148,7 @@ public class UICard : MonoBehaviour
 
     private IEnumerator UseCard(float duration)
     {
-        hand.CanPlay = false;
+        player.CanPlay(false);
         hand.UICards.Remove(this);
         Destroy(uIShiny);
         yield return new WaitForSeconds(Time.deltaTime);
@@ -166,9 +168,12 @@ public class UICard : MonoBehaviour
         // Apply card effect
         card.ApplyEffect(hand.player, CardsFightUI.Enemy);
         CardsFightUI.UpdateProgressBars();
-
-        hand.CanPlay = true;
         hand.InitCardPos();
+
+        CardsFightUI.Enemy.CanPlay(true);
+        CardsFightUI.Enemy.Attack();
+
+
         Destroy(gameObject);
     }
 }
