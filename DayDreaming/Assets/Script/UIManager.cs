@@ -21,5 +21,10 @@ public class UIManager : MonoBehaviour
         GameManager.instance.soundManager.music.Stop(false);
         CardsFight.Open(Enemy);
     }
+
+    public void CloseFightMenu()
+    {
+        CardsFight.Close();
+    }
     // TODO HUD
 }

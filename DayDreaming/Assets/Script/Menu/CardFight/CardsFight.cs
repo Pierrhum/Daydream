@@ -40,10 +40,16 @@ public class CardsFight : MonoBehaviour
         StartCoroutine(ShowCoroutine());
     }
 
+    public void Close()
+    {
+        music.Stop(true);
+        StartCoroutine(HideCoroutine());
+    }
+
     public void UpdateProgressBars()
     {
         PlayerBar.SetFill(PlayerHand.player.CurrentHP / PlayerHand.player.MaxHP);
-        EnemyBar.SetFill(Enemy.Fighter.CurrentHP / Enemy.Fighter.MaxHP);
+        EnemyBar.SetFill(Enemy.CurrentHP / Enemy.MaxHP);
     }
 
     private IEnumerator ShowCoroutine()
@@ -53,6 +59,23 @@ public class CardsFight : MonoBehaviour
         yield return StartCoroutine(Utils.UI.Fade(fadeImages, 0.0f, 1.0f, 0.2f));
         PlayerBar.SetOpacity(1.0f);
         EnemyBar.SetOpacity(1.0f);
+    }
+
+    private IEnumerator HideCoroutine()
+    {
+        fadeImages.Clear();
+        foreach (UICard card in PlayerHand.UICards)
+            fadeImages.Add(card.GetComponent<Image>());
+
+        yield return StartCoroutine(Utils.UI.Fade(fadeImages, 1.0f, 0.0f, 0.2f));
+        PlayerBar.SetOpacity(0.0f);
+        EnemyBar.SetOpacity(0.0f);
+        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { PlayerSprite, EnemySprite }, 1.0f, 0.0f, 0.5f));
+
+        yield return StartCoroutine(Utils.UI.Dissolve(dissolve, 0.0f, 1.0f, 1.0f));
+
+        GameManager.instance.soundManager.music.Play();
+        gameObject.SetActive(false);
     }
 
     private void SetOpacity(float a)

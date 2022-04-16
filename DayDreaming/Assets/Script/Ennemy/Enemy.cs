@@ -2,47 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : AI
+public class Enemy : Fighter
 {
     // Serialized Fields
     public float RangeOfAggression = 1.5f;
     public EnemyAssets asset;
-    public Fighter Fighter;
+    public AI ai;
 
     private void Awake()
     {
         if(asset != null)
         {
-            Speed = asset.Speed;
+            ai.Speed = asset.Speed;
             GetComponent<SpriteRenderer>().sprite = asset.Sprite;
             RangeOfAggression = asset.RangeOfAggression;
         }
     }
     void Update()
     {
-        if (!Player.isFighting)
+        if (!GameManager.instance.player.isFighting)
         {
-            Vector2 PlayerDirection = Player.transform.position - this.transform.position;
+            Vector2 PlayerDirection = GameManager.instance.player.transform.position - this.transform.position;
 
             float PlayerDistance = PlayerDirection.magnitude;
 
             if (PlayerDistance < this.RangeOfAggression)
             {
 
-                if (this.Collider.IsTouching(this.PlayerCollider)) LoadFight();
+                if (ai.Collider.IsTouching(ai.PlayerCollider)) LoadFight();
 
-                else Move(PlayerDirection);
+                else ai.Move(PlayerDirection);
             }
 
-            else Stop();
+            else ai.Stop();
         }
     }
 
     void LoadFight()
     {
-        Stop();
-        Player.isFighting = true;
+        ai.Stop();
+        GameManager.instance.player.isFighting = true;
         GameManager.instance.uiManager.OpenFightMenu(this);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        GameManager.instance.uiManager.CloseFightMenu();
     }
 
 }

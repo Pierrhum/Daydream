@@ -6200,10 +6200,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dee346a22a45045b29f3b2a69d8fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
+  CurrentHP: 10
+  MaxHP: 10
+  Cards:
+  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+  - {fileID: 11400000, guid: cbf4b1ca75dd4174ba3859786bf43104, type: 2}
+  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
   RangeOfAggression: 1.5
   asset: {fileID: 11400000, guid: 1ac092a8fafdadf458b66b159c9a280f, type: 2}
-  Fighter: {fileID: 1651807878}
+  ai: {fileID: 1651807878}
 --- !u!58 &1651807876
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6244,15 +6249,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1651807872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f2b8016f854feb4bb2c92a126367122, type: 3}
+  m_Script: {fileID: 11500000, guid: a7310c184df5d624188d03a296241824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHP: 10
-  MaxHP: 10
-  Cards:
-  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
-  - {fileID: 11400000, guid: cbf4b1ca75dd4174ba3859786bf43104, type: 2}
-  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+  Collider: {fileID: 0}
+  PlayerCollider: {fileID: 0}
+  Rigidbody: {fileID: 0}
+  Player: {fileID: 0}
+  Speed: 1
 --- !u!1 &1653264841
 GameObject:
   m_ObjectHideFlags: 0

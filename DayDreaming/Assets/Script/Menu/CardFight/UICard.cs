@@ -164,7 +164,7 @@ public class UICard : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
         // Apply card effect
-        card.ApplyEffect(hand.player, CardsFightUI.Enemy.Fighter);
+        card.ApplyEffect(hand.player, CardsFightUI.Enemy);
         CardsFightUI.UpdateProgressBars();
 
         hand.CanPlay = true;

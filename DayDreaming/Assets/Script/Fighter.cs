@@ -14,4 +14,16 @@ public class Fighter : MonoBehaviour
         if (CurrentHP > MaxHP)
             CurrentHP = MaxHP;
     }
+
+    public void Hurt(int amount)
+    {
+        CurrentHP -= amount;
+        if (CurrentHP <= 0)
+            Die();
+    }
+
+    public virtual void Die()
+    {
+
+    }
 }

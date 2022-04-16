@@ -26,7 +26,7 @@ public class CardAsset : ScriptableObject
                 break;
 
             case "Loneliness":
-                Debug.Log("Todo : Loneliness");
+                opponent.Hurt(5);
                 break;
 
             case "Rooted":
