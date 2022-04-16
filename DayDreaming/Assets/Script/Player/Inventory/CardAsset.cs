@@ -16,7 +16,6 @@ public class CardAsset : ScriptableObject
     {
         int Turn = GameManager.instance.uiManager.CardsFight.Turn;
 
-        Debug.Log(fighter + "use " + name + " against " + opponent);
         // asset filename
         switch (name)
         {
