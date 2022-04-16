@@ -43,10 +43,11 @@ public class Fighter : MonoBehaviour
 
             if(!this.canPlay)
             {
-                Debug.Log(name + " skipped");
                 if (this is Player) GameManager.instance.uiManager.CardsFight.Enemy.CanPlay(true);
                 else if (this is Enemy) GameManager.instance.player.CanPlay(true);
             }
+
+            status.Remove(GameManager.instance.uiManager.CardsFight.Turn);
         }
     }
 

@@ -10,6 +10,7 @@ public class CardsFight : MonoBehaviour
     public Image Overlay;
     public Image PlayerSprite;
     public Image EnemySprite;
+    public Image EnemyCard;
     public PlayerHand PlayerHand;
     public Enemy Enemy;
 
@@ -79,6 +80,14 @@ public class CardsFight : MonoBehaviour
 
         GameManager.instance.soundManager.music.Play();
         gameObject.SetActive(false);
+    }
+
+    public IEnumerator ShowEnemyCard(CardAsset card)
+    {
+        EnemyCard.sprite = card.Sprite;
+        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 0.0f, 1.0f, 0.5f));
+        yield return new WaitForSeconds(2f);
+        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 1.0f, 0.0f, 0.5f));
     }
 
     private void SetOpacity(float a)
