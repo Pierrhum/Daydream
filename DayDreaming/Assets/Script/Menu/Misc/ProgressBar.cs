@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
     public Image Fill;
+    public GameObject Status;
+    public StatusUI StatusTemplate;
+
+    private void Awake()
+    {
+        // Reset Status Bar
+        foreach (Transform status in Status.transform)
+            Destroy(status.gameObject);
+    }
 
     public void SetOpacity(float a)
     {
@@ -16,6 +26,22 @@ public class ProgressBar : MonoBehaviour
     public void SetFill(float fillAmount)
     {
         StartCoroutine(FillCoroutine(Fill.fillAmount, fillAmount, 0.2f));
+    }
+
+    public void SetStatus(Fighter fighter)
+    {
+        // Reset Status Bar
+        foreach (Transform status in Status.transform)
+            Destroy(status.gameObject);
+
+        foreach (KeyValuePair<int, List<Status>> status in fighter.status)
+        {
+            foreach(Status s in status.Value)
+            {
+                StatusUI StatusUI = Instantiate(StatusTemplate, StatusTemplate.transform.position, StatusTemplate.transform.rotation, Status.transform);
+                StatusUI.UpdateStatusUI(s.GetSprite(), (status.Key - GameManager.instance.uiManager.CardsFight.Turn));
+            }
+        }
     }
 
     private IEnumerator FillCoroutine(float start, float end, float duration)

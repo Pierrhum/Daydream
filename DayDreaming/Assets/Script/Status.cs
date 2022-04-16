@@ -31,4 +31,22 @@ public class Status
                 break;
         }
     }
+
+    public Sprite GetSprite()
+    {
+        Texture2D tex = null;
+        switch (type)
+        {
+            case Type.Heal:
+                tex = Resources.Load<Texture2D>("Sprite/Status/Heal");
+                break;
+            case Type.Hurt:
+                tex = Resources.Load<Texture2D>("Sprite/Status/poison");
+                break;
+            case Type.Skip:
+                tex = Resources.Load<Texture2D>("Sprite/Status/debuff");
+                break;
+        }
+        return Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0, 0));
+    }
 }

@@ -172,8 +172,9 @@ public class UICard : MonoBehaviour
 
         CardsFightUI.Enemy.CanPlay(true);
         CardsFightUI.Enemy.Attack();
+        CardsFightUI.UpdateProgressBars();
 
-
+        CardsFightUI.EndTurn();
         Destroy(gameObject);
     }
 }

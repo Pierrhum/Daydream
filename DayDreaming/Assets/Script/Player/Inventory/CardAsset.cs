@@ -20,8 +20,9 @@ public class CardAsset : ScriptableObject
         // asset filename
         switch (name)
         {
+            // Debuff
             case "FlyingCarpet":
-                Debug.Log("Todo : Flying Carpet");
+                fighter.status.Clear();
                 break;
 
             // Cure 20% of your health

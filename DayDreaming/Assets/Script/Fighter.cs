@@ -37,17 +37,25 @@ public class Fighter : MonoBehaviour
         this.canPlay = canPlay;
         if(canPlay)
         {
-            List<Status> StatusOfThisTurn;
-            if (status.TryGetValue(GameManager.instance.uiManager.CardsFight.Turn, out StatusOfThisTurn))
+            CardsFight CardsFightUI = GameManager.instance.uiManager.CardsFight;
+
+            List <Status> StatusOfThisTurn;
+            if (status.TryGetValue(CardsFightUI.Turn, out StatusOfThisTurn))
                 StatusOfThisTurn.ForEach(s => s.ApplyStatus());
 
-            if(!this.canPlay)
+            status.Remove(CardsFightUI.Turn);
+
+            if (this is Player)
             {
-                if (this is Player) GameManager.instance.uiManager.CardsFight.Enemy.CanPlay(true);
-                else if (this is Enemy) GameManager.instance.player.CanPlay(true);
+                CardsFightUI.PlayerBar.SetStatus(this);
+                if (!this.canPlay) CardsFightUI.Enemy.CanPlay(true);
             }
 
-            status.Remove(GameManager.instance.uiManager.CardsFight.Turn);
+            else if(this is Enemy)
+            {
+                CardsFightUI.EnemyBar.SetStatus(this);
+                if (!this.canPlay) CardsFightUI.PlayerHand.player.CanPlay(true);
+            }
         }
     }
 

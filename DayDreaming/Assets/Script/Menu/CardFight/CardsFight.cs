@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Coffee.UIEffects;
+using TMPro;
 
 public class CardsFight : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class CardsFight : MonoBehaviour
 
     public ProgressBar PlayerBar;
     public ProgressBar EnemyBar;
+    public TextMeshProUGUI TurnText;
     public int Turn;
 
     [SerializeField]
@@ -35,7 +37,7 @@ public class CardsFight : MonoBehaviour
     public void Open(Enemy Enemy)
     {
         this.Enemy = Enemy;
-        this.Turn = 0;
+        this.Turn = 1;
         gameObject.SetActive(true);
 
         UpdateProgressBars();
@@ -51,6 +53,7 @@ public class CardsFight : MonoBehaviour
 
     public void UpdateProgressBars()
     {
+
         PlayerBar.SetFill(PlayerHand.player.CurrentHP / PlayerHand.player.MaxHP);
         EnemyBar.SetFill(Enemy.CurrentHP / Enemy.MaxHP);
     }
@@ -96,10 +99,12 @@ public class CardsFight : MonoBehaviour
             Utils.UI.SetImageOpacity(img, a);
         PlayerBar.SetOpacity(a);
         EnemyBar.SetOpacity(a);
+        TurnText.enabled = a==1f;
     }
 
     public void EndTurn()
     {
         Turn++;
+        TurnText.SetText("" + Turn);
     }
 }
