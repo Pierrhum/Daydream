@@ -165,6 +165,7 @@ public class UICard : MonoBehaviour
         }
         // Apply card effect
         card.ApplyEffect(hand.player, CardsFightUI.Enemy.Fighter);
+        CardsFightUI.UpdateProgressBars();
 
         hand.CanPlay = true;
         hand.InitCardPos();

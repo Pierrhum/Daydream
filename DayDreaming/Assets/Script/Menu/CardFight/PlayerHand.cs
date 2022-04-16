@@ -18,10 +18,12 @@ public class PlayerHand : MonoBehaviour
 
     private void Awake()
     {
-        if(UICards.Count > 0)
+        UICard[] cards = GetComponentsInChildren<UICard>();
+        if (cards.Length != 0)
         {
-            foreach (UICard card in UICards)
-                DestroyImmediate(card.gameObject);
+            foreach (UICard card in cards)
+                if (!card.Equals(template))
+                    DestroyImmediate(card.gameObject);
             UICards.Clear();
         }
         InitCardUI();

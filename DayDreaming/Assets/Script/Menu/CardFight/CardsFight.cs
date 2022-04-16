@@ -13,6 +13,9 @@ public class CardsFight : MonoBehaviour
     public PlayerHand PlayerHand;
     public Enemy Enemy;
 
+    public ProgressBar PlayerBar;
+    public ProgressBar EnemyBar;
+
     [SerializeField]
     private List<Image> fadeImages;
     private UIDissolve dissolve;
@@ -25,15 +28,22 @@ public class CardsFight : MonoBehaviour
             fadeImages.Add(card.GetComponent<Image>());
         SetOpacity(0.0f);
         gameObject.SetActive(false);
-
     }
 
     public void Open(Enemy Enemy)
     {
         this.Enemy = Enemy;
         gameObject.SetActive(true);
+
+        UpdateProgressBars();
         music.Play();
         StartCoroutine(ShowCoroutine());
+    }
+
+    public void UpdateProgressBars()
+    {
+        PlayerBar.SetFill(PlayerHand.player.CurrentHP / PlayerHand.player.MaxHP);
+        EnemyBar.SetFill(Enemy.Fighter.CurrentHP / Enemy.Fighter.MaxHP);
     }
 
     private IEnumerator ShowCoroutine()
@@ -41,11 +51,15 @@ public class CardsFight : MonoBehaviour
         yield return StartCoroutine(Utils.UI.Dissolve(dissolve, 1.0f, 0.0f, 1.0f));
         
         yield return StartCoroutine(Utils.UI.Fade(fadeImages, 0.0f, 1.0f, 0.2f));
+        PlayerBar.SetOpacity(1.0f);
+        EnemyBar.SetOpacity(1.0f);
     }
 
     private void SetOpacity(float a)
     {
         foreach (Image img in fadeImages)
             Utils.UI.SetImageOpacity(img, a);
+        PlayerBar.SetOpacity(a);
+        EnemyBar.SetOpacity(a);
     }
 }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Fighter : MonoBehaviour
 {
-    public int CurrentHP = 10;
-    public int MaxHP = 10;
+    public float CurrentHP = 10;
+    public float MaxHP = 10;
     public List<CardAsset> Cards;
 
     public void Heal(int amount)
