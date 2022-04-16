@@ -12,7 +12,7 @@ public class CardAsset : ScriptableObject
     public Rarity rarity;
     public string description;
 
-    public void ApplyEffect(Player player, Enemy enemy)
+    public void ApplyEffect(Fighter fighter, Fighter opponent)
     {
         // asset filename
         switch(name)
@@ -20,21 +20,27 @@ public class CardAsset : ScriptableObject
             case "FlyingCarpet":
                 Debug.Log("Todo : Flying Carpet");
                 break;
+
             case "Resting":
-                Debug.Log("Todo : Resting");
+                fighter.Heal(5);
                 break;
+
             case "Loneliness":
                 Debug.Log("Todo : Loneliness");
                 break;
+
             case "Rooted":
                 Debug.Log("Todo : Rooted");
                 break;
+
             case "SinisterPath":
                 Debug.Log("Todo : Sinister Path");
                 break;
+
             case "Watched":
                 Debug.Log("Todo : Watched");
                 break;
+
             default:
                 Debug.Log(name + " - card effect uninitialized");
                 break;

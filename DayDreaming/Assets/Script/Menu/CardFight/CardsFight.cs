@@ -11,6 +11,7 @@ public class CardsFight : MonoBehaviour
     public Image PlayerSprite;
     public Image EnemySprite;
     public PlayerHand PlayerHand;
+    public Enemy Enemy;
 
     [SerializeField]
     private List<Image> fadeImages;
@@ -27,8 +28,9 @@ public class CardsFight : MonoBehaviour
 
     }
 
-    public void Open()
+    public void Open(Enemy Enemy)
     {
+        this.Enemy = Enemy;
         gameObject.SetActive(true);
         music.Play();
         StartCoroutine(ShowCoroutine());

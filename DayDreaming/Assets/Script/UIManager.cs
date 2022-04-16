@@ -16,10 +16,10 @@ public class UIManager : MonoBehaviour
 
     // TODO Menu Pause
     // TODO Menu combat
-    public void OpenFightMenu()
+    public void OpenFightMenu(Enemy Enemy)
     {
         GameManager.instance.soundManager.music.Stop(false);
-        CardsFight.Open();
+        CardsFight.Open(Enemy);
     }
     // TODO HUD
 }

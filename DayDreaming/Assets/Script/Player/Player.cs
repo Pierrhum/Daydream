@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : MonoBehaviour
+public class Player : Fighter
 {
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
-    public List<CardAsset> Cards;
 
     public Quest Quest;
 

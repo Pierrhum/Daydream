@@ -7,6 +7,7 @@ public class Enemy : AI
     // Serialized Fields
     public float RangeOfAggression = 1.5f;
     public EnemyAssets asset;
+    public Fighter Fighter;
 
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class Enemy : AI
     {
         Stop();
         Player.isFighting = true;
-        GameManager.instance.uiManager.OpenFightMenu();
+        GameManager.instance.uiManager.OpenFightMenu(this);
     }
 
 }

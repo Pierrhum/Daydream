@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class UICard : MonoBehaviour
 {
-    public PlayerHand hand;
+    public CardsFight CardsFightUI;
+    public CardInfo InfoPopUp;
     public UIShiny uIShiny;
     public Texture DestroyTransition;
 
@@ -18,12 +19,14 @@ public class UICard : MonoBehaviour
     private Coroutine lastC;
     private static bool isDragging = false;
     private bool isSelected = false;
+    private PlayerHand hand;
 
-    public void Init(PlayerHand hand, CardAsset card)
+    public void Init(CardsFight CardsFightUI, CardAsset card)
     {
         uIShiny.enabled = false;
-        this.hand = hand;
+        this.CardsFightUI = CardsFightUI;
         this.card = card;
+        this.hand = CardsFightUI.PlayerHand;
 
         GetComponent<Image>().sprite = card.Sprite;
 
@@ -33,15 +36,17 @@ public class UICard : MonoBehaviour
     {
         this.index = index;
         this.initialPosOnCurve = initialPosOnCurve;
+        BezierCurve bezier = hand.bezier;
 
-        transform.position = new Vector3(hand.bezier.curve[initialPosOnCurve].x, hand.bezier.curve[initialPosOnCurve].y, 0);
-        transform.eulerAngles = new Vector3(0, 0, hand.bezier.angles[initialPosOnCurve]);
+        transform.position = new Vector3(bezier.curve[initialPosOnCurve].x, bezier.curve[initialPosOnCurve].y, 0);
+        transform.eulerAngles = new Vector3(0, 0, bezier.angles[initialPosOnCurve]);
     }
     // Ecarter les deux cartes autour
     public void OnCardHover()
     {
-        if(hand.CanPlay && !isDragging)
+        if(CardsFightUI.PlayerHand.CanPlay && !isDragging)
         {
+            InfoPopUp.Show(card);
             hand.MoveCards(index);
             uIShiny.enabled = true;
         }
@@ -52,6 +57,7 @@ public class UICard : MonoBehaviour
     {
         if (hand.CanPlay && !isDragging)
         {
+            InfoPopUp.Hide();
             hand.ResetCardPos();
             uIShiny.enabled = false;
         }
@@ -66,6 +72,7 @@ public class UICard : MonoBehaviour
     {
         if(hand.CanPlay)
         {
+            InfoPopUp.Hide();
             isDragging = true;
             if (hand.CanPlay && !isSelected)
                 StartCoroutine(CardSelected());
@@ -157,7 +164,7 @@ public class UICard : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
         // Apply card effect
-        card.ApplyEffect(hand.player, null);
+        card.ApplyEffect(hand.player, CardsFightUI.Enemy.Fighter);
 
         hand.CanPlay = true;
         hand.InitCardPos();

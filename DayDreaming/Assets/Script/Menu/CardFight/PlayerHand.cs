@@ -57,7 +57,9 @@ public class PlayerHand : MonoBehaviour
         foreach (CardAsset card in player.Cards)
         {
             UICard uiCard = Instantiate(template, template.transform.position, template.transform.rotation, transform);
-            uiCard.Init(this,card);
+
+            CardsFight CardsFightUI = transform.parent.GetComponent<CardsFight>();
+            uiCard.Init(CardsFightUI, card);
 
             UICards.Add(uiCard);
         }
