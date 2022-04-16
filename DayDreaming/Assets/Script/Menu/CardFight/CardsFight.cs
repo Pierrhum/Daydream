@@ -92,12 +92,5 @@ public class CardsFight : MonoBehaviour
     public void EndTurn()
     {
         Turn++;
-        // Application des status associés au nouveau tour
-        List<Status> PlayerStatus;
-        List<Status> EnemyStatus;
-        if (PlayerHand.player.status.TryGetValue(Turn, out PlayerStatus))
-            PlayerStatus.ForEach(s => s.ApplyStatus());
-        if (Enemy.status.TryGetValue(Turn, out EnemyStatus))
-            EnemyStatus.ForEach(s => s.ApplyStatus());
     }
 }

@@ -54,7 +54,7 @@ public class Enemy : Fighter
 
     public void Attack()
     {
-        if(Cards.Count > 0)
+        if(CanPlay() && Cards.Count > 0)
         {
             int random = Random.Range(0, Cards.Count);
             CardAsset card = Cards[random];

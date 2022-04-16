@@ -16,7 +16,7 @@ public class CardAsset : ScriptableObject
     {
         int Turn = GameManager.instance.uiManager.CardsFight.Turn;
 
-        Debug.Log("Using " + name);
+        Debug.Log(fighter + "use " + name + " against " + opponent);
         // asset filename
         switch (name)
         {
@@ -36,8 +36,9 @@ public class CardAsset : ScriptableObject
                 AddStatus(opponent, new Status(opponent, Status.Type.Hurt, (int)(opponent.MaxHP * 0.15f)), Turn + 2);
                 break;
 
+            // Skip next turn
             case "Rooted":
-                Debug.Log("Todo : Rooted");
+                AddStatus(opponent, new Status(opponent, Status.Type.Skip), Turn + 1);
                 break;
 
             // Take 5 damages, but deal 15 to the opponent next turn

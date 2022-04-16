@@ -27,6 +27,7 @@ public class Status
                 Fighter.Hurt(amount);
                 break;
             case Type.Skip:
+                Fighter.canPlay = false;
                 break;
         }
     }

@@ -35,6 +35,19 @@ public class Fighter : MonoBehaviour
     public virtual void CanPlay(bool canPlay)
     {
         this.canPlay = canPlay;
+        if(canPlay)
+        {
+            List<Status> StatusOfThisTurn;
+            if (status.TryGetValue(GameManager.instance.uiManager.CardsFight.Turn, out StatusOfThisTurn))
+                StatusOfThisTurn.ForEach(s => s.ApplyStatus());
+
+            if(!this.canPlay)
+            {
+                Debug.Log(name + " skipped");
+                if (this is Player) GameManager.instance.uiManager.CardsFight.Enemy.CanPlay(true);
+                else if (this is Enemy) GameManager.instance.player.CanPlay(true);
+            }
+        }
     }
 
     public bool CanPlay()
