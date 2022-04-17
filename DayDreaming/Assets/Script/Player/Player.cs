@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player : Fighter
 {
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
-    public List<CardAsset> Cards;
 
     public Quest Quest;
 
@@ -19,6 +19,16 @@ public class Player : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
+
+    /************ COMBAT ***********/
+
+    public override void CanPlay(bool canPlay)
+    {
+        base.CanPlay(canPlay);
+        foreach (UICard uiCard in GameManager.instance.uiManager.CardsFight.PlayerHand.UICards)
+            uiCard.GetComponent<Button>().interactable = canPlay;
+    }
+
     public void NextQuest()
     {
         if (Quest.Next == null)
