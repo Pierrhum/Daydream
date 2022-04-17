@@ -21,3 +21,14 @@ MonoBehaviour:
     Display: 1
     sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
     Right: {fileID: 0}
+  - Text: 'Lorem ipsum dolor sit amet. Et exercitationem omnis sed rerum dolores
+      qui debitis quisquam eos sunt alias vel rerum numquam ad aliquid aperiam? 33
+      voluptatem exercitationem 33 assumenda odit aut sapiente optio est atque velit
+      vel omnis asperiores. '
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Ok cool
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}

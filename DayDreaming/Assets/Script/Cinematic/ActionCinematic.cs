@@ -24,9 +24,10 @@ public class ActionCinematic
                     GameManager.instance.uiManager.OpenDialogueUI(false);
                     foreach(Dialogue.Talk talk in Dialogue.talks)
                     {
-                        yield return (GameManager.instance.uiManager.HUD.DialogueUI.Display(talk.Text, talk.Display, talk.sprite, talk.Right));
+                        DialogueUI DialogueUI = GameManager.instance.uiManager.HUD.DialogueUI;
+                        DialogueUI.Display(talk.Text, talk.Display, talk.sprite, talk.Right);
+                        yield return DialogueUI.WaitForDialogueEnd();
                     }
-                    yield return new WaitForSeconds(1f);
                     GameManager.instance.uiManager.CloseDialogueUI(false);
                 }
                 break;

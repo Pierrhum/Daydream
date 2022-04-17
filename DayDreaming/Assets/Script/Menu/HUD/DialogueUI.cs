@@ -10,17 +10,22 @@ public class DialogueUI : MonoBehaviour
     public Image SpriteRight;
     public TextMeshProUGUI TextMesh;
 
+    private bool Next = false;
+    private string TextToDisplay = "";
+
     private void Awake()
     {
         Hide();
     }
 
-    public IEnumerator Display(string Text, Dialogue.Talk.SpriteDisplay SpriteDisplay, Sprite Sprite, Sprite Right)
+    public void Display(string Text, Dialogue.Talk.SpriteDisplay SpriteDisplay, Sprite Sprite, Sprite Right)
     {
-        yield return StartCoroutine(DisplayCoroutine(Text, SpriteDisplay, Sprite, Right));
+        TextToDisplay = Text;
+        Next = false;
+        StartCoroutine(DisplayCoroutine(SpriteDisplay, Sprite, Right));
     }
 
-    private IEnumerator DisplayCoroutine(string Text, Dialogue.Talk.SpriteDisplay SpriteDisplay, Sprite Sprite, Sprite Right)
+    private IEnumerator DisplayCoroutine(Dialogue.Talk.SpriteDisplay SpriteDisplay, Sprite Sprite, Sprite Right)
     {
         switch(SpriteDisplay)
         {
@@ -42,7 +47,7 @@ public class DialogueUI : MonoBehaviour
                 break;
         }
 
-        yield return StartCoroutine(TextCoroutine(Text));
+        yield return StartCoroutine(TextCoroutine());
     }
 
     public void Show()
@@ -54,13 +59,31 @@ public class DialogueUI : MonoBehaviour
         transform.gameObject.SetActive(false);
     }
 
-    private IEnumerator TextCoroutine(string Text)
+    public void OnClick()
+    {
+        Debug.Log("test");
+        if(TextMesh.text == TextToDisplay)
+            Next = true;
+        else
+            TextMesh.text = TextToDisplay;
+    }
+
+    private IEnumerator TextCoroutine()
     {
         TextMesh.text = "";
-        foreach (var c in Text)
+        foreach (var c in TextToDisplay)
         {
-            TextMesh.text += c;
-            yield return new WaitForSeconds(0.05f);
+            if(TextMesh.text != TextToDisplay)
+            {
+                TextMesh.text += c;
+                yield return new WaitForSeconds(0.05f);
+            }
         }
+    }
+
+    public IEnumerator WaitForDialogueEnd()
+    {
+        while (!Next)
+            yield return new WaitForSeconds(Time.deltaTime);
     }
 }
