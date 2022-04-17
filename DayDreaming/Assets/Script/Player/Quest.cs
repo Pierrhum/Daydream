@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Quest", menuName = "Quest")]
+[CreateAssetMenu(fileName = "New Quest", menuName = "QuestSystem/Quest")]
 public class Quest : ScriptableObject
 {
     public string Name;
@@ -11,11 +11,7 @@ public class Quest : ScriptableObject
 
     public QuestGiver Trigger;
 
-    public void End()
-    {
-        // Peut être associer une cinématique ou un dialogue ici
-        Debug.Log(Name + " ended");
-    }
+    public Cinematic Cinematic;
 
     public Vector3 GetTriggerPos()
     {
