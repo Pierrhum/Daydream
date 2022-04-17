@@ -5,7 +5,7 @@ Sa présence peut se faire sentir peu importe l'endroit où l'on se trouve car s
 ### Histoire
 - Un homme âgé qui à perdu sa famille dans un incendie dont il est le seul rescapé.
 - Anéanti par le fait d'avoir tout perdu, il suppliait les médecins de le laisser mourir pour pouvoir rejoindre ses proches dans l'au-delà.
-- Il à été plongé dans le coma artificiel par le [[Personnage Principal]] et son équipe d'urgence afin de le préserver sans qu'il souffre.  
+- Il à été plongé dans le coma artificiel par le [[Steve]] et son équipe d'urgence afin de le préserver sans qu'il souffre.  
 - Il à commencé à rêver d'un monde idéal qu'il pense être le paradis où il vit depuis plusieurs années avec ses proches. 
 - Son rêve a commencé à prendre une ampleur considérable et régulièrement, des rêveurs s'introduisent dedans sans son autorisation et il cherche activement à les renvoyer chez eux pour préserver sa vie intime. 
 - Pour ce faire, il les lobotimise et les transforme en [[Sans-paroles]], des esclaves obéissants et muets. Ce qu'il se passe réellement est bien plus sombre : il tue les rêveurs dans leur sommeil et les [[Sans-paroles]] sont en fait la mémoire qu'il a d'eux dans son rêve mais il n'en est pas conscient. 
