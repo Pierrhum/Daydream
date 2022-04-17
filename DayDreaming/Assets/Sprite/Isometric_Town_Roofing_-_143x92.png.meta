@@ -110,7 +110,7 @@ TextureImporter:
         x: 0
         y: 276
         width: 143
-        height: 76
+        height: 92
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,7 +191,7 @@ TextureImporter:
       name: Isometric_Town_Roofing_-_143x92_4
       rect:
         serializedVersion: 2
-        x: 143
+        x: 142
         y: 184
         width: 143
         height: 92
