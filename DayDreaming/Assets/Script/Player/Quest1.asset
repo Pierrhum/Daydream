@@ -16,3 +16,5 @@ MonoBehaviour:
   Description: "Premi\xE8re qu\xEAte"
   Next: {fileID: 11400000, guid: ed7254085c682a644949b62cc4484cc2, type: 2}
   Trigger: {fileID: 0}
+  Dialogues:
+  - {fileID: 0}
