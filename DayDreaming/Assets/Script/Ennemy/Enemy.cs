@@ -8,12 +8,17 @@ public class Enemy : AI
     public float RangeOfAggression = 1.5f;
     public EnemyAssets asset;
 
+    [SerializeField]
+    private SpriteRenderer SpriteRenderer;
+
     private void Awake()
     {
         if(asset != null)
         {
             Speed = asset.Speed;
-            GetComponent<SpriteRenderer>().sprite = asset.Sprite;
+            if (SpriteRenderer == null)
+                GetComponent<SpriteRenderer>().sprite = asset.Sprite;
+            else SpriteRenderer.sprite = asset.Sprite;
             RangeOfAggression = asset.RangeOfAggression;
         }
     }
