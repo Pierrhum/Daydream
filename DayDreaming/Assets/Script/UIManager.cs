@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     // UI
     public GameObject gameOverMenu;
     public CardsFight CardsFight;
+    public HUD HUD;
 
     // TODO : Animation
     public void OpenGameOverMenu()
@@ -27,4 +28,18 @@ public class UIManager : MonoBehaviour
         CardsFight.Close();
     }
     // TODO HUD
+
+    public void OpenDialogueUI(bool stopMusic)
+    {
+        if(stopMusic)
+            GameManager.instance.soundManager.music.Stop(false);
+        HUD.DialogueUI.Show();
+    }
+
+    public void CloseDialogueUI(bool playMusic)
+    {
+        if (playMusic)
+            GameManager.instance.soundManager.music.Play();
+        HUD.DialogueUI.Hide();
+    }
 }

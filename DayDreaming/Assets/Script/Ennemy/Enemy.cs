@@ -14,7 +14,7 @@ public class Enemy : Fighter
         if(asset != null)
         {
             ai.Speed = asset.Speed;
-            GetComponent<SpriteRenderer>().sprite = asset.Sprite;
+            GetComponentInChildren<SpriteRenderer>().sprite = asset.Sprite;
             RangeOfAggression = asset.RangeOfAggression;
         }
     }

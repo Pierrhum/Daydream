@@ -4,7 +4,7 @@ using UnityEngine;
 using MyBox;
 
 [System.Serializable]
-public class ActionCinematic 
+public class ActionCinematic
 {
     public enum Type { None, Dialogue, Movement }
     public Type ActionType = Type.None;
@@ -21,11 +21,13 @@ public class ActionCinematic
         {
             case Type.Dialogue:
                 {
+                    GameManager.instance.uiManager.OpenDialogueUI(false);
                     foreach(Dialogue.Talk talk in Dialogue.talks)
                     {
-                        Debug.Log(talk.sprite.name + " : " + talk.Text);
-                        yield return new WaitForSeconds(0.5f);
+                        yield return (GameManager.instance.uiManager.HUD.DialogueUI.Display(talk.Text, talk.Display, talk.sprite, talk.Right));
                     }
+                    yield return new WaitForSeconds(1f);
+                    GameManager.instance.uiManager.CloseDialogueUI(false);
                 }
                 break;
 
