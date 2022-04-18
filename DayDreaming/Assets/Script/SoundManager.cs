@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
     private Music MainMusic;
     [SerializeField]
     private Music FightMusic;
+    [SerializeField]
+    private AudioSource SFXSource;
 
     private Music CurrentMusic;
 
@@ -48,5 +50,13 @@ public class SoundManager : MonoBehaviour
         CurrentMusic.source.Play();
     }
 
+    public IEnumerator Play2DSFX(AudioClip clip, bool WaitEnd)
+    {
+        SFXSource.clip = clip;
+        SFXSource.Play();
+        if (WaitEnd)
+            while (SFXSource.isPlaying)
+                yield return new WaitForSeconds(Time.deltaTime);
+    }
     // TODO : Bruitages, Modifier volume son, etc..
 }

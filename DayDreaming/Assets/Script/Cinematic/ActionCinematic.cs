@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [System.Serializable]
 public class ActionCinematic
 {
-    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, Wait }
+    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait }
     public Type ActionType = Type.None;
 
     [ConditionalField(nameof(ActionType), false, Type.Dialogue)]
@@ -21,6 +21,12 @@ public class ActionCinematic
     private static Music CurrentMusic;
     [ConditionalField(nameof(ActionType), false, Type.StopMusic)]
     public bool FadeOut = false;
+
+    [ConditionalField(nameof(ActionType), false, Type.SFX)]
+    public AudioClip SFX;
+    [ConditionalField(nameof(ActionType), false, Type.SFX)]
+    public bool WaitEnd;
+
 
     [ConditionalField(nameof(ActionType), false, Type.Wait)]
     public float SecondsToWait = 1.0f;
@@ -87,6 +93,10 @@ public class ActionCinematic
                 CurrentMusic.Stop(FadeOut);
                 yield return CurrentMusic.WaitForMusicEnd();
                 GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
+                break;
+
+            case Type.SFX:
+                yield return GameManager.instance.soundManager.Play2DSFX(SFX, WaitEnd);
                 break;
 
             case Type.Wait:
