@@ -5,6 +5,13 @@ A un moment donné, la voix du [[Tyran]] retentit et il ordonne a ses [[Sans-par
 
 Le personnage principal se réveille à ce moment là, déboussolé et confus car son rêve parraîssait bien trop réel mais il doit se préparer pour aller travailler. Un peu plus tard, il apprends la mort d'un de ses patients suite a un arrêt cérébral qui n'est autre que [[Jed Morar]], et il fait le lien avec son rêve. Il y avait quelques morts similaires depuis quelque temps dans l'hôpital et le joueur se rendra compte qu'il ne rêvait pas lors de l'[[Acte 2]].
 
+*Un texte apparaît au milieu de l'écran.*
+
+<p style="text-align:center;">
+Steve est infirmier et un soir, alors qu'il s'endort dans son bureau à l'hopital, il rêve d'un univers étrange qui lui paraît bien trop réel. 
+</p>
+
+
 FONDU ENTRANT
 
 RUES DE [[Nyxos (Acte 1)|NYXOS]], NUIT
@@ -73,4 +80,19 @@ JED <br>
 J'ai perdu mon stylo et je crois qu'il est là bas. J'ai peur d'y aller mais vous m'avez l'air courageux. Si je vais vous donnez de quoi vous défendre.  
 </p>
 *Jed tend à Steve un packet de cartes qu'il range dans son inventaire.*
-**Le joueur reprend le controle de son personnage. Il entre dans la zone et se fait attaquer par un sans-parole ce qui lance un combat.**
+**Le joueur reprend le controle de son personnage. Il entre dans la zone et se fait attaquer par un sans-parole ce qui lance un combat.
+Après ce combat, le joueur trouve un stylo par terre et sort de la zone.**
+*Steve retourne près de Jed.*
+<p style="text-align:center;">
+TYRAN <br>
+(voix distante) <br>
+Emparez-vous de lui !
+</p>
+*Deux sans-paroles surprennent Jed et l'emportent avec eux, en poussant steve par Terre.*
+
+FONDU AU NOIR
+
+*Un texte apparaît à l'écran*
+<p style="text-align:center;">
+Steve se réveille le lendemain et on lui annonce le décès d'un de ses patients, Jed Morar. Steve fait le lien immédiatement avec son rêve et pense qu'il fait des rêves prémonitoires. Ce ne cera qu'a la nuit suivante qu'il se rendra compte que ce n'était pas vraiment un rêve. 
+</p>
