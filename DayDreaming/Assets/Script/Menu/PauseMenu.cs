@@ -9,11 +9,14 @@ public class PauseMenu : MonoBehaviour
     // Permet d'accéder au panneau d'option
     public GameObject settingsWindow;
     public GameObject pauseMenu;
+    public GameObject HUD;
+    public GameObject inventory;
 
     public void Resume()
     {
         if(pauseMenu.activeSelf){
             pauseMenu.SetActive(false);
+            HUD.SetActive(true);
             Time.timeScale = 1;
         }
         else{
@@ -42,6 +45,10 @@ public class PauseMenu : MonoBehaviour
     public void OpenMenuPause()
     {
         Time.timeScale = 0;
+        HUD.SetActive(false);
+        if(inventory.activeSelf){
+            inventory.SetActive(false);
+        }
         pauseMenu.SetActive(true);
     }
 }

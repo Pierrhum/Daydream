@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     public GameObject textClick;
     public GameObject cardPannel;
     public GameObject objectPannel;   
+    public GameObject HUD;
 
     private int choose = 0;
 
@@ -41,23 +42,31 @@ public class Inventory : MonoBehaviour
 
     public void openInventory()
     {
-        Time.timeScale = 0;
-        inventoryWindow.SetActive(true);
+        if(!inventoryWindow.activeSelf){
+            Time.timeScale = 0;
+            inventoryWindow.SetActive(true);
+            HUD.SetActive(false);
 
-        for(int i = 0; i < 5; i++){
-            GameObject card = GameObject.Find(i.ToString());
-            if(i < player.Cards.Count){
-                card.GetComponent<Button>().image.sprite = player.Cards[i].Sprite;
-            }
-            else{
-                card.SetActive(false);
-            }
-        } 
+            for(int i = 0; i < 5; i++){
+                GameObject card = GameObject.Find(i.ToString());
+                if(i < player.Cards.Count){
+                    card.GetComponent<Button>().image.sprite = player.Cards[i].Sprite;
+                }
+                else{
+                    card.SetActive(false);
+                }
+            } 
+        }
+        else{
+            exitMenu();
+        }
+        
     }
 
     public void exitMenu()
     {
         Time.timeScale = 1;
+        HUD.SetActive(true);
         inventoryWindow.SetActive(false);
     }
 
