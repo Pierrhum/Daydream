@@ -560,6 +560,7 @@ MonoBehaviour:
         GoTo: {fileID: 1755334317}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -569,6 +570,7 @@ MonoBehaviour:
         GoTo: {fileID: 686797139}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: c383abbae3809834899be62fc4e753c8, type: 2}
     Movements:
@@ -578,6 +580,7 @@ MonoBehaviour:
         GoTo: {fileID: 1755334317}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 3
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -590,6 +593,20 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 1252583572}
     FadeOut: 0
+    SecondsToWait: 1
+  - ActionType: 5
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SecondsToWait: 1.2
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -602,6 +619,7 @@ MonoBehaviour:
         GoTo: {fileID: 1585665245}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -614,6 +632,7 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -626,6 +645,7 @@ MonoBehaviour:
         GoTo: {fileID: 1292747503}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -638,6 +658,7 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -650,6 +671,7 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -662,6 +684,7 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 0}
     FadeOut: 0
+    SecondsToWait: 1
   - ActionType: 4
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -674,6 +697,7 @@ MonoBehaviour:
         GoTo: {fileID: 633401551}
     Music: {fileID: 0}
     FadeOut: 1
+    SecondsToWait: 1
 --- !u!114 &401568280
 MonoBehaviour:
   m_ObjectHideFlags: 0
