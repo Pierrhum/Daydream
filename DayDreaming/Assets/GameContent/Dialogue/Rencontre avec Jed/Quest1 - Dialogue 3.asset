@@ -10,21 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
-  m_Name: Quest1 - Dialogue 2
+  m_Name: Quest1 - Dialogue 3
   m_EditorClassIdentifier: 
   talks:
-  - Text: "C'est bizarre j'ai pass\xE9 ma maison sans faire attention ?"
+  - Text: Tiens, elle a une forme bizarre cette maison.
     Display: 0
     sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
     Right: {fileID: 0}
-  - Text: "Et puis je suis o\xF9 en plus de \xE7a ? Serieux \xE7a arrive \xE0 qui
-      d'autre de se retrouver dans un quartier totalement diff\xE9rent parce qu'il
-      regarde pas o\xF9 il va ?"
-    Display: 0
-    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
-    Right: {fileID: 0}
-  - Text: "Je vais aller demander de l'aide direct, pas envie de passer la soir\xE9e
-      \xE0 essayer de retrouver mon chemin."
+  - Text: "J'ai qu'\xE0 essayer de voir s'il y a quelqu'un..."
     Display: 0
     sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
     Right: {fileID: 0}

@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
-  m_Name: Quest1 - Dialogue 1
+  m_Name: Quest1 - Dialogue 6
   m_EditorClassIdentifier: 
   talks:
-  - Text: 'Aaaaah... Je vais enfin rentrer chez moi. Marre des heures sup au taf. '
+  - Text: On peut y aller, let's gooo !
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Je vous suis.
     Display: 0
     sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
     Right: {fileID: 0}

@@ -683,6 +683,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Actions:
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 98c01c37b25028a468871b641ea99035, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 0}
     Movements:
@@ -708,6 +723,21 @@ MonoBehaviour:
     Music: {fileID: 0}
     FadeOut: 1
     SFX: {fileID: 8300000, guid: d1ff68ab486f5c9498ca6894ea1472c7, type: 3}
+    WaitEnd: 1
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: b5f9fd0e87537f14383489ecdc5186f7, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
     WaitEnd: 0
     SecondsToWait: 1
   - ActionType: 6
@@ -724,7 +754,7 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
-    SecondsToWait: 1
+    SecondsToWait: 1.5
   - ActionType: 5
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -761,6 +791,75 @@ MonoBehaviour:
         GoTo: {fileID: 1755334317}
     Music: {fileID: 0}
     FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 1585665245}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 67acebdb9843cdd4fbc8bbe4a93c61c9, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    SecondsToWait: 1
+  - ActionType: 5
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 8300000, guid: a7907935a719e2143ba5fc5de85c1934, type: 3}
+    WaitEnd: 1
+    SecondsToWait: 1.2
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 686797139}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 21a1ae73a4e4696469d1c7301cb33c0a, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
     SecondsToWait: 1
