@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [System.Serializable]
 public class ActionCinematic
 {
-    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait, Reward }
+    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait, Reward, QuestItem }
     public Type ActionType = Type.None;
 
     [ConditionalField(nameof(ActionType), false, Type.Dialogue)]
@@ -29,6 +29,10 @@ public class ActionCinematic
 
     [ConditionalField(nameof(ActionType), false, Type.Reward)]
     public Reward Reward;
+
+    [ConditionalField(nameof(ActionType), false, Type.QuestItem)]
+    public QuestItem QuestItem;
+
 
     [ConditionalField(nameof(ActionType), false, Type.Wait)]
     public float SecondsToWait = 1.0f;
@@ -105,6 +109,12 @@ public class ActionCinematic
                 Reward.GiveRewardToPlayer();
                 break;
 
+            case Type.QuestItem:
+                yield return QuestItem.Show();
+                while (!QuestItem.isHidden())
+                    yield return new WaitForSeconds(Time.deltaTime);
+                break;
+
             case Type.Wait:
                 yield return new WaitForSeconds(SecondsToWait);
                 break;
@@ -142,6 +152,5 @@ public class Reward
 
         // Donner XP
     }
-
 }
 

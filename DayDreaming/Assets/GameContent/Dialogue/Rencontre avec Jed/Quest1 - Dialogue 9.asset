@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
+  m_Name: Quest1 - Dialogue 9
+  m_EditorClassIdentifier: 
+  talks:
+  - Text: ...
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "O\xF9 sommes-nous ?"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "En face de Ephialt\xE8s."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "\xC7a m'avance pas beaucoup."
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: ... Excusez-moi, cet endroit m'est particulier
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Vous savez, comme je vous ai dit, ce n'est pas la premi\xE8re fois que
+      je viens ici"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Ce doit \xEAtre la 3\xE8me ou 4\xE8me fois exactement, et d\xE8s ma premi\xE8re
+      arriv\xE9e, j'ai \xE9t\xE9 fascin\xE9 par ce monde"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Chaque nuit depuis, je me retrouve ici dans l'On\xE9ros, \xE0 m\xE9diter
+      et \xE0 enqu\xEAter."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Je ne vous ai pas dit, mais je suis \xE9crivain en r\xE9alit\xE9 ! Ma
+      passion c'est d'\xE9crire."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Ce qui pourrait expliquer pourquoi il ressemble \xE0 une face d'encre...)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: C'est pourquoi je note tout dans mon carnet, j'admet que parfois je divague
+      un peu, mais il semblerait que cela ne soit pas que fantaisies.
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Cependant... L'autre nuit, je me suis approch\xE9 de cette grotte, afin
+      d'en cartographi\xE9 l'antre..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Et ces fameux sans-paroles y \xE9taient regroup\xE9s par dizaine, ils
+      semblait \xEAtre en symbiose"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: ...
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "M\xEAme ceux qui me tournaient le dos se sont imm\xE9diatement ru\xE9s
+      sur moi"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "J'ai compris d'instinct qu'ils voulaient me nuire, comme un pr\xE9dateur
+      et sa proie"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "J'ai donc imm\xE9diatement pris la fuite, de peur d'\xEAtre accul\xE9
+      par ces \xEAtre terrifiants, et ai err\xE9 dans cette grotte des heures durant."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Je me demande \xE0 quoi peuvent ressembler ces Sans-Paroles)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: Admettons, ces Sans-Paroles sont probablement dangereux, est-ce qu'on a
+      un moyen de les distinguer ? Par leur apparence je veux dire...
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: 'Oui ! Ils se ressemblent tous ! '
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Regardez, j'ai pu sauver ce croquis de ma fuite.
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}

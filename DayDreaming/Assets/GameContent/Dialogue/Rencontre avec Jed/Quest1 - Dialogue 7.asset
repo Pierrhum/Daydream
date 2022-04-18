@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
+  m_Name: Quest1 - Dialogue 7
+  m_EditorClassIdentifier: 
+  talks:
+  - Text: "Ici c'est le quartier des Onards, mais... Ils n'ont pas vraiment l'air
+      tr\xE8s loquaces et r\xE9p\xE8tent souvent la m\xEAme chose..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Un Onard ?
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Yes! C'est comme \xE7a que je les surnomme. J'adore les surnoms !"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "D'ailleurs, si vous voulez savoir, ce monde m'a tout l'air sorti d'un
+      r\xEAve, un monde onirique..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "L'On\xE9ros !"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: ...
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Je suis donc en train de r\xEAver ?)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "C'est plut\xF4t rare de voir quelqu'un comme vous par ailleurs, vous avez
+      l'air d'\xEAtre un v\xE9ritable humain..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Bien s\xFBr que je suis humain."
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Int\xE9ressant... Vous ressemblez pourtant \xE9trangement \xE0 un serpent..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "... Et vous \xE0 un stylo plume"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Effectivement, lequel de nous deux est donc en train de r\xEAver... Si
+      nous r\xEAvons vraiment ?"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Cet homme a beau l'air \xE9trange, il n'a pas tort...)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Maintenant que j'y pense, il ressemble \xE9trangement \xE0...)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Continuons notre petite promenade ! Nous aurons tout le temps de m\xE9diter,
+      j'ai d'ailleurs certaines choses importantes \xE0 vous confier."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: (Pourquoi ne pas le dire tout de suite dans ce cas?)
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
