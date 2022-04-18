@@ -15,8 +15,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMusic(MusicType Type)
     {
-        if(CurrentMusic != null)
-            CurrentMusic.Stop(false);
+        if (CurrentMusic != null)
+            CurrentMusic.source.Stop();
         switch (Type)
         {
             case MusicType.Main:
@@ -28,10 +28,24 @@ public class SoundManager : MonoBehaviour
         }
         CurrentMusic.Play();
     }
+    public void PlayMusic(Music Music)
+    {
+        if(Music.source.Equals(CurrentMusic.source))
+        {
+            CurrentMusic.source.Stop();
+            CurrentMusic = Music;
+            CurrentMusic.Play();
+        }
+    }
 
     public void StopMusic(bool fadeOut)
     {
         CurrentMusic.Stop(fadeOut);
+    }
+
+    public void ResumeMusic()
+    {
+        CurrentMusic.source.Play();
     }
 
     // TODO : Bruitages, Modifier volume son, etc..

@@ -518,6 +518,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 750897873}
+  - {fileID: 1252583571}
   m_Father: {fileID: 169166790}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -557,6 +558,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1711733570}
         GoTo: {fileID: 1755334317}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -564,6 +567,8 @@ MonoBehaviour:
       - ShouldTeleport: 1
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 686797139}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: c383abbae3809834899be62fc4e753c8, type: 2}
     Movements:
@@ -571,6 +576,20 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 0}
         GoTo: {fileID: 1755334317}
+    Music: {fileID: 0}
+    FadeOut: 0
+  - ActionType: 3
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 1252583572}
+    FadeOut: 0
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -581,6 +600,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 1585665245}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -591,6 +612,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -601,6 +624,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 1292747503}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -611,6 +636,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -621,6 +648,8 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 0
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
@@ -631,6 +660,20 @@ MonoBehaviour:
       - ShouldTeleport: 0
         Agent: {fileID: 1573320960}
         GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 0
+  - ActionType: 4
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
 --- !u!114 &401568280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,6 +689,11 @@ MonoBehaviour:
   Quest: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
   Cinematic: {fileID: 401568279}
   TriggerType: 0
+--- !u!82 &518322450 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7401596609249564603, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 392064891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &633401550
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,15 +884,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.613
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.545
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1164,6 +1212,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 11400000, guid: e05abd9396361fa4aa7d42fec4546f0d, type: 2}
+--- !u!1 &1252583570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252583571}
+  - component: {fileID: 1252583572}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252583571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252583570}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 401568277}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252583572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252583570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63abc2f93a08f4148a5bf1c8988817ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: b7d2acb463e28c544948a321b6b72df4, type: 2}
+  source: {fileID: 518322450}
 --- !u!1 &1292747502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1384,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63abc2f93a08f4148a5bf1c8988817ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1481655105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1622584413008826396, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 392064891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1481655108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5945213223881516555, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 392064891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481655105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1481655110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481655105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1481655108}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1965166722}
+        m_TargetAssemblyTypeName: DialogueUI, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1573320959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,6 +1784,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965166722 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3311301737116314015, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 392064891}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d97c371d9837a444b4749cf9e5fe325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2095553806
 GameObject:
   m_ObjectHideFlags: 0

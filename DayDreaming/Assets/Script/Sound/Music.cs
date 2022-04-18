@@ -35,8 +35,11 @@ public class Music : MonoBehaviour
         {
             source.clip = asset.end;
             source.Play();
-        }
-        else
-            source.Stop();
+        } else source.Stop();
+    }
+    public IEnumerator WaitForMusicEnd()
+    {
+        while(source.isPlaying)
+            yield return new WaitForSeconds(Time.deltaTime);
     }
 }

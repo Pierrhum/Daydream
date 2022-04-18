@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [System.Serializable]
 public class ActionCinematic
 {
-    public enum Type { None, Dialogue, Movement }
+    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic }
     public Type ActionType = Type.None;
 
     [ConditionalField(nameof(ActionType), false, Type.Dialogue)]
@@ -15,6 +15,12 @@ public class ActionCinematic
 
     [ConditionalField(nameof(ActionType), false, Type.Movement)]
     public CollectionWrapper<Movement> Movements;
+
+    [ConditionalField(nameof(ActionType), false, Type.PlayMusic)]
+    public Music Music;
+    private static Music CurrentMusic;
+    [ConditionalField(nameof(ActionType), false, Type.StopMusic)]
+    public bool FadeOut = false;
 
     public IEnumerator ProcessAction()
     {
@@ -68,6 +74,16 @@ public class ActionCinematic
                 }
                 break;
 
+            case Type.PlayMusic:
+                CurrentMusic = Music;
+                GameManager.instance.soundManager.StopMusic(false);
+                GameManager.instance.soundManager.PlayMusic(CurrentMusic);
+                break;
+            case Type.StopMusic:
+                CurrentMusic.Stop(FadeOut);
+                yield return CurrentMusic.WaitForMusicEnd();
+                GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
+                break;
             default:
                 yield return null;
                 break;
