@@ -279,66 +279,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: MaxHP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Quest
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: CurrentHP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: currentQuest
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: quests.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7df4dee5805894eff92d06eb7bb81271, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: quests.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 2329355379999492413, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: orthographic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: orthographic size
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
 --- !u!114 &148228170 stripped
@@ -864,6 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quest: {fileID: 11400000, guid: ed7254085c682a644949b62cc4484cc2, type: 2}
+  Cinematic: {fileID: 0}
   TriggerType: 0
 --- !u!1 &1144769105
 GameObject:
@@ -960,6 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quest: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
+  Cinematic: {fileID: 0}
   TriggerType: 0
 --- !u!1 &1395489371
 GameObject:
@@ -3579,6 +3521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7310c184df5d624188d03a296241824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Agent: {fileID: 0}
   Speed: 1
 --- !u!1 &1653264841
 GameObject:
@@ -8835,10 +8778,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 27720401, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 148228170}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: UICards.Array.data[4]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 147712013960758657, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8863,6 +8834,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1162891955266297673, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_fontSize
+      value: 22.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2144939657841920422, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -8886,6 +8861,10 @@ PrefabInstance:
     - target: {fileID: 2144939657841920422, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2646886988434089697, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2646886989467762500, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_RootOrder
@@ -8938,10 +8917,6 @@ PrefabInstance:
     - target: {fileID: 2646886989467762522, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705664570806900509, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7500347710920596629, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y

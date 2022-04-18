@@ -9,8 +9,10 @@ public class Cinematic : MonoBehaviour
 
     public IEnumerator Play()
     {
+        GameManager.instance.player.StopMoving();
         foreach (ActionCinematic action in Actions)
             yield return StartCoroutine(action.ProcessAction());
+        GameManager.instance.player.CanMove = true;
     }
 }
 

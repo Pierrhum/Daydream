@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [System.Serializable]
 public class ActionCinematic
 {
-    public enum Type { None, Dialogue, Movement }
+    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait }
     public Type ActionType = Type.None;
 
     [ConditionalField(nameof(ActionType), false, Type.Dialogue)]
@@ -15,6 +15,21 @@ public class ActionCinematic
 
     [ConditionalField(nameof(ActionType), false, Type.Movement)]
     public CollectionWrapper<Movement> Movements;
+
+    [ConditionalField(nameof(ActionType), false, Type.PlayMusic)]
+    public Music Music;
+    private static Music CurrentMusic;
+    [ConditionalField(nameof(ActionType), false, Type.StopMusic)]
+    public bool FadeOut = false;
+
+    [ConditionalField(nameof(ActionType), false, Type.SFX)]
+    public AudioClip SFX;
+    [ConditionalField(nameof(ActionType), false, Type.SFX)]
+    public bool WaitEnd;
+
+
+    [ConditionalField(nameof(ActionType), false, Type.Wait)]
+    public float SecondsToWait = 1.0f;
 
     public IEnumerator ProcessAction()
     {
@@ -66,6 +81,26 @@ public class ActionCinematic
                             yield return new WaitForSeconds(Time.deltaTime);
                     }
                 }
+                break;
+
+            case Type.PlayMusic:
+                CurrentMusic = Music;
+                GameManager.instance.soundManager.StopMusic(false);
+                GameManager.instance.soundManager.PlayMusic(CurrentMusic);
+                break;
+
+            case Type.StopMusic:
+                CurrentMusic.Stop(FadeOut);
+                yield return CurrentMusic.WaitForMusicEnd();
+                GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
+                break;
+
+            case Type.SFX:
+                yield return GameManager.instance.soundManager.Play2DSFX(SFX, WaitEnd);
+                break;
+
+            case Type.Wait:
+                yield return new WaitForSeconds(SecondsToWait);
                 break;
 
             default:

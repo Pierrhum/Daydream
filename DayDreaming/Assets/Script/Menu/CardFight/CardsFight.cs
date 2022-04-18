@@ -7,7 +7,6 @@ using TMPro;
 
 public class CardsFight : MonoBehaviour
 {
-    public Music music;
     public Image Overlay;
     public Image PlayerSprite;
     public Image EnemySprite;
@@ -41,13 +40,13 @@ public class CardsFight : MonoBehaviour
         gameObject.SetActive(true);
 
         UpdateProgressBars();
-        music.Play();
+        GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Fight);
         StartCoroutine(ShowCoroutine());
     }
 
     public void Close()
     {
-        music.Stop(true);
+        GameManager.instance.soundManager.StopMusic(true);
         StartCoroutine(HideCoroutine());
     }
 
@@ -81,7 +80,7 @@ public class CardsFight : MonoBehaviour
 
         yield return StartCoroutine(Utils.UI.Dissolve(dissolve, 0.0f, 1.0f, 1.0f));
 
-        GameManager.instance.soundManager.music.Play();
+        GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
         gameObject.SetActive(false);
     }
 
