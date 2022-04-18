@@ -361,6 +361,11 @@ Transform:
   m_Father: {fileID: 750897873}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!224 &299069812 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4065682726235344845, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+  m_PrefabInstance: {fileID: 392064891}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &373057313
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2646886989467762522, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7500347710920596629, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -651,6 +660,7 @@ Transform:
   m_Children:
   - {fileID: 750897873}
   - {fileID: 1252583571}
+  - {fileID: 1559206299}
   m_Father: {fileID: 169166790}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -697,6 +707,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 0}
@@ -709,6 +722,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 5
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -724,6 +740,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 8300000, guid: d1ff68ab486f5c9498ca6894ea1472c7, type: 3}
     WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: b5f9fd0e87537f14383489ecdc5186f7, type: 2}
@@ -739,6 +758,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 6
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -754,6 +776,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1.5
   - ActionType: 5
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -769,6 +794,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 8300000, guid: a7907935a719e2143ba5fc5de85c1934, type: 3}
     WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1.2
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -781,6 +809,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: c383abbae3809834899be62fc4e753c8, type: 2}
@@ -793,6 +824,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -805,6 +839,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: 67acebdb9843cdd4fbc8bbe4a93c61c9, type: 2}
@@ -820,6 +857,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 5
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -835,6 +875,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 8300000, guid: a7907935a719e2143ba5fc5de85c1934, type: 3}
     WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1.2
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -847,6 +890,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: 21a1ae73a4e4696469d1c7301cb33c0a, type: 2}
@@ -862,6 +908,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 3
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -877,6 +926,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 6
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -892,6 +944,9 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 3.3
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -907,9 +962,12 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
-    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Dialogue: {fileID: 11400000, guid: 3175a767aef1c134a961bbf7fbaaf26b, type: 2}
     Movements:
       Value:
       - ShouldTeleport: 0
@@ -922,6 +980,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -937,9 +998,12 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
-    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Dialogue: {fileID: 11400000, guid: 632c04a60636e284996294c5efdba5b0, type: 2}
     Movements:
       Value:
       - ShouldTeleport: 0
@@ -952,6 +1016,24 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 3
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 686797139}
+    Music: {fileID: 1559206300}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -967,9 +1049,12 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
-    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Dialogue: {fileID: 11400000, guid: 97b2d2132e1583f419c28ea36c1dabec, type: 2}
     Movements:
       Value:
       - ShouldTeleport: 0
@@ -982,8 +1067,11 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
-  - ActionType: 4
+  - ActionType: 8
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
     Movements:
       Value:
@@ -997,6 +1085,112 @@ MonoBehaviour:
     FadeOut: 1
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 936199300}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 52b90a21c122d1d45b488e8644c0085b, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 7
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1711733570}
+        GoTo: {fileID: 947765168}
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 633401551}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards:
+      - {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
+      - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+      - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+      - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+      - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+      - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+      - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 1826795066}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 686797139}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 4
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 686797139}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 1573320960}
+        GoTo: {fileID: 686797139}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
 --- !u!114 &401568280
 MonoBehaviour:
@@ -1188,6 +1382,7 @@ Transform:
   - {fileID: 1292747503}
   - {fileID: 947765168}
   - {fileID: 633401551}
+  - {fileID: 1826795066}
   m_Father: {fileID: 401568277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1208,15 +1403,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.613
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.545
+      value: -1.18
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1250,6 +1445,34 @@ PrefabInstance:
       propertyPath: Agent
       value: 
       objectReference: {fileID: 1711733570}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
 --- !u!4 &810581678 stripped
@@ -1268,6 +1491,153 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 585b56cbe65437849b54fdfcc6c0da16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &936199298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 936199299}
+  - component: {fileID: 936199303}
+  - component: {fileID: 936199302}
+  - component: {fileID: 936199301}
+  - component: {fileID: 936199300}
+  m_Layer: 0
+  m_Name: QuestItem1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &936199299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936199298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1132299375}
+  m_Father: {fileID: 2058356145}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 289.5, y: 289.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &936199300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936199298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1d476b5ed23d045949fd0df71a6ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &936199301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936199298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 936199302}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 936199300}
+        m_TargetAssemblyTypeName: QuestItem, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &936199302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936199298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4897f258be3323b45860bd74b5112c1d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &936199303
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936199298}
+  m_CullTransparentMesh: 1
 --- !u!1 &947765167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,6 +1906,111 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dialogue: {fileID: 11400000, guid: e05abd9396361fa4aa7d42fec4546f0d, type: 2}
+--- !u!1 &1132299374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132299375}
+  - component: {fileID: 1132299378}
+  - component: {fileID: 1132299377}
+  - component: {fileID: 1132299376}
+  m_Layer: 0
+  m_Name: Sketch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132299375
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132299374}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 936199299}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 230, y: 230}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1132299376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132299374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce76b7a490bd74f34a2f2752641aea24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectFactor: 0.653
+  m_Width: 0
+  m_Softness: 0.427
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_ColorMode: 3
+  m_TransitionTexture: {fileID: 2800000, guid: 04b808c8e7e2f114aa6bce179817e3b6, type: 3}
+  m_EffectArea: 0
+  m_KeepAspectRatio: 0
+  m_Player:
+    play: 0
+    initialPlayDelay: 0
+    duration: 1
+    loop: 0
+    loopDelay: 0
+    updateMode: 0
+  m_Reverse: 0
+--- !u!114 &1132299377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132299374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3607b93698924c54a8d01c18803426fc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1132299378
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132299374}
+  m_CullTransparentMesh: 1
 --- !u!1 &1252583570
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +2022,7 @@ GameObject:
   - component: {fileID: 1252583571}
   - component: {fileID: 1252583572}
   m_Layer: 0
-  m_Name: Music
+  m_Name: Music1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1780,6 +2255,52 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1559206298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559206299}
+  - component: {fileID: 1559206300}
+  m_Layer: 0
+  m_Name: Music2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1559206299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559206298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 401568277}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559206300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559206298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63abc2f93a08f4148a5bf1c8988817ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: 0c8d0192c0696cf458c922175250e495, type: 2}
+  source: {fileID: 518322450}
 --- !u!1 &1573320959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +2478,37 @@ Transform:
   m_Father: {fileID: 750897873}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1826795065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1826795066}
+  m_Layer: 0
+  m_Name: City Point - 4 - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1826795066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826795065}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 13.62, y: 3.69, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 750897873}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
 --- !u!1 &1899003483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,10 +2612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHP: 50
   MaxHP: 50
-  Cards:
-  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
-  - {fileID: 11400000, guid: cbf4b1ca75dd4174ba3859786bf43104, type: 2}
-  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+  FightCards: []
+  InventoryCards: []
   RangeOfAggression: 1.5
   asset: {fileID: 11400000, guid: 1ac092a8fafdadf458b66b159c9a280f, type: 2}
   ai: {fileID: 1929247669}
@@ -2124,6 +2674,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d97c371d9837a444b4749cf9e5fe325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2058356144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2058356145}
+  m_Layer: 0
+  m_Name: QuestItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2058356145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058356144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 936199299}
+  m_Father: {fileID: 299069812}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2095553806
 GameObject:
   m_ObjectHideFlags: 0

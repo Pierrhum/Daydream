@@ -7,7 +7,7 @@ using UnityEngine.AI;
 [System.Serializable]
 public class ActionCinematic
 {
-    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait }
+    public enum Type { None, Dialogue, Movement, PlayMusic, StopMusic, SFX, Wait, Reward, QuestItem }
     public Type ActionType = Type.None;
 
     [ConditionalField(nameof(ActionType), false, Type.Dialogue)]
@@ -26,6 +26,12 @@ public class ActionCinematic
     public AudioClip SFX;
     [ConditionalField(nameof(ActionType), false, Type.SFX)]
     public bool WaitEnd;
+
+    [ConditionalField(nameof(ActionType), false, Type.Reward)]
+    public Reward Reward;
+
+    [ConditionalField(nameof(ActionType), false, Type.QuestItem)]
+    public QuestItem QuestItem;
 
 
     [ConditionalField(nameof(ActionType), false, Type.Wait)]
@@ -99,6 +105,16 @@ public class ActionCinematic
                 yield return GameManager.instance.soundManager.Play2DSFX(SFX, WaitEnd);
                 break;
 
+            case Type.Reward:
+                Reward.GiveRewardToPlayer();
+                break;
+
+            case Type.QuestItem:
+                yield return QuestItem.Show();
+                while (!QuestItem.isHidden())
+                    yield return new WaitForSeconds(Time.deltaTime);
+                break;
+
             case Type.Wait:
                 yield return new WaitForSeconds(SecondsToWait);
                 break;
@@ -116,5 +132,25 @@ public class Movement
     public bool ShouldTeleport = false;
     public NavMeshAgent Agent;
     public Transform GoTo;
+}
+
+[System.Serializable]
+public class Reward
+{
+    public List<CardAsset> Cards;
+
+    public void GiveRewardToPlayer()
+    {
+        Player player = GameManager.instance.player;
+        foreach (CardAsset card in Cards)
+            player.InventoryCards.Add(card);
+
+        /// A SUPPRIMER PLUS TARD, UNE FOIS QU'ON POURRA SELECTIONNER NOS CARTES DANS L'INVENTAIRE
+        foreach (CardAsset card in Cards)
+            player.FightCards.Add(card);
+        ///
+
+        // Donner XP
+    }
 }
 

@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
     // Permet d'ajouter une carte à l'inventaire
     public void addCard(CardAsset cardToAdd)
     {
-        player.Cards.Add(cardToAdd);
+        player.FightCards.Add(cardToAdd);
     }
 
     public void openInventory()
@@ -49,8 +49,8 @@ public class Inventory : MonoBehaviour
 
             for(int i = 0; i < 5; i++){
                 GameObject card = GameObject.Find(i.ToString());
-                if(i < player.Cards.Count){
-                    card.GetComponent<Button>().image.sprite = player.Cards[i].Sprite;
+                if(i < player.FightCards.Count){
+                    card.GetComponent<Button>().image.sprite = player.FightCards[i].Sprite;
                 }
                 else{
                     card.SetActive(false);
@@ -60,7 +60,6 @@ public class Inventory : MonoBehaviour
         else{
             exitMenu();
         }
-        
     }
 
     public void exitMenu()
@@ -122,8 +121,8 @@ public class Inventory : MonoBehaviour
         textName.SetActive(true);
         textDescription.SetActive(true);
         textClick.SetActive(false);
-        textName.GetComponent<TextMeshProUGUI>().SetText(player.Cards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
-        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.Cards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
+        textName.GetComponent<TextMeshProUGUI>().SetText(player.FightCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
+        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.FightCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
     }
  
 }

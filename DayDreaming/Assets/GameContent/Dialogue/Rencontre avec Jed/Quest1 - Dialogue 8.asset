@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
+  m_Name: Quest1 - Dialogue 8
+  m_EditorClassIdentifier: 
+  talks:
+  - Text: "\xC9trange..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: '?'
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Je souhaitais vous montrer une autre entit\xE9e de ce monde"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Des \xEAtres dont je n'ai jamais entendu prononc\xE9 un seul mot..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Des Sans-Paroles.
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Alors comme \xE7a en plus d'avoir des discussions absurdes avec ces...
+      \"Onards\", on se fait carr\xE9ment ignorer par d'autres."
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Un r\xEAve bien fade."
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Si seulement c'\xE9tait simplement ennuyant..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "En r\xE9alit\xE9, ils sont bien plus dangereux que les Onards"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Mais ce qui m'inqui\xE8te encore plus, c'est qu'ils ne sont plus \xE0
+      port\xE9e de vue"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: D'habitude, ils se regroupent tous ici.
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: 'En quoi sont-ils dangereux exactement ? '
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: Suivez-moi.
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: ...
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
