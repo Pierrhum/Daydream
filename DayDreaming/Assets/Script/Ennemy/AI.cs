@@ -1,13 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
-    protected CircleCollider2D Collider;
-    protected CircleCollider2D PlayerCollider;
-    protected Rigidbody2D Rigidbody;
-    protected Player Player;
+    public NavMeshAgent Agent;
+    [System.NonSerialized]
+    public CircleCollider2D Collider;
+    [System.NonSerialized]
+    public CircleCollider2D PlayerCollider;
+    [System.NonSerialized]
+    public Rigidbody2D Rigidbody;
+    [System.NonSerialized]
+    public Player Player;
 
     // Serialized Fields
     public float Speed = 1.0f;
@@ -22,12 +28,12 @@ public class AI : MonoBehaviour
         Rigidbody.freezeRotation = true;
     }
 
-    protected void Move(Vector2 Direction)
+    public void Move(Vector2 Direction)
     {
         Rigidbody.velocity = Speed * Direction;
     }
 
-    protected void Stop()
+    public void Stop()
     {
         Rigidbody.velocity = new Vector3(0.0f, 0.0f, 0.0f);
     }

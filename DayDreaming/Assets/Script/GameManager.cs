@@ -18,7 +18,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        soundManager.music.Play();
+    }
+    private void Start()
+    {
+        soundManager.PlayMusic(SoundManager.MusicType.Main);
     }
 
     // Update is called once per frame

@@ -8,6 +8,8 @@ namespace Utils {
     public static class UI
     {
         #region Basic Unity Effects
+        public class CoroutineWrapper : MonoBehaviour { }
+
         public static void SetImageOpacity(Image image, float a)
         {
             Color c = image.color;
