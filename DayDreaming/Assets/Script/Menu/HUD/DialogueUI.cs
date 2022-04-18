@@ -61,7 +61,6 @@ public class DialogueUI : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log("test");
         if(TextMesh.text == TextToDisplay)
             Next = true;
         else

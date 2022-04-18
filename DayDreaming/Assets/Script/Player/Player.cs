@@ -12,12 +12,20 @@ public class Player : Fighter
 
     public Quest Quest;
 
+    public bool CanMove = true;
     public bool isFighting = false;
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
+    }
+
+    public void StopMoving()
+    {
+        CanMove = false;
+        rbody.velocity = Vector2.zero;
+        isoRenderer.SetDirection(Vector2.zero);
     }
 
     /************ COMBAT ***********/
@@ -44,13 +52,16 @@ public class Player : Fighter
 
     public void Move(InputAction.CallbackContext context)
     {
-        Vector2 currentPos = rbody.position;
-        Vector2 inputVector = context.ReadValue<Vector2>();
-        inputVector = Vector2.ClampMagnitude(inputVector, 1);
-        Vector2 movement = inputVector * speed;
+        if(CanMove)
+        {
+            Vector2 currentPos = rbody.position;
+            Vector2 inputVector = context.ReadValue<Vector2>();
+            inputVector = Vector2.ClampMagnitude(inputVector, 1);
+            Vector2 movement = inputVector * speed;
 
-        isoRenderer.SetDirection(movement);
-        rbody.velocity = movement;
+            isoRenderer.SetDirection(movement);
+            rbody.velocity = movement;
+        }
     }
 
     public void OpenMenu(InputAction.CallbackContext context)
