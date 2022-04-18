@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
     public GameObject cardPannel;
     public GameObject objectPannel;   
     public GameObject HUD;
+    public GameObject pauseMenu;
 
     private int choose = 0;
 
@@ -46,6 +47,11 @@ public class Inventory : MonoBehaviour
             Time.timeScale = 0;
             inventoryWindow.SetActive(true);
             HUD.SetActive(false);
+
+            if(pauseMenu.activeSelf){
+                 pauseMenu.SetActive(false);
+            }
+            
 
             for(int i = 0; i < 5; i++){
                 GameObject card = GameObject.Find(i.ToString());
