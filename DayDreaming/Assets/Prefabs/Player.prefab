@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 9d568b64459ebc34e8e02c585027a77e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -267,7 +267,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!114 &209099958195674054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,6 +357,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 56395091-457d-4380-8e8b-db5e34337d53
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c135550a-d0f8-445a-8b17-cadc4275671d
+    m_ActionName: UI/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6426a4a6-dd89-4c9c-9d4c-2c234af1438d
+    m_ActionName: UI/KillTest[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 377cb6dd-bf12-48c9-9896-bf1f9bc7b331
+    m_ActionName: UI/OpenInventory[/Keyboard/i]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -374,7 +386,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 585b56cbe65437849b54fdfcc6c0da16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurrentHP: 50
+  MaxHP: 50
+  Cards:
+  - {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
+  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+  - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+  - {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
+  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+  Agent: {fileID: 0}
   speed: 2
+  Quest: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
+  CanMove: 1
+  isFighting: 0
 --- !u!1 &2329355379999492412
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +442,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -435,7 +459,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -11,7 +11,6 @@ public class Music : MonoBehaviour
     {
         if (source == null)
             source = GetComponent<AudioSource>();
-        source.clip = asset.begin;
     }
     public void Play()
     {
@@ -20,6 +19,7 @@ public class Music : MonoBehaviour
 
     private IEnumerator MusicCoroutine()
     {
+        source.clip = asset.begin;
         source.Play();
         while (source.isPlaying)
             yield return new WaitForSeconds(Time.deltaTime);

@@ -19,7 +19,6 @@ public class UIManager : MonoBehaviour
     // TODO Menu combat
     public void OpenFightMenu(Enemy Enemy)
     {
-        GameManager.instance.soundManager.music.Stop(false);
         CardsFight.Open(Enemy);
     }
 
@@ -32,14 +31,14 @@ public class UIManager : MonoBehaviour
     public void OpenDialogueUI(bool stopMusic)
     {
         if(stopMusic)
-            GameManager.instance.soundManager.music.Stop(false);
+            GameManager.instance.soundManager.StopMusic(false);
         HUD.DialogueUI.Show();
     }
 
     public void CloseDialogueUI(bool playMusic)
     {
         if (playMusic)
-            GameManager.instance.soundManager.music.Play();
+            GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
         HUD.DialogueUI.Hide();
     }
 }
