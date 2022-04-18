@@ -33,7 +33,7 @@ public class PlayerHand : MonoBehaviour
         if(DebugCards)
         {
             UICard[] cards = GetComponentsInChildren<UICard>();
-            if (cards.Length != player.Cards.Count)
+            if (cards.Length != player.FightCards.Count)
             {
                 foreach (UICard card in cards)
                 {
@@ -55,7 +55,7 @@ public class PlayerHand : MonoBehaviour
     {
         if(player==null)
             player = GameManager.instance.player;
-        foreach (CardAsset card in player.Cards)
+        foreach (CardAsset card in player.FightCards)
         {
             UICard uiCard = Instantiate(template, template.transform.position, template.transform.rotation, transform);
 

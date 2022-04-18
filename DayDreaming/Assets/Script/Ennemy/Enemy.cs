@@ -54,12 +54,12 @@ public class Enemy : Fighter
 
     public void Attack()
     {
-        if(CanPlay() && Cards.Count > 0)
+        if(CanPlay() && FightCards.Count > 0)
         {
-            int random = Random.Range(0, Cards.Count);
-            CardAsset card = Cards[random];
+            int random = Random.Range(0, FightCards.Count);
+            CardAsset card = FightCards[random];
             card.ApplyEffect(this, GameManager.instance.player);
-            Cards.Remove(card);
+            FightCards.Remove(card);
 
             GameManager.instance.uiManager.CardsFight.UpdateProgressBars();
             StartCoroutine(GameManager.instance.uiManager.CardsFight.ShowEnemyCard(card));
