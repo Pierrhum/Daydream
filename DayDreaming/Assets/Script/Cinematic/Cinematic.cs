@@ -6,13 +6,19 @@ using UnityEngine;
 public class Cinematic : MonoBehaviour
 {
     public List<ActionCinematic> Actions;
+    private bool isPlaying = false;
 
     public IEnumerator Play()
     {
-        GameManager.instance.player.StopMoving();
-        foreach (ActionCinematic action in Actions)
-            yield return StartCoroutine(action.ProcessAction());
-        GameManager.instance.player.CanMove = true;
+        if(!isPlaying)
+        {
+            isPlaying = true;
+            GameManager.instance.player.StopMoving();
+            foreach (ActionCinematic action in Actions)
+                yield return StartCoroutine(action.ProcessAction());
+            GameManager.instance.player.CanMove = true;
+            Destroy(gameObject);
+        }
     }
 }
 

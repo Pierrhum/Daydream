@@ -65,7 +65,7 @@ public class ActionCinematic
                         if (movement.Agent.Equals(GameManager.instance.player.Agent))
                         {
                             movement.Agent.transform.position = GameManager.instance.player.transform.position;
-                            GameManager.instance.player.transform.localPosition = Vector3.zero;
+                            GameManager.instance.player.transform.localPosition = new Vector3(0.01f,0f,0.07f);
                         }
                         if(movement.ShouldTeleport)
                         {

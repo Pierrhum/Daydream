@@ -26,5 +26,6 @@ public class DialogueSpawner : MonoBehaviour
         }
         GameManager.instance.uiManager.CloseDialogueUI(false);
         GameManager.instance.player.CanMove = true;
+        Destroy(gameObject);
     }
 }
