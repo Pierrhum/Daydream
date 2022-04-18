@@ -35,6 +35,9 @@ public class ActionCinematic
 
             case Type.Movement:
                 {
+                    List<NavMeshAgent> MovingAgents = new List<NavMeshAgent>();
+                    List<Vector3> ToGoPositions = new List<Vector3>();
+
                     foreach (Movement movement in Movements.Value)
                     {
                         // Update Player NavAgent
@@ -43,9 +46,24 @@ public class ActionCinematic
                             movement.Agent.transform.position = GameManager.instance.player.transform.position;
                             GameManager.instance.player.transform.localPosition = Vector3.zero;
                         }
-                        movement.Agent.SetDestination(movement.GoTo.position);
-                        while(Vector3.SqrMagnitude(movement.Agent.nextPosition - movement.GoTo.position) > 0.03)
-                            yield return new WaitForSeconds(0.5f);
+                        if(movement.ShouldTeleport)
+                        {
+                            movement.Agent.Warp(movement.GoTo.position);
+                            yield return new WaitForSeconds(1f);
+                        } 
+                        else
+                        {
+                            movement.Agent.SetDestination(movement.GoTo.position);
+                            MovingAgents.Add(movement.Agent);
+                            ToGoPositions.Add(movement.GoTo.position);
+                        }
+                    }
+
+                    // Check si tous les agents sont bien arrivés, à refaire c'est un peu dégueu
+                    for (int i = 0; i < MovingAgents.Count; i++)
+                    {
+                        while (Vector3.SqrMagnitude(MovingAgents[i].nextPosition - ToGoPositions[i]) > 0.03)
+                            yield return new WaitForSeconds(Time.deltaTime);
                     }
                 }
                 break;
@@ -60,6 +78,7 @@ public class ActionCinematic
 [System.Serializable]
 public class Movement
 {
+    public bool ShouldTeleport = false;
     public NavMeshAgent Agent;
     public Transform GoTo;
 }
