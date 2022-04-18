@@ -1473,10 +1473,34 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 27720401, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 27720401, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_Width
+      value: 0.471
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_Color.b
+      value: 0.18111429
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_Color.g
+      value: 0.26529637
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_Softness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 234287643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_EffectFactor
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 261543948, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
