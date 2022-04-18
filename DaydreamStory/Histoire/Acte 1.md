@@ -17,7 +17,7 @@ STEVE <br>
 Aaaaah... Je vais enfin rentrer chez moi. Marre des heures sup au taf. 
 </p>
 
-*STEVE continue de marcher et des yeux à travers certaines fenêtres le suivent du regard, sans qu'il ne les remarque.*
+*STEVE continue de marcher.*
 <p style="text-align:center;">
 STEVE <br>
 (perplexe) <br>
@@ -45,5 +45,32 @@ Vous avez pas l'air très sûr de vous là....
 JED <br>
 Vous savez quoi, je vais chercher mes affaires et je vous accompagne, je dois y aller aussi.
 </p>
-*JED rentre dans sa maison pour prendre son carnet et ressort presque instantanément.
-Les deux personnages s'engagent sur la route et font les présentations.*
+*JED rentre dans sa maison pour prendre son carnet et ressort presque instantanément.*
+**Le joueur perd le contrôle du personnage et il suit Jed à la place.**
+*Les deux personnages s'engagent sur la route et Jed présente brievement le quartier à Steve.
+Ils s'approchent du premier pâté de maison.*
+<p style="text-align:center;">
+JED <br>
+Ca c'est le quartier des ONARDS, mais personne fait vraiment attention à eux. Des fois vous tomberez sur une maison vide et vous pourrez vous y installer. C'est ce que j'ai fait quand je suis arrivé, après avoir enlevé les champignons bien sûr.
+</p>
+*Ils continuent vers les bâtiment un peu plus loin.*
+<p style="text-align:center;">
+JED <br>
+C'est ici qu'il y a mon restaurant préféré.
+</p>
+*Jed montre à Steve la grotte au bout de la rue.*
+<p style="text-align:center;">
+JED <br>
+Par contre là base c'est la zone des SANS-PAROLES. Enfin en tout cas c'est ce qu'on m'a dit. <br><br>
+D'ailleurs si ça vous dérange pas j'aimerais vous demander une petite faveur...
+</p>
+<p style="text-align:center;">
+STEVE <br>
+Quoi exactement ? 
+</p>
+<p style="text-align:center;">
+JED <br>
+J'ai perdu mon stylo et je crois qu'il est là bas. J'ai peur d'y aller mais vous m'avez l'air courageux. Si je vais vous donnez de quoi vous défendre.  
+</p>
+*Jed tend à Steve un packet de cartes qu'il range dans son inventaire.*
+**Le joueur reprend le controle de son personnage. Il entre dans la zone et se fait attaquer par un sans-parole ce qui lance un combat.**
