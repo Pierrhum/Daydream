@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
+    public NavMeshAgent Agent;
     [System.NonSerialized]
     public CircleCollider2D Collider;
     [System.NonSerialized]

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MyBox;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class ActionCinematic
@@ -36,8 +37,15 @@ public class ActionCinematic
                 {
                     foreach (Movement movement in Movements.Value)
                     {
-                        movement.Entity.transform.position = movement.GoTo.position;
-                        yield return new WaitForSeconds(0.5f);
+                        // Update Player NavAgent
+                        if (movement.Agent.Equals(GameManager.instance.player.Agent))
+                        {
+                            movement.Agent.transform.position = GameManager.instance.player.transform.position;
+                            GameManager.instance.player.transform.localPosition = Vector3.zero;
+                        }
+                        movement.Agent.SetDestination(movement.GoTo.position);
+                        while(Vector3.SqrMagnitude(movement.Agent.nextPosition - movement.GoTo.position) > 0.03)
+                            yield return new WaitForSeconds(0.5f);
                     }
                 }
                 break;
@@ -52,7 +60,7 @@ public class ActionCinematic
 [System.Serializable]
 public class Movement
 {
-    public GameObject Entity;
+    public NavMeshAgent Agent;
     public Transform GoTo;
 }
 

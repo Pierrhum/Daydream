@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class Player : Fighter
 {
+    public NavMeshAgent Agent;
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
