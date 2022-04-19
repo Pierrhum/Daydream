@@ -63,8 +63,8 @@ public class Enemy : Fighter
 
             GameManager.instance.uiManager.CardsFight.UpdateProgressBars();
             StartCoroutine(GameManager.instance.uiManager.CardsFight.ShowEnemyCard(card));
-            GameManager.instance.player.CanPlay(true);
         }
+        GameManager.instance.player.CanPlay(true);
     }
 
 }
