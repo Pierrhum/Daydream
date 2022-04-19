@@ -1,0 +1,862 @@
+fileFormatVersion: 2
+guid: ed5f71d4ed05d4032a3d58a1f5cadf76
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 126
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2f8fa19c4e6415eaecd53de7aa7b6a
+      internalID: 492164180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081d3d89a10ff4df0ae9e4faf8184615
+      internalID: 2042981957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b614f18b3a94b4f90173ce8f51e308
+      internalID: -1747323202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f4030f08d4b4f60bfc8b46733181b8
+      internalID: 1231586596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97fee4c67c088438e8775eea08ebf357
+      internalID: -774378652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d47242c102e041d99c3c60e9aa95fa2
+      internalID: -1836915931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8d6436aa2c748d5bb5b3053989b8d8
+      internalID: -900384402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd020926888d4b0892d42cab386427c
+      internalID: 1724617046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c260c952751854a8e8df007d07d660c2
+      internalID: 1897262621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192d5a009b5954d488eab2570ec8c27e
+      internalID: 1772190988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84e3a68aa4574145bec32e8c61adeb2
+      internalID: -578619933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50727adfc16ca48a79d9f33d73db4517
+      internalID: -1064857759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b91b5c1580f4befae3768a5e55056b
+      internalID: 623947705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504f10225440b463f8cc2edf4df81019
+      internalID: -1382470229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102507599ec024cbabe4d6b14d12890f
+      internalID: 1654694914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a4e4d0189d4bef920c3205be1e909
+      internalID: -203988710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386ebd57445e34ef5969eaa367ccc808
+      internalID: 1432903324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170d7b9cbd032482980eea0ee0ed5a4e
+      internalID: -1012561547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a19ea7b3e7954ba587c2892c05e79bc
+      internalID: 1706015377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8bb34722a11c40369a6c4e16599d9af
+      internalID: -165781978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6add32a4ac1964a8ca69d95d86f227d7
+      internalID: 632869104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f9e1fa169ac14932987679814e9cda1
+      internalID: -1190211880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d97a6fa8b4524604ba7651fc5e2b241
+      internalID: -1300930504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f22dc212720478a8bcb30821483d2a
+      internalID: 328020300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d289f89146f342979eb49d4b11400c8
+      internalID: 71185614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db6f6b61cd834ce898eb9b0eb0304a0
+      internalID: -205930854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafcac2caeb854f6b9d2dd4461070afd
+      internalID: 1332979012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Road Sand Grass (128x64)_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -32}
+        - {x: -63, y: 0}
+        - {x: 1, y: 32}
+        - {x: 63, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce2ce6479d7e42f78de9b4259dbecc7
+      internalID: 1658717060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Road Sand Grass (128x64)_26: 1332979012
+      Road Sand Grass (128x64)_0: 492164180
+      Road Sand Grass (128x64)_24: 71185614
+      Road Sand Grass (128x64)_17: -1012561547
+      Road Sand Grass (128x64)_6: -900384402
+      Road Sand Grass (128x64)_1: 2042981957
+      Road Sand Grass (128x64)_8: 1897262621
+      Road Sand Grass (128x64)_15: -203988710
+      Road Sand Grass (128x64)_20: 632869104
+      Road Sand Grass (128x64)_27: 1658717060
+      Road Sand Grass (128x64)_12: 623947705
+      Road Sand Grass (128x64)_7: 1724617046
+      Road Sand Grass (128x64)_5: -1836915931
+      Road Sand Grass (128x64)_11: -1064857759
+      Road Sand Grass (128x64)_10: -578619933
+      Road Sand Grass (128x64)_2: -1747323202
+      Road Sand Grass (128x64)_13: -1382470229
+      Road Sand Grass (128x64)_4: -774378652
+      Road Sand Grass (128x64)_9: 1772190988
+      Road Sand Grass (128x64)_16: 1432903324
+      Road Sand Grass (128x64)_3: 1231586596
+      Road Sand Grass (128x64)_19: -165781978
+      Road Sand Grass (128x64)_18: 1706015377
+      Road Sand Grass (128x64)_14: 1654694914
+      Road Sand Grass (128x64)_22: -1300930504
+      Road Sand Grass (128x64)_23: 328020300
+      Road Sand Grass (128x64)_25: -205930854
+      Road Sand Grass (128x64)_21: -1190211880
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

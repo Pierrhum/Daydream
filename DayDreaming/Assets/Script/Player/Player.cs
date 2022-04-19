@@ -45,6 +45,7 @@ public class Player : Fighter
             Debug.Log("jeu terminé");
         else
         {
+
             Quest = Quest.Next;
             Debug.Log("New quest : " + Quest.Name);
         }

@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ee5b03f1283a747891dd6b64134191, type: 3}
+  m_Name: Quest1 - Dialogue 10
+  m_EditorClassIdentifier: 
+  talks:
+  - Text: Mmh... On ne distingue pas grand chose...
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Mais c'est d\xE9j\xE0 \xE7a... Toutefois pourquoi ne pas terminer ce croquis
+      ?"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Eh bien h\xE9las... Dans ma fuite j'ai laiss\xE9 tomber mon stylo dans
+      \xC9phialt\xE8s, et il est le seul que j'ai pu trouver en ce monde..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "\xC9coutez, je pense que ce qui se passe actuellement nous d\xE9passe
+      tous les deux, je suis d\xE9sormais certain que vous n'\xEAtes pas une personne
+      ordinaire \xE0 ce monde."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Que vous le croyez ou non, je suis \xE9galement humain, et je pense sinc\xE8rement
+      que si nous devons nous retrouver ici chaque nuit, nous devrions faire \xE9quipe,
+      et amasser le plus d'informations possible."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Qu'en dites-vous ?
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Je sens que par \"faire \xE9quipe\", il entend que j'aille chercher son
+      foutu stylo)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Mmh pourquoi pas, on verra o\xF9 \xE7a nous m\xEAne..."
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: 'Suuuuper ! '
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Pour commencer il faudrait r\xE9cup\xE9rer le stylo... "
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(\xC9videmment...)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Je reconnais qu'il s'agit d'une t\xE2che ingrate... Et dangereuse..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "(Elle commence bien cette \xE9quipe)"
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: 'Mais je ne compte pas vous laisser les mains vides ! '
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "J'ai trouv\xE9 ces cartes dans l'antre... Apr\xE8s les avoir test\xE9s
+      sur des Ona-... Hem, \xE9tudi\xE9es j'ai d\xE9cel\xE9 un certain pouvoir dans
+      chacune d'entre-elles..."
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Je t'ai laiss\xE9 des notes, n'h\xE9site pas \xE0 les lire !"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: "Int\xE9ressant "
+    Display: 0
+    sprite: {fileID: 21300000, guid: 1dac0b8e4039dc44bbc1ad43d4c7558f, type: 3}
+    Right: {fileID: 0}
+  - Text: "Vous venez d'acqu\xE9rir vos premi\xE8res cartes. Vous pouvez ouvrir votre
+      inventaire en appuyant sur \"I\" afin de s\xE9lectionner celles que vous utiliserez
+      lors de votre aventure. R\xE9flechissez bien avant de vous lancer \xE0 l'assaut
+      de l'ennemi..."
+    Display: 0
+    sprite: {fileID: 0}
+    Right: {fileID: 0}
+  - Text: "Je retourne chez moi chercher et organiser mes notes, je vous y attendrai
+      pour le debrief de tout ce que avez \xE0 savoir ici !"
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}
+  - Text: Bonne chance !
+    Display: 1
+    sprite: {fileID: 21300000, guid: 08d9f823f8da9974fb42a5e01f8541b1, type: 3}
+    Right: {fileID: 0}

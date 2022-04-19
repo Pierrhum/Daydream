@@ -1,0 +1,1171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8844373812817152959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373812817152958}
+  m_Layer: 0
+  m_Name: City Point - 2 - Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373812817152958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373812817152959}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 14.657, y: 0.847, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373813022691357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813022691356}
+  m_Layer: 0
+  m_Name: JedHouse - Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813022691356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813022691357}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.19, y: -1.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8844373813085796488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813085796491}
+  m_Layer: 0
+  m_Name: City Point - 4 - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813085796491
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813085796488}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 13.62, y: 3.69, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373813353500459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813353500458}
+  - component: {fileID: 8844373813353500461}
+  m_Layer: 0
+  m_Name: Music2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813353500458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813353500459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814309758116}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844373813353500461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813353500459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63abc2f93a08f4148a5bf1c8988817ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: 0c8d0192c0696cf458c922175250e495, type: 2}
+  source: {fileID: 0}
+--- !u!1 &8844373813389886061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813389886060}
+  m_Layer: 0
+  m_Name: City Point - 1 - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813389886060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813389886061}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 7.009, y: 4.554, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373813442601515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813442601514}
+  - component: {fileID: 8844373813442601516}
+  - component: {fileID: 8844373813442601517}
+  m_Layer: 0
+  m_Name: DialogueSpawner - 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813442601514
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813442601515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814655127927}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844373813442601516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813442601515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda7ec179f733974f9636d4029dbf531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogue: {fileID: 11400000, guid: e05abd9396361fa4aa7d42fec4546f0d, type: 2}
+--- !u!61 &8844373813442601517
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813442601515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.1370617}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.2741234}
+  m_EdgeRadius: 0
+--- !u!1 &8844373813592636963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813592636962}
+  - component: {fileID: 8844373813592636965}
+  m_Layer: 0
+  m_Name: Music1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813592636962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813592636963}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814309758116}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844373813592636965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813592636963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63abc2f93a08f4148a5bf1c8988817ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: b7d2acb463e28c544948a321b6b72df4, type: 2}
+  source: {fileID: 0}
+--- !u!1 &8844373813598721119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813598721118}
+  m_Layer: 0
+  m_Name: City Point - 2 - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813598721118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813598721119}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 15.391, y: 1.151, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373813813700894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373813813700865}
+  m_Layer: 0
+  m_Name: City Point - 3 - Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373813813700865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373813813700894}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 17.81, y: 6.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373814006294143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814006294142}
+  m_Layer: 0
+  m_Name: City Point - 3 - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814006294142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814006294143}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 18.69, y: 7.19, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373814088092138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814088092141}
+  - component: {fileID: 8844373814088092143}
+  - component: {fileID: 8844373814088092140}
+  m_Layer: 0
+  m_Name: DialogueSpawner - 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814088092141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814088092138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.94, y: -1.83, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814655127927}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844373814088092143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814088092138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda7ec179f733974f9636d4029dbf531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialogue: {fileID: 11400000, guid: eb250f4c35b38014ab0b517cd8618e9d, type: 2}
+--- !u!61 &8844373814088092140
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814088092138}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &8844373814091704291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814091704290}
+  m_Layer: 0
+  m_Name: JedHouse - Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814091704290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814091704291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.21, y: -0.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8844373814157352033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814157352032}
+  m_Layer: 0
+  m_Name: CinematicPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814157352032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814157352033}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8844373813022691356}
+  - {fileID: 8844373814091704290}
+  - {fileID: 8844373814634237652}
+  - {fileID: 8844373813389886060}
+  - {fileID: 8844373812817152958}
+  - {fileID: 8844373813598721118}
+  - {fileID: 8844373813813700865}
+  - {fileID: 8844373814006294142}
+  - {fileID: 8844373813085796491}
+  m_Father: {fileID: 8844373814309758116}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8844373814309758117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814309758116}
+  - component: {fileID: 8844373814309758121}
+  - component: {fileID: 8844373814309758118}
+  - component: {fileID: 8844373814309758119}
+  m_Layer: 0
+  m_Name: EndCinematic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814309758116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814309758117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.574, y: 2.168, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8844373814157352032}
+  - {fileID: 8844373813592636962}
+  - {fileID: 8844373813353500458}
+  m_Father: {fileID: 8844373814655127927}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8844373814309758121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814309758117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e179734b5b236fe45a0f3b444dc4cf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quest: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
+  Cinematic: {fileID: 8844373814309758118}
+  TriggerType: 0
+--- !u!114 &8844373814309758118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814309758117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a586d3cfd7d4f54d97d4e166975ff9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Actions:
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 98c01c37b25028a468871b641ea99035, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 0}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813022691356}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 5
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 8300000, guid: d1ff68ab486f5c9498ca6894ea1472c7, type: 3}
+    WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: b5f9fd0e87537f14383489ecdc5186f7, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 6
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1.5
+  - ActionType: 5
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 8300000, guid: a7907935a719e2143ba5fc5de85c1934, type: 3}
+    WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1.2
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: c383abbae3809834899be62fc4e753c8, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813022691356}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813389886060}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 67acebdb9843cdd4fbc8bbe4a93c61c9, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 5
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 8300000, guid: a7907935a719e2143ba5fc5de85c1934, type: 3}
+    WaitEnd: 1
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1.2
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 21a1ae73a4e4696469d1c7301cb33c0a, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 3
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 8844373813592636965}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 6
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 3.3
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814634237652}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813389886060}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 3175a767aef1c134a961bbf7fbaaf26b, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373812817152958}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813598721118}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 632c04a60636e284996294c5efdba5b0, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 3
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 8844373813353500461}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 97b2d2132e1583f419c28ea36c1dabec, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 0
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 8
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 52b90a21c122d1d45b488e8644c0085b, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 7
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813813700865}
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814006294142}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards:
+      - {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
+      - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+      - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+      - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+      - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+      - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+      - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 0
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373813085796491}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 2
+    Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 4
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+  - ActionType: 1
+    Dialogue: {fileID: 11400000, guid: 2290ceab4674925499c462db595e4d01, type: 2}
+    Movements:
+      Value:
+      - ShouldTeleport: 1
+        Agent: {fileID: 0}
+        GoTo: {fileID: 8844373814091704290}
+    Music: {fileID: 0}
+    FadeOut: 1
+    SFX: {fileID: 0}
+    WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
+    SecondsToWait: 1
+--- !u!58 &8844373814309758119
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814309758117}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5
+--- !u!1 &8844373814634237653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814634237652}
+  m_Layer: 0
+  m_Name: City Point - 1 - Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814634237652
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814634237653}
+  m_LocalRotation: {x: -0, y: -0, z: 0.42261824, w: 0.90630776}
+  m_LocalPosition: {x: 6.74, y: 3.86, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8844373814157352032}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 50}
+--- !u!1 &8844373814655127924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8844373814655127927}
+  m_Layer: 0
+  m_Name: Rencontre avec Jed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8844373814655127927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8844373814655127924}
+  m_LocalRotation: {x: 0, y: 0, z: -0.42261827, w: 0.9063079}
+  m_LocalPosition: {x: 1.5, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8844373814088092141}
+  - {fileID: 8844373813442601514}
+  - {fileID: 8844373814309758116}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50}

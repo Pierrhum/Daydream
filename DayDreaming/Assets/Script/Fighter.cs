@@ -11,7 +11,8 @@ public class Fighter : MonoBehaviour
 
     public float CurrentHP = 10;
     public float MaxHP = 10;
-    public List<CardAsset> Cards;
+    public List<CardAsset> FightCards;
+    public List<CardAsset> InventoryCards;
 
     public void Heal(int amount)
     {
