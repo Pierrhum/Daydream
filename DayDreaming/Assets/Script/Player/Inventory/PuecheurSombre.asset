@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Puecheur Sombre
   Sprite: {fileID: 21300000, guid: 94e1497170c112147bb64bb7fed4360e, type: 3}
-  type: 0
-  description: "Puech est un encul\xE9"
+  rarity: 0
+  description: 
