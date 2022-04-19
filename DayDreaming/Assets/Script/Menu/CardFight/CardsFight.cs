@@ -21,14 +21,16 @@ public class CardsFight : MonoBehaviour
 
     [SerializeField]
     private List<Image> fadeImages;
+    private List<Image> initFadeImages = new List<Image>();
     private UIDissolve dissolve;
 
     public void Start()
     {
         dissolve = Overlay.GetComponent<UIDissolve>();
         dissolve.effectFactor = 1.0f;
-        foreach (UICard card in PlayerHand.UICards)
-            fadeImages.Add(card.GetComponent<Image>());
+        foreach (Image img in fadeImages)
+            initFadeImages.Add(img);
+        fadeImages.Clear();
         SetOpacity(0.0f);
         gameObject.SetActive(false);
     }
@@ -38,6 +40,12 @@ public class CardsFight : MonoBehaviour
         this.Enemy = Enemy;
         this.Turn = 1;
         gameObject.SetActive(true);
+        PlayerHand.LoadCards();
+        fadeImages.Clear();
+        foreach (Image img in initFadeImages)
+            fadeImages.Add(img);
+        foreach (UICard card in PlayerHand.UICards)
+            fadeImages.Add(card.GetComponent<Image>());
 
         UpdateProgressBars();
         GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Fight);
@@ -82,6 +90,7 @@ public class CardsFight : MonoBehaviour
 
         GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Main);
         gameObject.SetActive(false);
+        GameManager.instance.player.isFighting = false;
     }
 
     public IEnumerator ShowEnemyCard(CardAsset card)

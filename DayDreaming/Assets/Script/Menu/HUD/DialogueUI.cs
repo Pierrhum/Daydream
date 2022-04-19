@@ -29,6 +29,10 @@ public class DialogueUI : MonoBehaviour
     {
         switch(SpriteDisplay)
         {
+            case Dialogue.Talk.SpriteDisplay.None:
+                SpriteRight.gameObject.SetActive(false);
+                SpriteLeft.gameObject.SetActive(false);
+                break;
             case Dialogue.Talk.SpriteDisplay.Left:
                 SpriteRight.gameObject.SetActive(false);
                 SpriteLeft.gameObject.SetActive(true);

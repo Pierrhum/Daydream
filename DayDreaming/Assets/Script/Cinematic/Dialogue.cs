@@ -11,7 +11,7 @@ public class Dialogue : ScriptableObject
     [System.Serializable]
     public class Talk
     {
-        public enum SpriteDisplay { Left, Right, Both }
+        public enum SpriteDisplay { Left, Right, Both, None }
 
         public string Text;
         public SpriteDisplay Display = SpriteDisplay.Left;

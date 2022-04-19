@@ -7,6 +7,7 @@ public class PlayerHand : MonoBehaviour
 {
     public Player player;
     public BezierCurve bezier;
+    public CardsFight CardsFightUI;
     public List<UICard> UICards;
 
     public UICard template;
@@ -15,7 +16,7 @@ public class PlayerHand : MonoBehaviour
 
     public bool DebugCards = true;
 
-    private void Awake()
+    public void LoadCards()
     {
         UICard[] cards = GetComponentsInChildren<UICard>();
         if (cards.Length != 0)
@@ -27,6 +28,11 @@ public class PlayerHand : MonoBehaviour
         }
         InitCardUI();
         InitCardPos();
+    }
+
+    private void Awake()
+    {
+        LoadCards();
     }
     private void OnDrawGizmos()
     {
@@ -59,7 +65,6 @@ public class PlayerHand : MonoBehaviour
         {
             UICard uiCard = Instantiate(template, template.transform.position, template.transform.rotation, transform);
 
-            CardsFight CardsFightUI = transform.parent.GetComponent<CardsFight>();
             uiCard.Init(CardsFightUI, card);
 
             UICards.Add(uiCard);

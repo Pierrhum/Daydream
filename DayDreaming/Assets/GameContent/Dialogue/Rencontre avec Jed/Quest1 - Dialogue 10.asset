@@ -94,7 +94,7 @@ MonoBehaviour:
       inventaire en appuyant sur \"I\" afin de s\xE9lectionner celles que vous utiliserez
       lors de votre aventure. R\xE9flechissez bien avant de vous lancer \xE0 l'assaut
       de l'ennemi..."
-    Display: 0
+    Display: 3
     sprite: {fileID: 0}
     Right: {fileID: 0}
   - Text: "Je retourne chez moi chercher et organiser mes notes, je vous y attendrai
