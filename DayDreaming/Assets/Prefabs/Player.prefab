@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 209099956771605261}
   - component: {fileID: 209099956771605260}
   m_Layer: 0
-  m_Name: WitchRender
+  m_Name: SteveRender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9d568b64459ebc34e8e02c585027a77e, type: 3}
+  m_Sprite: {fileID: -440722208, guid: 4920c6bc2ffaf47329719066a76e3644, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.671875, y: 1.09375}
+  m_Size: {x: 2.560625, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 209099958044986579}
   m_Layer: 0
-  m_Name: Witch
+  m_Name: Steve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +358,19 @@ MonoBehaviour:
     m_ActionId: 56395091-457d-4380-8e8b-db5e34337d53
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OpenMenuPause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c135550a-d0f8-445a-8b17-cadc4275671d
     m_ActionName: UI/Pause[/Keyboard/escape]
   - m_PersistentCalls:
@@ -388,12 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHP: 50
   MaxHP: 50
-  Cards:
-  - {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
-  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
-  - {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
-  - {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
-  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
+  FightCards: []
+  InventoryCards: []
   Agent: {fileID: 0}
   speed: 2
   Quest: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}

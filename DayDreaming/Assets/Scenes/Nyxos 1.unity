@@ -7396,61 +7396,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 719794571}
     m_Modifications:
-    - target: {fileID: 209099956771605258, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_Name
-      value: SteveRender
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605259, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605259, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605259, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605262, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_Size.x
-      value: 2.560625
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605262, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_Size.y
-      value: 2.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099956771605262, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -440722208, guid: 4920c6bc2ffaf47329719066a76e3644, type: 3}
-    - target: {fileID: 209099956771605262, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958044986578, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_Name
-      value: Steve
-      objectReference: {fileID: 0}
     - target: {fileID: 209099958195674049, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674050, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674052, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7496,102 +7448,10 @@ PrefabInstance:
       propertyPath: Agent
       value: 
       objectReference: {fileID: 719794572}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: MaxHP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Quest
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: CurrentHP
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: currentQuest
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: quests.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 0eeea9e06ed95d442a8bf58c1dfb11cc, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: Cards.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
-    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: quests.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c30031d64ea10684ab34813198217db4, type: 2}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1416404518}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenMenuPause
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PauseMenu, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 209099958195674054, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: orthographic size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2329355379999492415, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3224268994705290136, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
 --- !u!114 &1748625832 stripped
@@ -8144,10 +8004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHP: 50
   MaxHP: 50
-  Cards:
-  - {fileID: 11400000, guid: 864352d0eb49c184e8e1592a20cb7fad, type: 2}
-  - {fileID: 11400000, guid: cbf4b1ca75dd4174ba3859786bf43104, type: 2}
-  - {fileID: 11400000, guid: 9a9e6424973b120409b1874ec5a8a1ca, type: 2}
+  FightCards: []
+  InventoryCards: []
   RangeOfAggression: 1.5
   asset: {fileID: 11400000, guid: 1ac092a8fafdadf458b66b159c9a280f, type: 2}
   ai: {fileID: 1865456862}
@@ -8272,6 +8130,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8284,6 +8145,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: c383abbae3809834899be62fc4e753c8, type: 2}
@@ -8296,6 +8160,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8311,6 +8178,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8326,6 +8196,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8341,6 +8214,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8356,6 +8232,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 2
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8371,6 +8250,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
   - ActionType: 1
     Dialogue: {fileID: 11400000, guid: f941eb4d760b6b24f9d6415726aabf11, type: 2}
@@ -8386,6 +8268,9 @@ MonoBehaviour:
     FadeOut: 0
     SFX: {fileID: 0}
     WaitEnd: 0
+    Reward:
+      Cards: []
+    QuestItem: {fileID: 0}
     SecondsToWait: 1
 --- !u!114 &1874996473
 MonoBehaviour:
