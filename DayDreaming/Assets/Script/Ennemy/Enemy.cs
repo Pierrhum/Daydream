@@ -36,6 +36,7 @@ public class Enemy : Fighter
 
             else ai.Stop();
         }
+        else ai.Stop();
     }
 
     void LoadFight()

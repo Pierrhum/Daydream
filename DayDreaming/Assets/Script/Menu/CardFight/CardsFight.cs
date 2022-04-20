@@ -37,6 +37,7 @@ public class CardsFight : MonoBehaviour
 
     public void Open(Enemy Enemy)
     {
+
         this.Enemy = Enemy;
         this.Turn = 1;
         gameObject.SetActive(true);
@@ -46,7 +47,9 @@ public class CardsFight : MonoBehaviour
             fadeImages.Add(img);
         foreach (UICard card in PlayerHand.UICards)
             fadeImages.Add(card.GetComponent<Image>());
-
+        fadeImages.ForEach(i => Utils.UI.SetImageOpacity(i, 0f));
+        PlayerBar.ClearStatusBar();
+        EnemyBar.ClearStatusBar();
         UpdateProgressBars();
         GameManager.instance.soundManager.PlayMusic(SoundManager.MusicType.Fight);
         StartCoroutine(ShowCoroutine());
@@ -55,8 +58,10 @@ public class CardsFight : MonoBehaviour
     public void Close()
     {
         GameManager.instance.soundManager.StopMusic(true);
+        GameManager.instance.player.status.Clear();
         StartCoroutine(HideCoroutine());
     }
+
 
     public void UpdateProgressBars()
     {

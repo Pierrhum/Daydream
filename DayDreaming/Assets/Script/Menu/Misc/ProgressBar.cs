@@ -44,6 +44,14 @@ public class ProgressBar : MonoBehaviour
         }
     }
 
+    public void ClearStatusBar()
+    {
+        // Reset Status Bar
+        foreach (Transform status in Status.transform)
+            Destroy(status.gameObject);
+
+    }
+
     private IEnumerator FillCoroutine(float start, float end, float duration)
     {
         float timer = 0f;
