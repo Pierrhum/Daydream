@@ -12,6 +12,7 @@ public class DialogueUI : MonoBehaviour
 
     private bool Next = false;
     private string TextToDisplay = "";
+    [SerializeField] private float Speed = 0.05f;
 
     private void Awake()
     {
@@ -79,7 +80,7 @@ public class DialogueUI : MonoBehaviour
             if(TextMesh.text != TextToDisplay)
             {
                 TextMesh.text += c;
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(Speed);
             }
         }
     }
