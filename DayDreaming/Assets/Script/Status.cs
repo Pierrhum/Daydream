@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Status
 {
+    private CardAsset Card;
     private Fighter Fighter;
     private Type type;
     private int amount;
     public enum Type { Heal, Hurt, Skip}
 
-    public Status(Fighter Fighter, Type type, int amount=0)
+    public Status(CardAsset Card, Fighter Fighter, Type type, int amount=0)
     {
+        this.Card = Card;
         this.Fighter = Fighter;
         this.type = type;
         this.amount = amount;
@@ -32,7 +34,12 @@ public class Status
         }
     }
 
-    public Sprite GetSprite()
+    public Sprite GetCardSprite()
+    {
+        return Card.Sprite;
+    }
+
+    public Sprite GetStatusSprite()
     {
         Texture2D tex = null;
         switch (type)
@@ -48,5 +55,19 @@ public class Status
                 break;
         }
         return Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0, 0));
+    }
+
+    public string GetDescription()
+    {
+        switch (type)
+        {
+            case Type.Heal:
+                return "Heal " + amount + "HP";
+            case Type.Hurt:
+                return "Deal " + amount + " damages";
+            case Type.Skip:
+                return "Skip the turn";
+        }
+        return "";
     }
 }
