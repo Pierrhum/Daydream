@@ -30,6 +30,7 @@ public class UICard : MonoBehaviour
         this.card = card;
         this.hand = CardsFightUI.PlayerHand;
         this.player = hand.player;
+        this.InfoPopUp.Hide();
 
         GetComponent<Image>().sprite = card.Sprite;
 

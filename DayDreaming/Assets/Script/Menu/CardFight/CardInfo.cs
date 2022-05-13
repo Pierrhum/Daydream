@@ -8,11 +8,6 @@ public class CardInfo : MonoBehaviour
     public TextMeshProUGUI Name;
     public TextMeshProUGUI Descritpion;
 
-    public void Awake()
-    {
-        Hide();
-    }
-
     public void Show(CardAsset Card)
     {
         gameObject.SetActive(true);
