@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Coffee.UIEffects;
 using UnityEngine.UI;
+using System.Reflection;
 
 public class UICard : MonoBehaviour
 {
@@ -97,7 +98,7 @@ public class UICard : MonoBehaviour
     }
 
     public void SetPositionOnCurve(int index)
-    {
+    {        
         lastC = StartCoroutine(MoveCardCoroutine(new Vector3(hand.bezier.curve[index].x, hand.bezier.curve[index].y, 0),
                                         new Vector3(0, 0, hand.bezier.angles[index]), 0.2f));
 
@@ -105,25 +106,34 @@ public class UICard : MonoBehaviour
 
     private IEnumerator MoveCardCoroutine(Vector3 position, Vector3 rotation, float duration)
     {
-        if (lastC != null)
-            StopCoroutine(lastC);
-        if (initialPosOnCurve == (hand.bezier.curve.Count - 1) * 0.5f && rotation.z > 180f)
+        if (!position.Equals(transform.position))
         {
-            transform.eulerAngles = new Vector3(0, 0, 360f);
-        }
-        float timer = 0f;
-        AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
-        while (timer <= duration)
-        {
-            timer += Time.deltaTime;
+            // Correction de la rotation
+            float currentZ = transform.eulerAngles.z;
+            if (Mathf.Abs(rotation.z - transform.eulerAngles.z) > 50f)
+            {
+                if (rotation.z > transform.eulerAngles.z) currentZ += 360;
+                else rotation = new Vector3(rotation.x, rotation.y, rotation.z + 360);
+            }
 
-            transform.position = Vector3.Lerp(transform.position, position, smoothCurve.Evaluate(timer / duration));
-            float z = Mathf.Lerp(transform.eulerAngles.z, rotation.z, smoothCurve.Evaluate(timer / duration));
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
-            yield return new WaitForSeconds(Time.deltaTime);
+            if (lastC != null)
+                StopCoroutine(lastC);
+
+            float timer = 0f;
+            AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+
+                // Linear interpolation
+                transform.position = Vector3.Lerp(transform.position, position, smoothCurve.Evaluate(timer / duration));
+                // Angular interpolation
+                float z = Mathf.Lerp(currentZ, rotation.z, smoothCurve.Evaluate(timer / duration));
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
         }
     }
-
     private IEnumerator CardSelected()
     {
         isSelected = true;

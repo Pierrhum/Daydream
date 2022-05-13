@@ -2487,6 +2487,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 810581679}
+    - target: {fileID: 985851643, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: CardsFightUI
+      value: 
+      objectReference: {fileID: 392064893}
     - target: {fileID: 147712013960758657, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
