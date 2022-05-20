@@ -1,6 +1,8 @@
+using MyBox;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class CardAsset : ScriptableObject
@@ -10,6 +12,7 @@ public class CardAsset : ScriptableObject
     public string Name;
     public Sprite Sprite;
     public Rarity rarity;
+    public int AnimationID = -1;
     public string description;
 
     public void ApplyEffect(Fighter fighter, Fighter opponent)
@@ -44,6 +47,11 @@ public class CardAsset : ScriptableObject
             // Take 5 damages, but deal 15 to the opponent next turn
             case "SinisterPath":
                 fighter.Hurt(5);
+                AddStatus(opponent, new Status(this, opponent, Status.Type.Hurt, 15), Turn + 1);
+                break;
+
+            case "Boomerang":
+                opponent.Hurt(5);
                 AddStatus(opponent, new Status(this, opponent, Status.Type.Hurt, 15), Turn + 1);
                 break;
 

@@ -24,6 +24,11 @@ public class CardsFight : MonoBehaviour
     private List<Image> initFadeImages = new List<Image>();
     private UIDissolve dissolve;
 
+    // For Cards animation
+    public List<BezierCurve> CurvesManifold;
+    public List<Image> ImagesManifold;
+
+
     public void Start()
     {
         dissolve = Overlay.GetComponent<UIDissolve>();

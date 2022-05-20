@@ -177,6 +177,16 @@ public class UICard : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
         }
         // Apply card effect
+        if (card.rarity == CardAsset.Rarity.UNIQUE)
+        {
+            if(card.AnimationID != -1)
+            {
+                var template = CardsFightUI.ImagesManifold[card.AnimationID];
+                var AnimationImage = Instantiate<Image>(template, template.transform.position, template.transform.rotation, CardsFightUI.transform);
+                yield return StartCoroutine(Animate(CardsFightUI.CurvesManifold[card.AnimationID], AnimationImage));
+            }
+
+        }
         card.ApplyEffect(hand.player, CardsFightUI.Enemy);
         CardsFightUI.UpdateProgressBars();
         hand.InitCardPos();
@@ -187,5 +197,20 @@ public class UICard : MonoBehaviour
 
         CardsFightUI.EndTurn();
         Destroy(gameObject);
+    }
+
+
+    private IEnumerator Animate(BezierCurve Bezier, Image AnimationImage)
+    {
+        int pos = 0;
+        while (pos < Bezier.curve.Count)
+        {
+            Debug.Log(pos);
+            AnimationImage.transform.position = Bezier.curve[pos];
+            pos+=1;
+            yield return new WaitForSeconds(Time.deltaTime * 3f);
+        }
+        Destroy(AnimationImage);
+        yield return null;
     }
 }
