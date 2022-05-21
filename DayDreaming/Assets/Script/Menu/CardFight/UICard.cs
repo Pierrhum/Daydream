@@ -207,7 +207,8 @@ public class UICard : MonoBehaviour
         {
             Debug.Log(pos);
             AnimationImage.transform.position = Bezier.curve[pos];
-            pos+=1;
+            AnimationImage.transform.eulerAngles = new Vector3(0,0,30 * pos);
+            pos +=1;
             yield return new WaitForSeconds(Time.deltaTime * 3f);
         }
         Destroy(AnimationImage);
