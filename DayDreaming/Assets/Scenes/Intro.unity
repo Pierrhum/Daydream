@@ -240,10 +240,10 @@ RectTransform:
   m_Father: {fileID: 1598066198}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -2044.0033}
-  m_SizeDelta: {x: 980, y: 3891.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: -0.000061035156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550826068
 MonoBehaviour:
@@ -265,33 +265,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<b>INTRO</b>
-
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Morbi ultrices luctus turpis. Integer eget lectus finibus, sodales mauris
-    ac, pretium justo. Etiam eget sollicitudin urna. Cras auctor nibh aliquet rhoncus
-    pharetra. Vestibulum at orci sapien. Quisque pharetra elit et justo vestibulum
-    fringilla. Ut suscipit rhoncus quam ut laoreet. Etiam nec sem nunc. Praesent
-    dapibus condimentum gravida.
-
-
-    Vivamus convallis ante ac tempus euismod.
-    Sed a justo id lacus vestibulum posuere. Aenean congue metus risus, eu pulvinar
-    ipsum feugiat ut. Aliquam quis elit lectus. Pellentesque nec odio sem. Etiam
-    mattis mauris eu est facilisis, in vulputate dolor sollicitudin. Aenean nec placerat
-    arcu, vel efficitur ipsum. Nam vulputate lacinia blandit. Proin maximus, nibh
-    vitae pharetra varius, lorem nisl aliquam sapien, vel hendrerit ex dui non nulla.
-    Morbi ac erat a risus pulvinar rutrum. Praesent ultricies nunc arcu, sit amet
-    scelerisque risus maximus eu.
-
-
-    Morbi sit amet sagittis arcu. Cras hendrerit
-    iaculis aliquet. Proin faucibus facilisis nunc sed consectetur. Lorem ipsum dolor
-    sit amet, consectetur adipiscing elit. Duis condimentum pellentesque urna eleifend
-    convallis. Vestibulum vitae tincidunt erat. Nullam eget viverra leo. Orci varius
-    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam
-    congue imperdiet justo. In blandit lacus vel finibus commodo. Duis.'
+  m_text: "<b>INTRO</b>\n\nLorsque la nuit tombe, nombreux sont les r\xEAveurs de
+    mondes alternatifs. Parfois teint\xE9s de fantasmes inavouables, ces derniers
+    se retrouvent quelques fois \xE0 prendre une forme plus vicieuse pour l'esprit..
+    les cauchemars.\n\nC'est l\xE0 que nous faisons la connaissance de Steve. Curieux
+    personnage dont la principale caract\xE9ristique \xE9tait de prendre la vie et
+    ses tristes responsabilit\xE9s \xE0 la l\xE9g\xE8re. Chemin qui lui fut fatal
+    dans sa qu\xEAte vers une grande carri\xE8re dans la chirurgie, aujourd'hui il
+    ne restait qu'en ses mains des seringues usag\xE9es et un teint min\xE9 par une
+    charge de travail toujours plus inhumaine. Et oui, c'\xE9tait un simple infirmier.\n\nSes
+    nuits courtes furent toujours l'objet de tourments plus ou moins violents. Le
+    cadre professionnel dans lequel il n'obtenait aucun \xE9panouissement y \xE9tait
+    certainement pour beaucoup. Au demeurant, cela restait toujours des \xE9v\xE8nements
+    oubliables, jusqu'\xE0 cette nuit l\xE0 o\xF9 il d\xE9couvrit Oneiros..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -318,10 +304,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68
+  m_fontSize: 70.95
   m_fontSizeBase: 68
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -368,73 +354,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550826066}
   m_CullTransparentMesh: 1
---- !u!1 &1248089285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1248089288}
-  - component: {fileID: 1248089287}
-  - component: {fileID: 1248089286}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1248089286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248089285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1248089287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248089285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &1248089288
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248089285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1542500120
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -2044.49}
-  m_SizeDelta: {x: 1066.7, y: 4088.95}
+  m_AnchoredPosition: {x: 0, y: -2344.49}
+  m_SizeDelta: {x: 812, y: 4000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1598066199
 Animator:
@@ -608,3 +527,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Nyxos
+  Music: {fileID: 0}

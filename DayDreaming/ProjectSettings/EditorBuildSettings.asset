@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nyxos.unity
     guid: 042805a8fc5c56640a08d28d27de715b
+  - enabled: 1
+    path: Assets/Scenes/Outro.unity
+    guid: 672e7ca3a6df55642b91cdfe3a466947
   m_configObjects: {}
