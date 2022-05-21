@@ -17,4 +17,6 @@ public class Quest : ScriptableObject
     {
         return Trigger.gameObject.transform.position;
     }
+
+
 }

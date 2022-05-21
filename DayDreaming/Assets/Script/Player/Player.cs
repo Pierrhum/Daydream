@@ -47,6 +47,7 @@ public class Player : Fighter
         {
 
             Quest = Quest.Next;
+            GameObject.Find("QuestToDo").GetComponent<TMPro.TextMeshProUGUI>().text = Quest.Name;
             Debug.Log("New quest : " + Quest.Name);
         }
     }
