@@ -18,13 +18,17 @@ public class Inventory : MonoBehaviour
     public GameObject objectPannel;   
     public GameObject HUD;
     public GameObject pauseMenu;
-    public TextMeshProUGUI nbCard; 
-    public GameObject leftCard;
-    public GameObject rightCard;
-    public int pageNumber = 0;
-    public int numberOfPages;
+    public TextMeshProUGUI nbCard;
 
+    // Gestion des pages
+    private int pageNumber = 0;
+    private int numberOfPages; 
     private int choose = 0;
+
+    // Choix des cartes
+    private int countCardChosen = 0;
+    public GameObject popup;
+    private List<int> cardsChosen = new List<int>(); 
 
     // Implementation of singleton instance
     public static Inventory instance;
@@ -112,7 +116,7 @@ public class Inventory : MonoBehaviour
     // Lorsqu'on survole une carte
     public void OnPointerEnter(int nbButton)
     {   
-        Vector3 scaleChange = new Vector3(1.2f, 1.2f, 1.0f);
+        Vector3 scaleChange = new Vector3(1.15f, 1.15f, 1.0f);
         GameObject.Find(nbButton.ToString()).transform.localScale = scaleChange;
     }
 
@@ -151,18 +155,64 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    // Mise à jour de l'inventaire
     private void updateInventory()
     {
         nbCard.SetText((pageNumber+1).ToString() + " / " + numberOfPages.ToString());
         for(int i = 0; i < 5; i++){
             GameObject card = GameObject.Find(i.ToString());
             if(i < player.FightCards.Count){
-                card.GetComponent<Button>().image.sprite = player.FightCards[i + pageNumber].Sprite;
+                card.GetComponent<Button>().image.sprite = player.FightCards[i + pageNumber * 5].Sprite;
+
+                if(cardsChosen.Contains(i + pageNumber * 5))
+                    GameObject.Find("T"+i).GetComponent<Toggle>().isOn = true;
+                else GameObject.Find("T"+i).GetComponent<Toggle>().isOn = false;
+
             }
             else{
                 card.SetActive(false);
             }
         } 
     }
- 
+
+    // Gestion du choix des cartes
+    public void ChangeToggle(string name)
+    {
+        // Lorsqu'on coche
+        if(GameObject.Find(name).GetComponent<Toggle>().isOn){
+            if(countCardChosen < 5)
+            {
+                if(!cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
+                    cardsChosen.Add(Int32.Parse(name.Substring(1)) + pageNumber * 5);
+                    countCardChosen++;
+                    Debug.Log(countCardChosen);
+                }
+            }
+            else{
+                if(!cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
+                    GameObject.Find(name).GetComponent<Toggle>().isOn = false;
+                    OpenPopup();
+                }
+            }
+        }
+        else{ // Lorsqu'on decoche
+            if(countCardChosen > 0)
+            {
+                if(cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
+                    cardsChosen.Remove(Int32.Parse(name.Substring(1)) + pageNumber * 5);
+                    countCardChosen--;
+                    Debug.Log(countCardChosen);
+                }
+            }
+        }
+        
+    }
+
+    private void OpenPopup(){
+        popup.SetActive(true);
+    }
+    
+    public void ClosePopup(){
+        popup.SetActive(false);
+    }
 }
