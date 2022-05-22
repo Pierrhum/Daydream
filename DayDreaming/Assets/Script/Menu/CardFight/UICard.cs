@@ -19,13 +19,14 @@ public class UICard : MonoBehaviour
 
     private Coroutine lastC;
     private static bool isDragging = false;
-    private bool isSelected = false;
+    [System.NonSerialized]
+    public bool isSelected = false;
     private PlayerHand hand;
     private Player player;
 
     public void Init(CardsFight CardsFightUI, CardAsset card)
     {
-        uIShiny.enabled = false;
+        uIShiny.enabled = card.rarity == CardAsset.Rarity.UNIQUE;
         this.CardsFightUI = CardsFightUI;
         this.card = card;
         this.hand = CardsFightUI.PlayerHand;
@@ -33,6 +34,9 @@ public class UICard : MonoBehaviour
         this.InfoPopUp.Hide();
 
         GetComponent<Image>().sprite = card.Sprite;
+
+        if (uIShiny.enabled)
+            StartCoroutine(Utils.UI.BrightCoroutine(this, 1f));
 
     }
 
@@ -63,7 +67,7 @@ public class UICard : MonoBehaviour
         {
             InfoPopUp.Hide();
             hand.ResetCardPos();
-            uIShiny.enabled = false;
+            uIShiny.enabled = card.rarity == CardAsset.Rarity.UNIQUE;
         }
     }
     public void OnClick()
@@ -94,7 +98,11 @@ public class UICard : MonoBehaviour
             isSelected = false;
             if (RectTransformUtility.RectangleContainsScreenPoint(hand.dropArea as RectTransform, transform.position))
                 StartCoroutine(UseCard(0.5f));
-            else SetPositionOnCurve(initialPosOnCurve);
+            else
+            {
+                uIShiny.width = 0.8f;
+                SetPositionOnCurve(initialPosOnCurve);
+            }
         }
     }
 
@@ -139,6 +147,7 @@ public class UICard : MonoBehaviour
     {
         isSelected = true;
         AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+        uIShiny.effectFactor = 0.5f;
         while (isDragging)
         {
             while (uIShiny.width < 1)

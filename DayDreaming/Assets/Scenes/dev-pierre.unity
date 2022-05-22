@@ -676,6 +676,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[1].b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[2].b
+      value: 0.4339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[2].g
+      value: 0.0061409646
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[2].r
+      value: 0.23115051
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[3].b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[3].g
+      value: 0.9474731
+      objectReference: {fileID: 0}
+    - target: {fileID: 7847106165097922553, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: RarityColors.Array.data[3].r
+      value: 0.9528302
+      objectReference: {fileID: 0}
     - target: {fileID: 8637352728570794162, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -699,6 +731,10 @@ PrefabInstance:
     - target: {fileID: 8637352728570794162, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015742897408819838, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}
+      propertyPath: m_UseGraphicAlpha
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1bf918ab3de134da6192cef57821ea, type: 3}

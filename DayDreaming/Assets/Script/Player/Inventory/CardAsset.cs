@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class CardAsset : ScriptableObject
 {
-    public enum Rarity { COMMON, RARE, LEGENDARY, UNIQUE };
+    public enum Rarity { COMMON=0, RARE=1, LEGENDARY=2, UNIQUE=3 };
 
     public string Name;
     public Sprite Sprite;
