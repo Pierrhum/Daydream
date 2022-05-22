@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: ac0ba9cf1403f47c38ade06b87f939ae
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 370
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_0
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 2056
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90746576c0de845bf9f260af1e91d0a4
+      internalID: -1690352237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_3
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef7e4ccdfdbb493b8058738c381f35e
+      internalID: 306122531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 2060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc6b64e45e06415e88e79e08f14803b
+      internalID: -2001710209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_7
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 2060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46b4113ccb054cfabedfeb16a865859
+      internalID: 2055879738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_8
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 2060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1603245db83804d53903f655dbe47d8f
+      internalID: 1068310820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_9
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a5e46bf3754432da0a74f0fea87613
+      internalID: -1451549894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_10
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 1560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed614f2ee77544e4ebd200a2e1e5a84a
+      internalID: 1433020976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_13
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1564
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da83f1bac9d74fff89e146fa52d2e4e
+      internalID: 882486079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_16
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca659c8a7b7d43be9bc7b2e7df87a50
+      internalID: -1042010962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_17
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b412fc5a1b9be4a5c8dcaa2c3bd7a0c4
+      internalID: -107135535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_18
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509d17b1724c641199a88996e6150b96
+      internalID: 1048080933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_19
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 1560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247d2adbad3fa40e48c76dce1a9095e1
+      internalID: -2131240043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_24
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67b8d34b195147668726f580c14f67f
+      internalID: 1237067706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_25
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 1060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605c7a0128b9244b1975a3b152dfbbc4
+      internalID: -109818164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_26
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 1056
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636780e94f4a6437fa3f8879b7d9010e
+      internalID: 985949298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_27
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 1060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfee022b810654df1a76f80cd9679ce8
+      internalID: -508066500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_28
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb7847097dec4bfa84fb87be30f4889
+      internalID: 1427424081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_29
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 1060
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6938b60bc3574eb595caa23f23d97cc
+      internalID: -1647760209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_30
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dedcbb3d2fd94e099e15415b6e5d500
+      internalID: -1023532309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_33
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dec2bff6a55a4bd5b3715d52ffe9625
+      internalID: 684765114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_36
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64251e5af74314fa98f2f62a91c71183
+      internalID: 762948797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_37
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93f8b0b0c87c41b6a7fa4927b82c197
+      internalID: -2031160213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_38
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed68f9e3a93474ca759e5d27dc14cd
+      internalID: -917135229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_39
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 560
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0e434c750b44f35aa319db33052dce
+      internalID: 1057105866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_40
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 61
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b58ba3fcfa62474595e19ad51d469e7
+      internalID: 436156633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_43
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 57
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374a92508c8b34a2bbcce533a0af8783
+      internalID: -1969179646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_46
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 61
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3daba5e3e0c2a4cb8a9d754396e8c9af
+      internalID: 1303225216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_47
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 61
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a5d8df0454449ce810a469bb79e554
+      internalID: 2124299645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_48
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 57
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88ad9e3b79f84bf8b9fca336030076f
+      internalID: 960976876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass-Spritesheet_Blocks_49
+      rect:
+        serializedVersion: 2
+        x: 2548
+        y: 61
+        width: 410
+        height: 360
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -201, y: 40}
+        - {x: -4, y: 150}
+        - {x: 201, y: 50}
+        - {x: -1, y: -59}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3296e45f719c24f7a94fbf9d0d932527
+      internalID: 269822418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Grass-Spritesheet_Blocks_29: -1647760209
+      Grass-Spritesheet_Blocks_15: 468854521
+      Grass-Spritesheet_Blocks_9: -1451549894
+      Grass-Spritesheet_Blocks_45: -57412337
+      Grass-Spritesheet_Blocks_16: -1042010962
+      Grass-Spritesheet_Blocks_4: -236805909
+      Grass-Spritesheet_Blocks_21: 708904846
+      Grass-Spritesheet_Blocks_30: -1023532309
+      Grass-Spritesheet_Blocks_24: 1237067706
+      Grass-Spritesheet_Blocks_17: -107135535
+      Grass-Spritesheet_Blocks_43: -1969179646
+      Grass-Spritesheet_Blocks_13: 882486079
+      Grass-Spritesheet_Blocks_26: 985949298
+      Grass-Spritesheet_Blocks_6: -2001710209
+      Grass-Spritesheet_Blocks_41: 466282583
+      Grass-Spritesheet_Blocks_42: 1206135607
+      Grass-Spritesheet_Blocks_20: 382678531
+      Grass-Spritesheet_Blocks_18: 1048080933
+      Grass-Spritesheet_Blocks_39: 1057105866
+      Grass-Spritesheet_Blocks_44: -902914762
+      Grass-Spritesheet_Blocks_35: 892894197
+      Grass-Spritesheet_Blocks_23: -1178591547
+      Grass-Spritesheet_Blocks_47: 2124299645
+      Grass-Spritesheet_Blocks_22: 836291934
+      Grass-Spritesheet_Blocks_46: 1303225216
+      Grass-Spritesheet_Blocks_1: 265535555
+      Grass-Spritesheet_Blocks_8: 1068310820
+      Grass-Spritesheet_Blocks_14: 790272358
+      Grass-Spritesheet_Blocks_38: -917135229
+      Grass-Spritesheet_Blocks_12: -661996023
+      Grass-Spritesheet_Blocks_28: 1427424081
+      Grass-Spritesheet_Blocks_11: -104147108
+      Grass-Spritesheet_Blocks_33: 684765114
+      Grass-Spritesheet_Blocks_34: -70909721
+      Grass-Spritesheet_Blocks_40: 436156633
+      Grass-Spritesheet_Blocks_36: 762948797
+      Grass-Spritesheet_Blocks_10: 1433020976
+      Grass-Spritesheet_Blocks_3: 306122531
+      Grass-Spritesheet_Blocks_7: 2055879738
+      Grass-Spritesheet_Blocks_27: -508066500
+      Grass-Spritesheet_Blocks_5: -172261223
+      Grass-Spritesheet_Blocks_2: -2105891086
+      Grass-Spritesheet_Blocks_48: 960976876
+      Grass-Spritesheet_Blocks_0: -1690352237
+      Grass-Spritesheet_Blocks_37: -2031160213
+      Grass-Spritesheet_Blocks_19: -2131240043
+      Grass-Spritesheet_Blocks_32: -1019125403
+      Grass-Spritesheet_Blocks_49: 269822418
+      Grass-Spritesheet_Blocks_31: -1033154897
+      Grass-Spritesheet_Blocks_50: 757779020
+      Grass-Spritesheet_Blocks_25: -109818164
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
