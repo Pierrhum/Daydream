@@ -71,6 +71,25 @@ namespace Utils {
             }
         }
 
+        public static IEnumerator GameOverAnim(UIHsvModifier hsv, UIDissolve playerSprite, float duration)
+        {
+            float timer = 0f;
+            AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+                float HsvLerp = Mathf.Lerp(0.0f, -0.5f, smoothCurve.Evaluate(timer / duration));
+                float DissolveLerp = Mathf.Lerp(0.0f, 1.0f, smoothCurve.Evaluate(timer / duration));
+
+                hsv.saturation = HsvLerp;
+                hsv.value = HsvLerp;
+                playerSprite.effectFactor = DissolveLerp;
+
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+            Debug.Log("Load game over menu");
+        }
+
         #endregion
     }
 };

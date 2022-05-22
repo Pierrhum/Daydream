@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using Coffee.UIEffects;
 
 public class Player : Fighter
 {
@@ -93,5 +94,22 @@ public class Player : Fighter
             }
         }
         yield return StartCoroutine(Attack(SelectedCard, other));
+    }
+
+    public override void Die()
+    {
+        // Replace UIEffects for Overlay and PlayerSprite
+        DestroyImmediate(CardsFightUI.Overlay.GetComponent<UIDissolve>());
+        UIHsvModifier hsv = CardsFightUI.Overlay.gameObject.AddComponent<UIHsvModifier>();
+        DestroyImmediate(Feedback.GetComponent<UIEffect>());
+        UIDissolve dissolve = Feedback.gameObject.AddComponent<UIDissolve>();
+
+        CardsFightUI.Enemy.canPlay = false;
+        canPlay = false;
+        foreach (UICard uiCard in CardsFightUI.PlayerHand.UICards)
+            uiCard.GetComponent<Button>().interactable = canPlay;
+
+        StartCoroutine(Utils.UI.GameOverAnim(hsv, dissolve, 2f));
+
     }
 }

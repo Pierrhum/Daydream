@@ -53,10 +53,7 @@ public abstract class Fighter : MonoBehaviour
         isStunned = true;
     }
 
-    public virtual void Die()
-    {
-
-    }
+    public abstract void Die();
 
     public virtual void CanPlay(bool canPlay)
     {

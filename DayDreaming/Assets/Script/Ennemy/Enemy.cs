@@ -34,7 +34,6 @@ public class Enemy : Fighter
 
                 if (ai.Collider.IsTouching(ai.PlayerCollider))
                 {
-                    Debug.Log("mashallah");
                     LoadFight();
                 }
 
@@ -55,7 +54,6 @@ public class Enemy : Fighter
 
     public override void Die()
     {
-        base.Die();
         GameManager.instance.uiManager.CloseFightMenu();
         Destroy(gameObject);
     }
