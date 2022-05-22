@@ -8,6 +8,7 @@ public abstract class Fighter : MonoBehaviour
     public Dictionary<int, List<Status>> status = new Dictionary<int, List<Status>>();
     [System.NonSerialized]
     public bool canPlay = false;
+    public bool isStunned = false;
 
     public FightFeedback Feedback;
     public float CurrentHP = 10;
@@ -46,6 +47,13 @@ public abstract class Fighter : MonoBehaviour
             StartCoroutine(Feedback.Hurt(0.5f));
     }
 
+    public void Skip()
+    {
+        StartCoroutine(Feedback.Stun(1.0f, false));
+        canPlay = false;
+        isStunned = true;
+    }
+
     public virtual void Die()
     {
 
@@ -56,6 +64,11 @@ public abstract class Fighter : MonoBehaviour
         this.canPlay = canPlay;
         if(canPlay)
         {
+            if (isStunned)
+            {
+                isStunned = false;
+                StartCoroutine(Feedback.Stun(1.0f, true));
+            }
             CardsFight CardsFightUI = GameManager.instance.uiManager.CardsFight;
 
             List <Status> StatusOfThisTurn;

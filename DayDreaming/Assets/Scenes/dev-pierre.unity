@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dee346a22a45045b29f3b2a69d8fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
   Feedback: {fileID: 2038811319}
   CurrentHP: 50
   MaxHP: 50
@@ -336,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dee346a22a45045b29f3b2a69d8fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
   Feedback: {fileID: 2038811319}
   CurrentHP: 50
   MaxHP: 50
@@ -853,7 +855,7 @@ PrefabInstance:
       objectReference: {fileID: 1090925341}
     - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: FightCards.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
       propertyPath: FightCards.Array.data[0]
@@ -883,6 +885,10 @@ PrefabInstance:
       propertyPath: FightCards.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: c85b83265ebef3d4996d4ed0524766e4, type: 2}
+    - target: {fileID: 209099958195674053, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
+      propertyPath: FightCards.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: a182f667ef96af543a5500f309a56886, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91a46a6c3ac5fd841a02794dfdcb5edc, type: 3}
 --- !u!4 &810581678 stripped
@@ -15090,7 +15096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cb7ab5bf3f3bc4b9052ba129b87807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAnimating: 0
 --- !u!114 &1090925342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15598,6 +15603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2dee346a22a45045b29f3b2a69d8fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isStunned: 0
   Feedback: {fileID: 2038811319}
   CurrentHP: 50
   MaxHP: 50
@@ -15682,7 +15688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63cb7ab5bf3f3bc4b9052ba129b87807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAnimating: 0
 --- !u!114 &2038811320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15695,10 +15700,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b2ed11d675446c5a49da1ea296d490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectFactor: 1
+  m_EffectFactor: 0
   m_ColorFactor: 1
   m_BlurFactor: 1
-  m_EffectMode: 0
+  m_EffectMode: 2
   m_ColorMode: 0
   m_BlurMode: 0
   m_AdvancedBlur: 0
