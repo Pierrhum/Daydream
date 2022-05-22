@@ -185,42 +185,18 @@ public class UICard : MonoBehaviour
             dissolve.effectFactor = Mathf.Lerp(0f, 1f, smoothCurve.Evaluate(timer / duration));
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        // Apply card effect
-        if (card.rarity == CardAsset.Rarity.UNIQUE)
-        {
-            if(card.AnimationID != -1)
-            {
-                var template = CardsFightUI.ImagesManifold[card.AnimationID];
-                var AnimationImage = Instantiate<Image>(template, template.transform.position, template.transform.rotation, CardsFightUI.transform);
-                yield return StartCoroutine(Animate(CardsFightUI.CurvesManifold[card.AnimationID], AnimationImage));
-            }
+        player.SelectedCard = card;
+        
+        yield return StartCoroutine(hand.player.Attack(CardsFightUI.Enemy));
 
-        }
-        card.ApplyEffect(hand.player, CardsFightUI.Enemy);
         CardsFightUI.UpdateProgressBars();
         hand.InitCardPos();
 
         CardsFightUI.Enemy.CanPlay(true);
-        CardsFightUI.Enemy.Attack();
+        yield return StartCoroutine(CardsFightUI.Enemy.Attack(hand.player));
         CardsFightUI.UpdateProgressBars();
 
         CardsFightUI.EndTurn();
         Destroy(gameObject);
-    }
-
-
-    private IEnumerator Animate(BezierCurve Bezier, Image AnimationImage)
-    {
-        int pos = 0;
-        while (pos < Bezier.curve.Count)
-        {
-            Debug.Log(pos);
-            AnimationImage.transform.position = Bezier.curve[pos];
-            AnimationImage.transform.eulerAngles = new Vector3(0,0,30 * pos);
-            pos +=1;
-            yield return new WaitForSeconds(Time.deltaTime * 3f);
-        }
-        Destroy(AnimationImage);
-        yield return null;
     }
 }

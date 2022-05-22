@@ -106,9 +106,9 @@ public class CardsFight : MonoBehaviour
     public IEnumerator ShowEnemyCard(CardAsset card)
     {
         EnemyCard.sprite = card.Sprite;
-        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 0.0f, 1.0f, 0.5f));
-        yield return new WaitForSeconds(2f);
-        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 1.0f, 0.0f, 0.5f));
+        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 0.0f, 1.0f, 0.25f));
+        yield return new WaitForSeconds(1f);
+        yield return StartCoroutine(Utils.UI.Fade(new List<Image>() { EnemyCard }, 1.0f, 0.0f, 0.25f));
     }
 
     private void SetOpacity(float a)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : Fighter
 {
@@ -16,6 +17,8 @@ public class Enemy : Fighter
             ai.Speed = asset.Speed;
             GetComponentInChildren<SpriteRenderer>().sprite = asset.Sprite;
             RangeOfAggression = asset.RangeOfAggression;
+
+            CardsFightUI = GameManager.instance.uiManager.CardsFight;
         }
     }
     void Update()
@@ -53,17 +56,29 @@ public class Enemy : Fighter
         Destroy(gameObject);
     }
 
-    public void Attack()
+    public override IEnumerator Attack(Fighter other) 
     {
         if(CanPlay() && FightCards.Count > 0)
         {
             int random = Random.Range(0, FightCards.Count);
             CardAsset card = FightCards[random];
-            card.ApplyEffect(this, GameManager.instance.player);
             FightCards.Remove(card);
 
-            GameManager.instance.uiManager.CardsFight.UpdateProgressBars();
-            StartCoroutine(GameManager.instance.uiManager.CardsFight.ShowEnemyCard(card));
+            yield return StartCoroutine(GameManager.instance.uiManager.CardsFight.ShowEnemyCard(card));
+
+            // Apply card effect
+            if (card.rarity == CardAsset.Rarity.UNIQUE)
+            {
+                if (card.AnimationID != -1)
+                {
+                    var template = CardsFightUI.ImagesManifold[card.AnimationID];
+                    var AnimationImage = Instantiate<Image>(template, template.transform.position, template.transform.rotation, CardsFightUI.transform);
+                    yield return StartCoroutine(CardsFightUI.CurvesManifold[card.AnimationID].FollowCurve(AnimationImage, true));
+                }
+            }
+
+            //GameManager.instance.uiManager.CardsFight.UpdateProgressBars();
+            yield return StartCoroutine(Attack(card, other));
         }
         GameManager.instance.player.CanPlay(true);
     }

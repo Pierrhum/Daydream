@@ -62,7 +62,7 @@ namespace Utils {
                     else
                     {
                         timer += Time.deltaTime;
-                        uICard.uIShiny.effectFactor = Mathf.Lerp(0, 1, smoothCurve.Evaluate(timer / duration));
+                        uICard.uIShiny.effectFactor = Mathf.Lerp(0.0f, 1.0f, smoothCurve.Evaluate(timer / duration));
                         yield return new WaitForSeconds(Time.deltaTime);
                     }
                 }
