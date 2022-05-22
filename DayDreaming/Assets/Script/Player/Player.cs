@@ -17,10 +17,15 @@ public class Player : Fighter
     public bool CanMove = true;
     public bool isFighting = false;
 
+    [System.NonSerialized]
+    public CardAsset SelectedCard;
+
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
+
+        CardsFightUI = GameManager.instance.uiManager.CardsFight;
     }
 
     public void StopMoving()
@@ -35,7 +40,7 @@ public class Player : Fighter
     public override void CanPlay(bool canPlay)
     {
         base.CanPlay(canPlay);
-        foreach (UICard uiCard in GameManager.instance.uiManager.CardsFight.PlayerHand.UICards)
+        foreach (UICard uiCard in CardsFightUI.PlayerHand.UICards)
             uiCard.GetComponent<Button>().interactable = canPlay;
     }
 
@@ -47,6 +52,7 @@ public class Player : Fighter
         {
 
             Quest = Quest.Next;
+            GameObject.Find("QuestToDo").GetComponent<TMPro.TextMeshProUGUI>().text = Quest.Name;
             Debug.Log("New quest : " + Quest.Name);
         }
     }
@@ -70,5 +76,20 @@ public class Player : Fighter
     public void OpenMenu(InputAction.CallbackContext context)
     {
         Debug.Log("yo");   
+    }
+
+    public override IEnumerator Attack(Fighter other)
+    {
+        // Apply card effect
+        if (SelectedCard.rarity == CardAsset.Rarity.UNIQUE)
+        {
+            if (SelectedCard.AnimationID != -1)
+            {
+                var template = CardsFightUI.ImagesManifold[SelectedCard.AnimationID];
+                var AnimationImage = Instantiate<Image>(template, template.transform.position, template.transform.rotation, CardsFightUI.transform);
+                yield return StartCoroutine(CardsFightUI.CurvesManifold[SelectedCard.AnimationID].FollowCurve(AnimationImage, false));
+            }
+        }
+        yield return StartCoroutine(Attack(SelectedCard, other));
     }
 }

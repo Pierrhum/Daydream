@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BezierCurve : MonoBehaviour
 {
@@ -91,5 +92,19 @@ public class BezierCurve : MonoBehaviour
             points.Add(point);
         }
         return points;
+    }
+    public IEnumerator FollowCurve(Image AnimationImage, bool Reverse)
+    {
+        int pos = Reverse ? curve.Count-1 : 0;
+        int end = Reverse ? 0 : curve.Count - 1;
+        while (pos != end)
+        {
+            AnimationImage.transform.position = curve[pos];
+            AnimationImage.transform.eulerAngles = new Vector3(0, 0, 30 * pos);
+            pos += Reverse ? -1 : 1;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        Destroy(AnimationImage);
+        yield return null;
     }
 }

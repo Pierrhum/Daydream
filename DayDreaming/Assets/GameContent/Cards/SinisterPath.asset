@@ -15,4 +15,5 @@ MonoBehaviour:
   Name: Sinister Path
   Sprite: {fileID: 21300000, guid: c3bf3bb8876c399478f4aeedad366e78, type: 3}
   rarity: 0
+  AnimationID: -1
   description: Take 5 damages, but deal 15 to the opponent next turn

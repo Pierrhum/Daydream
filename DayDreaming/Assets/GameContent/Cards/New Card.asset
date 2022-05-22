@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Carte test
   Sprite: {fileID: 21300012, guid: 975570a90d56c477582e12d440dc9931, type: 3}
-  type: 1
+  rarity: 0
+  AnimationID: -1
   description: Ceci est un test

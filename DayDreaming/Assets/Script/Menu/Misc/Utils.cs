@@ -48,6 +48,29 @@ namespace Utils {
             }
         }
 
+
+        public static IEnumerator BrightCoroutine(UICard uICard, float duration)
+        {
+            float timer = 0f;
+            AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+            while(true)
+            {
+                while (timer <= duration)
+                {
+                    if(uICard.isSelected)
+                        yield return new WaitForSeconds(Time.deltaTime);
+                    else
+                    {
+                        timer += Time.deltaTime;
+                        uICard.uIShiny.effectFactor = Mathf.Lerp(0.0f, 1.0f, smoothCurve.Evaluate(timer / duration));
+                        yield return new WaitForSeconds(Time.deltaTime);
+                    }
+                }
+                timer = 0f;
+                yield return new WaitForSeconds(3f);
+            }
+        }
+
         #endregion
     }
 };

@@ -39,7 +39,8 @@ public class ProgressBar : MonoBehaviour
             foreach(Status s in status.Value)
             {
                 StatusUI StatusUI = Instantiate(StatusTemplate, StatusTemplate.transform.position, StatusTemplate.transform.rotation, Status.transform);
-                StatusUI.UpdateStatusUI(s.GetSprite(), (status.Key - GameManager.instance.uiManager.CardsFight.Turn));
+                StatusUI.UpdateStatusUI(s, (status.Key - GameManager.instance.uiManager.CardsFight.Turn));
+                StatusUI.HideInfo();
             }
         }
     }

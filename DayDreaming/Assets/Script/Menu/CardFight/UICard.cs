@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Coffee.UIEffects;
 using UnityEngine.UI;
+using System.Reflection;
 
 public class UICard : MonoBehaviour
 {
@@ -18,19 +19,24 @@ public class UICard : MonoBehaviour
 
     private Coroutine lastC;
     private static bool isDragging = false;
-    private bool isSelected = false;
+    [System.NonSerialized]
+    public bool isSelected = false;
     private PlayerHand hand;
     private Player player;
 
     public void Init(CardsFight CardsFightUI, CardAsset card)
     {
-        uIShiny.enabled = false;
+        uIShiny.enabled = card.rarity == CardAsset.Rarity.UNIQUE;
         this.CardsFightUI = CardsFightUI;
         this.card = card;
         this.hand = CardsFightUI.PlayerHand;
         this.player = hand.player;
+        this.InfoPopUp.Hide();
 
         GetComponent<Image>().sprite = card.Sprite;
+
+        if (uIShiny.enabled)
+            StartCoroutine(Utils.UI.BrightCoroutine(this, 1f));
 
     }
 
@@ -61,7 +67,7 @@ public class UICard : MonoBehaviour
         {
             InfoPopUp.Hide();
             hand.ResetCardPos();
-            uIShiny.enabled = false;
+            uIShiny.enabled = card.rarity == CardAsset.Rarity.UNIQUE;
         }
     }
     public void OnClick()
@@ -92,12 +98,16 @@ public class UICard : MonoBehaviour
             isSelected = false;
             if (RectTransformUtility.RectangleContainsScreenPoint(hand.dropArea as RectTransform, transform.position))
                 StartCoroutine(UseCard(0.5f));
-            else SetPositionOnCurve(initialPosOnCurve);
+            else
+            {
+                uIShiny.width = 0.8f;
+                SetPositionOnCurve(initialPosOnCurve);
+            }
         }
     }
 
     public void SetPositionOnCurve(int index)
-    {
+    {        
         lastC = StartCoroutine(MoveCardCoroutine(new Vector3(hand.bezier.curve[index].x, hand.bezier.curve[index].y, 0),
                                         new Vector3(0, 0, hand.bezier.angles[index]), 0.2f));
 
@@ -105,29 +115,39 @@ public class UICard : MonoBehaviour
 
     private IEnumerator MoveCardCoroutine(Vector3 position, Vector3 rotation, float duration)
     {
-        if (lastC != null)
-            StopCoroutine(lastC);
-        if (initialPosOnCurve == (hand.bezier.curve.Count - 1) * 0.5f && rotation.z > 180f)
+        if (!position.Equals(transform.position))
         {
-            transform.eulerAngles = new Vector3(0, 0, 360f);
-        }
-        float timer = 0f;
-        AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
-        while (timer <= duration)
-        {
-            timer += Time.deltaTime;
+            // Correction de la rotation
+            float currentZ = transform.eulerAngles.z;
+            if (Mathf.Abs(rotation.z - transform.eulerAngles.z) > 50f)
+            {
+                if (rotation.z > transform.eulerAngles.z) currentZ += 360;
+                else rotation = new Vector3(rotation.x, rotation.y, rotation.z + 360);
+            }
 
-            transform.position = Vector3.Lerp(transform.position, position, smoothCurve.Evaluate(timer / duration));
-            float z = Mathf.Lerp(transform.eulerAngles.z, rotation.z, smoothCurve.Evaluate(timer / duration));
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
-            yield return new WaitForSeconds(Time.deltaTime);
+            if (lastC != null)
+                StopCoroutine(lastC);
+
+            float timer = 0f;
+            AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+
+                // Linear interpolation
+                transform.position = Vector3.Lerp(transform.position, position, smoothCurve.Evaluate(timer / duration));
+                // Angular interpolation
+                float z = Mathf.Lerp(currentZ, rotation.z, smoothCurve.Evaluate(timer / duration));
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, z);
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
         }
     }
-
     private IEnumerator CardSelected()
     {
         isSelected = true;
         AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+        uIShiny.effectFactor = 0.5f;
         while (isDragging)
         {
             while (uIShiny.width < 1)
@@ -165,13 +185,15 @@ public class UICard : MonoBehaviour
             dissolve.effectFactor = Mathf.Lerp(0f, 1f, smoothCurve.Evaluate(timer / duration));
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        // Apply card effect
-        card.ApplyEffect(hand.player, CardsFightUI.Enemy);
+        player.SelectedCard = card;
+        
+        yield return StartCoroutine(hand.player.Attack(CardsFightUI.Enemy));
+
         CardsFightUI.UpdateProgressBars();
         hand.InitCardPos();
 
         CardsFightUI.Enemy.CanPlay(true);
-        CardsFightUI.Enemy.Attack();
+        yield return StartCoroutine(CardsFightUI.Enemy.Attack(hand.player));
         CardsFightUI.UpdateProgressBars();
 
         CardsFightUI.EndTurn();
