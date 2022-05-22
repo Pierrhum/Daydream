@@ -32,9 +32,13 @@ public class Enemy : Fighter
             if (PlayerDistance < this.RangeOfAggression)
             {
 
-                if (ai.Collider.IsTouching(ai.PlayerCollider)) LoadFight();
+                if (ai.Collider.IsTouching(ai.PlayerCollider))
+                {
+                    Debug.Log("mashallah");
+                    LoadFight();
+                }
 
-                else ai.Move(PlayerDirection);
+                else ai.Move(ai.Player.transform.position);
             }
 
             else ai.Stop();
