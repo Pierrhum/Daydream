@@ -14,6 +14,7 @@ public class Player : Fighter
     public List<CardAsset> InventoryCards;
 
     public Quest Quest;
+    public int MaxFightCards = 5;
 
     public bool CanMove = true;
     public bool isFighting = false;

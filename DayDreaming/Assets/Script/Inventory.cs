@@ -19,6 +19,9 @@ public class Inventory : MonoBehaviour
     public GameObject pauseMenu;
     public TextMeshProUGUI nbCard;
 
+    public List<GameObject> CardsUI;
+    public List<Toggle> Toggles;
+
     // Gestion des pages
     private int pageNumber = 0;
     private int numberOfPages; 
@@ -50,12 +53,6 @@ public class Inventory : MonoBehaviour
         player = GameManager.instance.player;
     }
 
-    // Permet d'ajouter une carte à l'inventaire
-    public void addCard(CardAsset cardToAdd)
-    {
-        player.FightCards.Add(cardToAdd);
-    }
-
     public void openInventory()
     {
         if(!inventoryWindow.activeSelf){
@@ -66,8 +63,10 @@ public class Inventory : MonoBehaviour
             if(pauseMenu.activeSelf){
                 pauseMenu.SetActive(false);
             }
-        
+            Debug.Log(player.InventoryCards.Count%5);
             numberOfPages = player.InventoryCards.Count / 5;
+            if (player.InventoryCards.Count % 5 > 0)
+                numberOfPages++;
             pageNumber = 0;
             updateInventory();
         }
@@ -122,14 +121,14 @@ public class Inventory : MonoBehaviour
     public void OnPointerEnter(int nbButton)
     {   
         Vector3 scaleChange = new Vector3(1.15f, 1.15f, 1.0f);
-        GameObject.Find(nbButton.ToString()).transform.localScale = scaleChange;
+        CardsUI[nbButton].transform.localScale = scaleChange;
     }
 
     // Lorsqu'on arrete de survoler une carte
     public void OnPointerExit(int nbButton)
     {
         Vector3 scaleChange = new Vector3(1.0f, 1.0f, 1.0f);
-        GameObject.Find(nbButton.ToString()).transform.localScale = scaleChange;
+        CardsUI[nbButton].transform.localScale = scaleChange;
     }
 
     // Affiche le nom de la carte et sa description
@@ -138,8 +137,9 @@ public class Inventory : MonoBehaviour
         textName.SetActive(true);
         textDescription.SetActive(true);
         textClick.SetActive(false);
-        textName.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
-        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
+
+        textName.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name) + pageNumber * 5].Name);
+        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name) + pageNumber * 5].description);
     }
 
     // Passe à la page suivante
@@ -160,49 +160,65 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    bool SkipToggleUpdate = false;
     // Mise à jour de l'inventaire
     private void updateInventory()
     {
         nbCard.SetText((pageNumber+1).ToString() + " / " + numberOfPages.ToString());
         for(int i = 0; i < 5; i++){
-            GameObject card = GameObject.Find(i.ToString());
-            if(i < player.InventoryCards.Count){
+            GameObject card = CardsUI[i];
+            Toggle toggle = Toggles[i];
+            toggle.gameObject.SetActive(true);
+            card.SetActive(true);
+
+            if (i + pageNumber * 5 < player.InventoryCards.Count){
                 card.GetComponent<Button>().image.sprite = player.InventoryCards[i + pageNumber * 5].Sprite;
 
-                if (player.FightCards.Contains(player.InventoryCards[i + pageNumber * 5])) 
-                    GameObject.Find("T"+i).GetComponent<Toggle>().isOn = true;
-                else GameObject.Find("T"+i).GetComponent<Toggle>().isOn = false;
+                if (player.FightCards.Contains(player.InventoryCards[i + pageNumber * 5]))
+                {
+                    SkipToggleUpdate = true;
+                    toggle.isOn = true;
+                    SkipToggleUpdate = false;
+
+                }
+                else toggle.isOn = false;
 
             }
-            else{
+            else if(toggle != null && card != null){
+                toggle.gameObject.SetActive(false);
                 card.SetActive(false);
             }
         } 
     }
 
     // Gestion du choix des cartes
-    public void ChangeToggle(string name)
+    public void ChangeToggle(int id)
     {
-        int id = Int32.Parse(name.Substring(1)) + pageNumber * 5;
+        if (SkipToggleUpdate)
+            return;
+
         // Lorsqu'on coche
-        if (GameObject.Find(name).GetComponent<Toggle>().isOn){
+        if (Toggles[id].isOn){
             if(countCardChosen < 5)
             {
-                player.FightCards.Add(player.InventoryCards[id]);
-                countCardChosen++;
+                if (!player.FightCards.Contains(player.InventoryCards[id + pageNumber * 5]))
+                {
+                    player.FightCards.Add(player.InventoryCards[id + pageNumber * 5]);
+                    countCardChosen++;
+                }
             }
             else{
-                if(!player.FightCards.Contains(player.InventoryCards[id])){
-                    GameObject.Find(name).GetComponent<Toggle>().isOn = false;
-                    OpenPopup();
-                }
+                SkipToggleUpdate = true;
+                Toggles[id].isOn = false;
+                SkipToggleUpdate = false;
+                OpenPopup();
             }
         }
         else{ // Lorsqu'on decoche
             if(countCardChosen > 0)
             {
-                if(player.FightCards.Contains(player.InventoryCards[id])){
-                    player.FightCards.Remove(player.InventoryCards[id]);
+                if(player.FightCards.Contains(player.InventoryCards[id + pageNumber * 5])){
+                    player.FightCards.Remove(player.InventoryCards[id + pageNumber * 5]);
                     countCardChosen--;
                 }
             }
