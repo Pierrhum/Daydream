@@ -15,4 +15,5 @@ MonoBehaviour:
   Name: Resting
   Sprite: {fileID: 21300000, guid: 1df112c329b579b4289c41ae90f7bd24, type: 3}
   rarity: 0
+  AnimationID: -1
   description: Cures 20% of your health

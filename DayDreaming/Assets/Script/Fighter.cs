@@ -2,23 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour
+public abstract class Fighter : MonoBehaviour
 {
     [System.NonSerialized]
     public Dictionary<int, List<Status>> status = new Dictionary<int, List<Status>>();
     [System.NonSerialized]
     public bool canPlay = false;
+    public bool isStunned = false;
 
+    public FightFeedback Feedback;
     public float CurrentHP = 10;
     public float MaxHP = 10;
     public List<CardAsset> FightCards;
     public List<CardAsset> InventoryCards;
 
+    protected CardsFight CardsFightUI;
+
+    public abstract IEnumerator Attack(Fighter other);
+
+    protected IEnumerator Attack(CardAsset card, Fighter other)
+    {
+        card.ApplyEffect(this, other);
+        while (Feedback.isAnimating || other.Feedback.isAnimating)
+            yield return new WaitForSeconds(Time.deltaTime);
+    }
+
     public void Heal(int amount)
     {
-        CurrentHP += amount;
-        if (CurrentHP > MaxHP)
-            CurrentHP = MaxHP;
+        if(CurrentHP != amount)
+        {
+            StartCoroutine(Feedback.Heal(1.0f));
+            CurrentHP += amount;
+            if (CurrentHP > MaxHP)
+                CurrentHP = MaxHP;
+        }
     }
 
     public void Hurt(int amount)
@@ -26,6 +43,15 @@ public class Fighter : MonoBehaviour
         CurrentHP -= amount;
         if (CurrentHP <= 0)
             Die();
+        else
+            StartCoroutine(Feedback.Hurt(0.5f));
+    }
+
+    public void Skip()
+    {
+        StartCoroutine(Feedback.Stun(1.0f, false));
+        canPlay = false;
+        isStunned = true;
     }
 
     public virtual void Die()
@@ -38,6 +64,11 @@ public class Fighter : MonoBehaviour
         this.canPlay = canPlay;
         if(canPlay)
         {
+            if (isStunned)
+            {
+                isStunned = false;
+                StartCoroutine(Feedback.Stun(1.0f, true));
+            }
             CardsFight CardsFightUI = GameManager.instance.uiManager.CardsFight;
 
             List <Status> StatusOfThisTurn;

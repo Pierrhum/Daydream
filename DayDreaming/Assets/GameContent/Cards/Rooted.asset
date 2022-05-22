@@ -15,4 +15,5 @@ MonoBehaviour:
   Name: Rooted
   Sprite: {fileID: 21300000, guid: d7d84d3947ef4c34f9ee503ed470ac56, type: 3}
   rarity: 0
+  AnimationID: -1
   description: Your opponent skip next turn

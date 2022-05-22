@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c167ab5cb74f2a14b9bc01868c397230, type: 3}
-  m_Name: FlyingCarpet
+  m_Name: Boomerang
   m_EditorClassIdentifier: 
-  Name: Flying Carpet
-  Sprite: {fileID: 21300000, guid: 2e3bd89c001f8734c912e01f6ba2b2f3, type: 3}
-  rarity: 0
-  AnimationID: -1
-  description: Debuff your current status
+  Name: Booooomrang
+  Sprite: {fileID: 21300000, guid: 7d1ddbadf8ef6de41a03fb420913d01d, type: 3}
+  rarity: 3
+  AnimationID: 0
+  description: Waow look that thicc boomerang
