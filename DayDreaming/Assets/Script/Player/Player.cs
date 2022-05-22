@@ -11,6 +11,7 @@ public class Player : Fighter
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
+    public List<CardAsset> InventoryCards;
 
     public Quest Quest;
 

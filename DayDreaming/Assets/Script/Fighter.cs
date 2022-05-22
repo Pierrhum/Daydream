@@ -14,7 +14,6 @@ public abstract class Fighter : MonoBehaviour
     public float CurrentHP = 10;
     public float MaxHP = 10;
     public List<CardAsset> FightCards;
-    public List<CardAsset> InventoryCards;
 
     protected CardsFight CardsFightUI;
 

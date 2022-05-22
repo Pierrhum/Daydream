@@ -8,7 +8,6 @@ using UnityEngine.EventSystems;
 // Must be a singleton
 public class Inventory : MonoBehaviour
 {
-    public Player player;
     public GameObject inventoryWindow;
     public TextMeshProUGUI textCategory;
     public GameObject textName;
@@ -28,10 +27,11 @@ public class Inventory : MonoBehaviour
     // Choix des cartes
     private int countCardChosen = 0;
     public GameObject popup;
-    private List<int> cardsChosen = new List<int>(); 
 
     // Implementation of singleton instance
     public static Inventory instance;
+
+    private Player player;
 
     private void Awake()
     {
@@ -43,6 +43,11 @@ public class Inventory : MonoBehaviour
 
 
         instance = this;
+    }
+
+    private void Start()
+    {
+        player = GameManager.instance.player;
     }
 
     // Permet d'ajouter une carte à l'inventaire
@@ -62,7 +67,7 @@ public class Inventory : MonoBehaviour
                 pauseMenu.SetActive(false);
             }
         
-            numberOfPages = player.FightCards.Count / 5;
+            numberOfPages = player.InventoryCards.Count / 5;
             pageNumber = 0;
             updateInventory();
         }
@@ -133,8 +138,8 @@ public class Inventory : MonoBehaviour
         textName.SetActive(true);
         textDescription.SetActive(true);
         textClick.SetActive(false);
-        textName.GetComponent<TextMeshProUGUI>().SetText(player.FightCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
-        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.FightCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
+        textName.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].Name);
+        textDescription.GetComponent<TextMeshProUGUI>().SetText(player.InventoryCards[Int32.Parse(EventSystem.current.currentSelectedGameObject.name)].description);
     }
 
     // Passe à la page suivante
@@ -161,10 +166,10 @@ public class Inventory : MonoBehaviour
         nbCard.SetText((pageNumber+1).ToString() + " / " + numberOfPages.ToString());
         for(int i = 0; i < 5; i++){
             GameObject card = GameObject.Find(i.ToString());
-            if(i < player.FightCards.Count){
-                card.GetComponent<Button>().image.sprite = player.FightCards[i + pageNumber * 5].Sprite;
+            if(i < player.InventoryCards.Count){
+                card.GetComponent<Button>().image.sprite = player.InventoryCards[i + pageNumber * 5].Sprite;
 
-                if(cardsChosen.Contains(i + pageNumber * 5))
+                if (player.FightCards.Contains(player.InventoryCards[i + pageNumber * 5])) 
                     GameObject.Find("T"+i).GetComponent<Toggle>().isOn = true;
                 else GameObject.Find("T"+i).GetComponent<Toggle>().isOn = false;
 
@@ -178,18 +183,16 @@ public class Inventory : MonoBehaviour
     // Gestion du choix des cartes
     public void ChangeToggle(string name)
     {
+        int id = Int32.Parse(name.Substring(1)) + pageNumber * 5;
         // Lorsqu'on coche
-        if(GameObject.Find(name).GetComponent<Toggle>().isOn){
+        if (GameObject.Find(name).GetComponent<Toggle>().isOn){
             if(countCardChosen < 5)
             {
-                if(!cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
-                    cardsChosen.Add(Int32.Parse(name.Substring(1)) + pageNumber * 5);
-                    countCardChosen++;
-                    Debug.Log(countCardChosen);
-                }
+                player.FightCards.Add(player.InventoryCards[id]);
+                countCardChosen++;
             }
             else{
-                if(!cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
+                if(!player.FightCards.Contains(player.InventoryCards[id])){
                     GameObject.Find(name).GetComponent<Toggle>().isOn = false;
                     OpenPopup();
                 }
@@ -198,10 +201,9 @@ public class Inventory : MonoBehaviour
         else{ // Lorsqu'on decoche
             if(countCardChosen > 0)
             {
-                if(cardsChosen.Contains(Int32.Parse(name.Substring(1)) + pageNumber * 5)){
-                    cardsChosen.Remove(Int32.Parse(name.Substring(1)) + pageNumber * 5);
+                if(player.FightCards.Contains(player.InventoryCards[id])){
+                    player.FightCards.Remove(player.InventoryCards[id]);
                     countCardChosen--;
-                    Debug.Log(countCardChosen);
                 }
             }
         }
