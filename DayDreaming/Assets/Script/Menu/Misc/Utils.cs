@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Coffee.UIEffects;
+using TMPro;
 
 namespace Utils {
     public static class UI
@@ -27,6 +28,27 @@ namespace Utils {
                 {
                     Color c = img.color;
                     img.color = new Color(c.r, c.g, c.b, Mathf.Lerp(start, end, smoothCurve.Evaluate(timer / duration)));
+                }
+                yield return new WaitForSeconds(Time.deltaTime);
+            }
+        }
+        public static IEnumerator Fade(List<Image> images, List<TextMeshProUGUI> texts, float start, float end, float duration)
+        {
+            float timer = 0f;
+            AnimationCurve smoothCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0f, 0f), new Keyframe(1f, 1f) });
+
+            while (timer <= duration)
+            {
+                timer += Time.deltaTime;
+                foreach (Image img in images)
+                {
+                    Color c = img.color;
+                    img.color = new Color(c.r, c.g, c.b, Mathf.Lerp(start, end, smoothCurve.Evaluate(timer / duration)));
+                }
+                foreach(TextMeshProUGUI txt in texts)
+                {
+                    Color c = txt.color;
+                    txt.color = new Color(c.r, c.g, c.b, Mathf.Lerp(start, end, smoothCurve.Evaluate(timer / duration)));
                 }
                 yield return new WaitForSeconds(Time.deltaTime);
             }
@@ -87,7 +109,6 @@ namespace Utils {
 
                 yield return new WaitForSeconds(Time.deltaTime);
             }
-            Debug.Log("Load game over menu");
         }
 
         #endregion

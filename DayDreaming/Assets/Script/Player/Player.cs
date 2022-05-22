@@ -103,13 +103,15 @@ public class Player : Fighter
         UIHsvModifier hsv = CardsFightUI.Overlay.gameObject.AddComponent<UIHsvModifier>();
         DestroyImmediate(Feedback.GetComponent<UIEffect>());
         UIDissolve dissolve = Feedback.gameObject.AddComponent<UIDissolve>();
+        dissolve.width = Feedback.DieDissolveWidth;
+        dissolve.color = Feedback.DieDissolveColor;
+        dissolve.transitionTexture = Feedback.DieDissolveTex;
 
         CardsFightUI.Enemy.canPlay = false;
         canPlay = false;
         foreach (UICard uiCard in CardsFightUI.PlayerHand.UICards)
             uiCard.GetComponent<Button>().interactable = canPlay;
 
-        StartCoroutine(Utils.UI.GameOverAnim(hsv, dissolve, 2f));
-
+        StartCoroutine(GameManager.instance.uiManager.OpenGameOverMenu(hsv, dissolve));
     }
 }
