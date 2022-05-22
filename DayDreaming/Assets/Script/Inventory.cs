@@ -161,6 +161,8 @@ public class Inventory : MonoBehaviour
     }
 
     bool SkipToggleUpdate = false;
+    List<int> checkedToggle = new List<int>();
+
     // Mise à jour de l'inventaire
     private void updateInventory()
     {
@@ -174,14 +176,17 @@ public class Inventory : MonoBehaviour
             if (i + pageNumber * 5 < player.InventoryCards.Count){
                 card.GetComponent<Button>().image.sprite = player.InventoryCards[i + pageNumber * 5].Sprite;
 
-                if (player.FightCards.Contains(player.InventoryCards[i + pageNumber * 5]))
+                if (checkedToggle.Contains(i + pageNumber * 5))
                 {
                     SkipToggleUpdate = true;
                     toggle.isOn = true;
                     SkipToggleUpdate = false;
-
                 }
-                else toggle.isOn = false;
+                else{
+                    SkipToggleUpdate = true;
+                    toggle.isOn = false;
+                    SkipToggleUpdate = false;
+                } 
 
             }
             else if(toggle != null && card != null){
@@ -205,6 +210,7 @@ public class Inventory : MonoBehaviour
                 {
                     player.FightCards.Add(player.InventoryCards[id + pageNumber * 5]);
                     countCardChosen++;
+                    checkedToggle.Add(id + pageNumber * 5);
                 }
             }
             else{
@@ -220,6 +226,7 @@ public class Inventory : MonoBehaviour
                 if(player.FightCards.Contains(player.InventoryCards[id + pageNumber * 5])){
                     player.FightCards.Remove(player.InventoryCards[id + pageNumber * 5]);
                     countCardChosen--;
+                    checkedToggle.Remove(id + pageNumber * 5);
                 }
             }
         }
