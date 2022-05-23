@@ -10,7 +10,7 @@ public class Enemy : Fighter
     public EnemyAssets asset;
     public AI ai;
 
-    private void Awake()
+    private void Start()
     {
         if(asset != null)
         {

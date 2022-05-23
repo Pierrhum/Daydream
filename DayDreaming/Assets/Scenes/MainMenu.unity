@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87dea129cde046ba98250a5cb348242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: Intro
+  firstLevel: Nyxos
   settingsWindow: {fileID: 1715517874}
 --- !u!114 &58541498
 MonoBehaviour:
