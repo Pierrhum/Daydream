@@ -65,7 +65,6 @@ public class StatusUI : MonoBehaviour
             var G = Mathf.Lerp(gradient.color1.g, targetColor.g, smoothCurve.Evaluate(timer / Transition));
             var B = Mathf.Lerp(gradient.color1.b, targetColor.b, smoothCurve.Evaluate(timer / Transition));
             gradient.color1 = new Color(R, G, B);
-            Debug.Log(gradient.color1);
 
             if (timer >= Transition)
             {

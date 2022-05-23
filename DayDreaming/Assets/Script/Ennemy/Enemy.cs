@@ -10,7 +10,7 @@ public class Enemy : Fighter
     public EnemyAssets asset;
     public AI ai;
 
-    private void Awake()
+    private void Start()
     {
         if(asset != null)
         {
@@ -32,9 +32,12 @@ public class Enemy : Fighter
             if (PlayerDistance < this.RangeOfAggression)
             {
 
-                if (ai.Collider.IsTouching(ai.PlayerCollider)) LoadFight();
+                if (ai.Collider.IsTouching(ai.PlayerCollider))
+                {
+                    LoadFight();
+                }
 
-                else ai.Move(PlayerDirection);
+                else ai.Move(ai.Player.transform.position);
             }
 
             else ai.Stop();
@@ -51,7 +54,6 @@ public class Enemy : Fighter
 
     public override void Die()
     {
-        base.Die();
         GameManager.instance.uiManager.CloseFightMenu();
         Destroy(gameObject);
     }

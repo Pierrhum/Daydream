@@ -14,7 +14,6 @@ public abstract class Fighter : MonoBehaviour
     public float CurrentHP = 10;
     public float MaxHP = 10;
     public List<CardAsset> FightCards;
-    public List<CardAsset> InventoryCards;
 
     protected CardsFight CardsFightUI;
 
@@ -54,10 +53,7 @@ public abstract class Fighter : MonoBehaviour
         isStunned = true;
     }
 
-    public virtual void Die()
-    {
-
-    }
+    public abstract void Die();
 
     public virtual void CanPlay(bool canPlay)
     {

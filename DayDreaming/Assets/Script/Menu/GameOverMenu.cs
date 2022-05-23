@@ -1,8 +1,12 @@
+using Coffee.UIEffects;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-// Script pour le menu de game over
-// @author Maxime Ginda
 public class GameOverMenu : MonoBehaviour
 {
 
@@ -10,25 +14,43 @@ public class GameOverMenu : MonoBehaviour
     public GameObject settingsWindow;
     public GameObject pauseMenu;
 
+    public List<Image> FadeImages;
+    public List<TextMeshProUGUI> FadeTexts;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Time.timeScale = 0;
+        foreach (Image img in FadeImages)
+        {
+            Color c = img.color;
+            img.color = new Color(c.r, c.g, c.b, 0);
+        }
+        foreach (TextMeshProUGUI txt in FadeTexts)
+        {
+            Color c = txt.color;
+            txt.color = new Color(c.r, c.g, c.b, 0);
+        }
+        gameObject.SetActive(false);
+    }
+
+    public IEnumerator Open(UIHsvModifier hsv, UIDissolve dissolve)
+    {
+        gameObject.SetActive(true);
+        yield return StartCoroutine(Utils.UI.GameOverAnim(hsv, dissolve, 2f));
         Destroy(settingsWindow);
         Destroy(pauseMenu);
+        yield return StartCoroutine(Utils.UI.Fade(FadeImages, FadeTexts, 0.0f, 1.0f, 2.0f));
     }
 
     // Relance la scène courante
     public void Retry()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Retourne au menu principale
     public void BackToMainMenu()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 

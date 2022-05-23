@@ -10,6 +10,10 @@ public class FightFeedback : MonoBehaviour
     private UIEffect uIEffect;
     private UIGradient uIGradient;
 
+    public Color DieDissolveColor;
+    public Texture2D DieDissolveTex;
+    public float DieDissolveWidth;
+
     [System.NonSerialized]
     public bool isAnimating = false;
 

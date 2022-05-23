@@ -10,6 +10,6 @@ public class Outro : MonoBehaviour
         Debug.Log(other);
         Debug.Log(GameManager.instance.player.GetComponentInChildren<Collider2D>());
         if(other==GameManager.instance.player.GetComponentInChildren<Collider2D>())
-            SceneManager.LoadScene("Outro");
+            SceneManager.LoadScene("MainMenu");
     }
 }

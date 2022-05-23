@@ -147,7 +147,7 @@ public class Reward
 
         /// A SUPPRIMER PLUS TARD, UNE FOIS QU'ON POURRA SELECTIONNER NOS CARTES DANS L'INVENTAIRE
         foreach (CardAsset card in Cards)
-            player.FightCards.Add(card);
+            player.InventoryCards.Add(card);
         ///
 
         // Donner XP

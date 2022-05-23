@@ -22,15 +22,15 @@ public class AI : MonoBehaviour
     {
         Player = GameManager.instance.player;
         PlayerCollider = Player.GetComponentInChildren<CircleCollider2D>();
-        Collider = GetComponent<CircleCollider2D>();
+        Collider = GetComponentInChildren<CircleCollider2D>();
         Rigidbody = GetComponent<Rigidbody2D>();
 
         Rigidbody.freezeRotation = true;
     }
 
-    public void Move(Vector2 Direction)
+    public void Move(Vector3 target)
     {
-        Rigidbody.velocity = Speed * Direction;
+        Agent.SetDestination(target);
     }
 
     public void Stop()

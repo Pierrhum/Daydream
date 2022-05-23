@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using Coffee.UIEffects;
 
 public class Player : Fighter
 {
@@ -11,8 +12,10 @@ public class Player : Fighter
     public float speed = 5f;
     private Rigidbody2D rbody;
     private IsometricCharacterRenderer isoRenderer;
+    public List<CardAsset> InventoryCards;
 
     public Quest Quest;
+    public int MaxFightCards = 5;
 
     public bool CanMove = true;
     public bool isFighting = false;
@@ -91,5 +94,24 @@ public class Player : Fighter
             }
         }
         yield return StartCoroutine(Attack(SelectedCard, other));
+    }
+
+    public override void Die()
+    {
+        // Replace UIEffects for Overlay and PlayerSprite
+        DestroyImmediate(CardsFightUI.Overlay.GetComponent<UIDissolve>());
+        UIHsvModifier hsv = CardsFightUI.Overlay.gameObject.AddComponent<UIHsvModifier>();
+        DestroyImmediate(Feedback.GetComponent<UIEffect>());
+        UIDissolve dissolve = Feedback.gameObject.AddComponent<UIDissolve>();
+        dissolve.width = Feedback.DieDissolveWidth;
+        dissolve.color = Feedback.DieDissolveColor;
+        dissolve.transitionTexture = Feedback.DieDissolveTex;
+
+        CardsFightUI.Enemy.canPlay = false;
+        canPlay = false;
+        foreach (UICard uiCard in CardsFightUI.PlayerHand.UICards)
+            uiCard.GetComponent<Button>().interactable = canPlay;
+
+        StartCoroutine(GameManager.instance.uiManager.OpenGameOverMenu(hsv, dissolve));
     }
 }

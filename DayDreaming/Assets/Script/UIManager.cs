@@ -1,3 +1,4 @@
+using Coffee.UIEffects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,14 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     // UI
-    public GameObject gameOverMenu;
+    public GameOverMenu GameOver;
     public CardsFight CardsFight;
     public HUD HUD;
 
     // TODO : Animation
-    public void OpenGameOverMenu()
+    public IEnumerator OpenGameOverMenu(UIHsvModifier hsv, UIDissolve dissolve)
     {
-        gameOverMenu.SetActive(true);
+        yield return StartCoroutine(GameOver.Open(hsv, dissolve));
     }
 
     // TODO Menu Pause

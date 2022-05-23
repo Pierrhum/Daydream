@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7ffeecf2863f94baebf5a413cc65fb94
   - enabled: 1
-    path: Assets/Scenes/Intro.unity
-    guid: 50c3a506a18b249979e50b39e3f1f55c
-  - enabled: 1
     path: Assets/Scenes/Nyxos.unity
-    guid: 042805a8fc5c56640a08d28d27de715b
-  - enabled: 1
-    path: Assets/Scenes/Outro.unity
-    guid: 672e7ca3a6df55642b91cdfe3a466947
+    guid: 248890129bcdae94fb8216358504a1e5
   m_configObjects: {}
