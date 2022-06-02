@@ -31,10 +31,10 @@ public class Inventory : MonoBehaviour
     private int countCardChosen = 0;
     public GameObject popup;
 
+    private Player player;
+
     // Implementation of singleton instance
     public static Inventory instance;
-
-    private Player player;
 
     private void Awake()
     {
@@ -206,7 +206,7 @@ public class Inventory : MonoBehaviour
         if (Toggles[id].isOn){
             if(countCardChosen < 5)
             {
-                if (!player.FightCards.Contains(player.InventoryCards[id + pageNumber * 5]))
+                if (!checkedToggle.Contains(id + pageNumber * 5))
                 {
                     player.FightCards.Add(player.InventoryCards[id + pageNumber * 5]);
                     countCardChosen++;
